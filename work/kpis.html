@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>KPIs Project</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <button
+          class="btn btn--ghost btn--back"
+          onclick="window.location.href='/index.html'"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+
+      <div class="article__hero">
+        <div class="article__hero-header">
+          <h1>itris KPI Dashboard</h1>
+          <h4>
+            Building a flexible, customisable and powerful KPI dashboard for
+            recruitment businesses to track performance of individuals, teams
+            and business goals
+          </h4>
+        </div>
+        <div class="article__hero-image-bloom--kpi"></div>
+        <img
+          src="/assets/images/kpi-svg.svg"
+          alt="KPI image"
+          class="article__hero-image--kpi skew-reverse"
+        />
+      </div>
+      <!-- <hr class="article__divider" /> -->
+      <div id="markdown-container" class="markdown-content"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Jack Brind</p>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2.2636 2.2636C2.61508 1.91213 3.18492 1.91213 3.5364 2.2636L8 6.72721L12.4636 2.2636C12.8151 1.91213 13.3849 1.91213 13.7364 2.2636C14.0879 2.61508 14.0879 3.18492 13.7364 3.5364L9.27279 8L13.7364 12.4636C14.0879 12.8151 14.0879 13.3849 13.7364 13.7364C13.3849 14.0879 12.8151 14.0879 12.4636 13.7364L8 9.27279L3.5364 13.7364C3.18492 14.0879 2.61508 14.0879 2.2636 13.7364C1.91213 13.3849 1.91213 12.8151 2.2636 12.4636L6.72721 8L2.2636 3.5364C1.91213 3.18492 1.91213 2.61508 2.2636 2.2636Z"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" id="lightbox-image" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Script(s) -->
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import { loadAndRenderMarkdown } from '/src/markdown-renderer.js';
+
+      // Load the specific markdown file for this case study
+      document.addEventListener('DOMContentLoaded', () => {
+        loadAndRenderMarkdown('/work/content/kpis.md', 'markdown-container');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>KPIs Project</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="header__headline">
+          <div class="header__title--work">
+            <button
+              class="btn btn--ghost"
+              onclick="window.location.href='/index.html'"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+                />
+              </svg>
+              Back
+            </button>
+          </div>
+        </div>
+        <!-- <div>
+          <button id="theme-toggle">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="theme-icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.84334 0.870695C7.96261 0.679143 7.95701 0.436343 7.82903 0.25035C7.70106 0.0643582 7.47448 -0.0302513 7.25016 0.0086273C5.25303 0.354755 3.45794 1.42243 2.21456 3.00366C0.97117 4.58491 0.368539 6.56647 0.524053 8.56235C0.679568 10.5582 1.5821 12.4255 3.05581 13.8004C4.52953 15.1753 6.46892 15.9594 8.49615 15.9999L8.5064 16C9.89472 16.0035 11.2604 15.6528 12.471 14.9818C13.6817 14.3109 14.6961 13.3425 15.4161 12.1706C15.5333 11.9798 15.5273 11.7391 15.4007 11.5542C15.2739 11.3693 15.0499 11.2741 14.8268 11.3105C14.4743 11.368 14.118 11.3998 13.7608 11.4057C12.5208 11.3971 11.3054 11.0637 10.2387 10.4394C9.17013 9.81416 8.28926 8.91956 7.68639 7.84739C7.08353 6.77522 6.78033 5.56405 6.80792 4.33806C6.83549 3.11207 7.19285 1.91539 7.84334 0.870695Z"
+              />
+            </svg>
+          </button>
+        </div> -->
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          flex-direction: column;
+          position: relative;
+        "
+      >
+        <h1 style="text-align: center; font-size: 32px; margin-top: 24px">
+          itris Knowledgebase
+        </h1>
+        <h4
+          style="
+            text-align: center;
+            font-size: 16px;
+            color: oklch(0.541 0.012 261.77);
+            font-weight: 500;
+          "
+          class="italic"
+        >
+          More information like a subtitle or blurb about a high-level summary.
+          This should cover a key point of the project.
+        </h4>
+        <div
+          style="
+            position: absolute;
+            width: 80%;
+            height: 40%;
+            background: radial-gradient(
+              ellipse,
+              rgba(0, 0, 0, 0.2) 0%,
+              rgba(0, 0, 0, 0.1) 40%,
+              transparent 70%
+            );
+            filter: blur(100px);
+            z-index: 0;
+            top: 40%;
+            border-radius: 50%;
+          "
+        ></div>
+        <img
+          style="
+            width: 90%;
+            border-radius: 12px;
+            height: auto;
+            object-fit: cover;
+            margin-top: 24px;
+            --mask-bottom: linear-gradient(
+              to bottom,
+              #000 50%,
+              transparent 90%
+            );
+            --mask-left: linear-gradient(to left, #000 90%, transparent 100%);
+            --mask-bottom-left: linear-gradient(
+              -110deg,
+              #000 65%,
+              transparent 85%
+            );
+            mask-image: var(--mask-bottom);
+            mask-composite: intersect;
+            position: relative;
+            z-index: 1;
+          "
+          src="/assets/images/Web Small.png"
+          alt="KPI image"
+        />
+      </div>
+      <hr />
+      <div id="markdown-container" class="markdown-content"></div>
+    </main>
+
+    <footer>
+      <!-- Your site footer here -->
+      <p>&copy; 2024 Jack Brind</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import { loadAndRenderMarkdown } from '/src/markdown-renderer.js';
+
+      // Load the specific markdown file for this case study
+      document.addEventListener('DOMContentLoaded', () => {
+        loadAndRenderMarkdown('/work/content/kpis.md', 'markdown-container');
+      });
+    </script>
+  </body>
+</html>
