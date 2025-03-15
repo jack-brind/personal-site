@@ -1,4 +1,7 @@
-import { marked } from 'marked';
+// Load marked from CDN
+const markedScript = document.createElement('script');
+markedScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+document.head.appendChild(markedScript);
 
 /**
  * Loads and renders markdown content into a specified container
@@ -6,6 +9,22 @@ import { marked } from 'marked';
  * @param {string} containerId - ID of the container element where markdown should be rendered
  */
 export async function loadAndRenderMarkdown(markdownPath, containerId) {
+  console.log(`Loading markdown from: ${markdownPath}`);
+  console.log(`Target container ID: ${containerId}`);
+
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error(`Container with ID "${containerId}" not found`);
+    return;
+  }
+
+  // Ensure marked is loaded
+  if (typeof marked === 'undefined') {
+    await new Promise(resolve => {
+      markedScript.onload = resolve;
+    });
+  }
+
   try {
     // Configure marked options
     const renderer = new marked.Renderer();
@@ -29,125 +48,97 @@ export async function loadAndRenderMarkdown(markdownPath, containerId) {
     marked.use({
       gfm: true,
       breaks: true,
-      pedantic: false,
-      sanitize: false,
-      smartLists: true,
-      smartypants: true,
       renderer: renderer,
     });
 
-    // Fetch the markdown file
+    console.log(`Fetching markdown file: ${markdownPath}`);
     const response = await fetch(markdownPath);
+
     if (!response.ok) {
       throw new Error(
-        `Failed to load markdown: ${response.status} ${response.statusText}`,
+        `Failed to fetch markdown file: ${response.status} ${response.statusText}`,
       );
     }
 
-    // Get the text content
-    const markdownText = await response.text();
+    const markdown = await response.text();
+    console.log(`Markdown file loaded, length: ${markdown.length} characters`);
 
-    // Find the container
-    const container = document.getElementById(containerId);
-    if (!container) {
-      throw new Error(`Container with ID "${containerId}" not found`);
-    }
+    // Parse the markdown to HTML
+    const html = marked.parse(markdown);
 
-    // Render the markdown
-    container.innerHTML = marked.parse(markdownText);
+    // Set the HTML content
+    container.innerHTML = html;
+    console.log('Markdown rendered successfully');
 
-    // Initialize lightbox for all images with the lightbox-image class
+    // Initialize lightbox functionality for images
     initializeLightbox(container);
-
-    // Add syntax highlighting if needed
-    if (typeof Prism !== 'undefined') {
-      Prism.highlightAllUnder(container);
-    }
   } catch (error) {
     console.error('Error loading or rendering markdown:', error);
-    const container = document.getElementById(containerId);
-    if (container) {
-      container.innerHTML = `<p class="error">Failed to load content: ${error.message}</p>`;
-    }
+    container.innerHTML = `<div class="error-message">
+      <h3>Error Loading Content</h3>
+      <p>${error.message}</p>
+    </div>`;
   }
 }
 
 /**
- * Initializes lightbox functionality for images in a container
+ * Initializes lightbox functionality for images in the container
  * @param {HTMLElement} container - The container element with images
  */
 function initializeLightbox(container) {
   const lightboxImages = container.querySelectorAll('.lightbox-image');
   const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-image');
+  const lightboxImage = document.getElementById('lightbox-image');
   const lightboxCaption = document.getElementById('lightbox-caption');
-  const lightboxClose = document.querySelector('.lightbox-close');
 
-  if (lightbox && lightboxImg) {
-    // Function to open the lightbox with animation
-    const openLightbox = (src, alt) => {
-      lightboxImg.src = src;
+  if (!lightbox || !lightboxImage) {
+    console.warn(
+      'Lightbox elements not found, skipping lightbox initialization',
+    );
+    return;
+  }
 
-      // Set the caption text from the alt attribute
-      if (alt) {
-        lightboxCaption.textContent = alt;
-        lightboxCaption.style.display = 'block';
-      } else {
-        lightboxCaption.style.display = 'none';
-      }
-
-      lightbox.style.display = 'block';
-
-      // Explicitly set cursor on both the lightbox and the image
-      lightbox.style.cursor = 'zoom-out';
-      lightboxImg.style.cursor = 'zoom-out';
-
-      // Trigger reflow before adding the class to ensure animation works
-      void lightbox.offsetWidth;
-
-      // Add show class to trigger animations
-      lightbox.classList.add('show');
-
-      // Prevent scrolling on the body while lightbox is open
-      document.body.style.overflow = 'hidden';
-    };
-
-    // Function to close the lightbox with animation
-    const closeLightbox = () => {
-      lightbox.classList.remove('show');
-
-      // Wait for the animation to complete before hiding
-      setTimeout(() => {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = '';
-      }, 300); // Match this with the CSS transition time
-    };
-
-    // Add click event to all lightbox images
-    lightboxImages.forEach(img => {
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', function () {
-        openLightbox(this.src, this.alt);
-      });
-    });
-
-    // Close lightbox when clicking the close button
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', function () {
-        closeLightbox();
-      });
+  const openLightbox = (src, alt) => {
+    lightboxImage.src = src;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = alt;
     }
+    lightbox.style.display = 'flex';
 
-    // Close when clicking anywhere in the lightbox, including the image
-    lightbox.addEventListener('click', function () {
-      closeLightbox();
-    });
-
-    // Keep the escape key functionality
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+    // Add event listener to close lightbox when clicking outside the image
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
         closeLightbox();
       }
     });
+
+    // Add event listener to close lightbox when pressing Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  };
+
+  const closeLightbox = () => {
+    lightbox.style.display = 'none';
+
+    // Remove event listeners
+    lightbox.removeEventListener('click', closeLightbox);
+    document.removeEventListener('keydown', closeLightbox);
+  };
+
+  // Add click event listeners to all lightbox images
+  lightboxImages.forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Add click event listener to close button
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  if (closeButton) {
+    closeButton.addEventListener('click', closeLightbox);
   }
 }
