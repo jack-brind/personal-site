@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
     <title>KPIs Project</title>
-    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <main>
@@ -124,20 +124,7 @@
       <!-- Your site footer here -->
       <p>&copy; 2024 Jack Brind</p>
     </footer>
-    <script type="module" src="../src/main.js"></script>
-    <script type="module">
-      import { loadAndRenderMarkdown } from '../src/markdown-renderer.js';
-
-      // Load the specific markdown file for this case study
-      document.addEventListener('DOMContentLoaded', () => {
-        const markdownContainer = document.getElementById('markdown-container');
-        if (markdownContainer) {
-          loadAndRenderMarkdown(
-            '/work/content/knowledgebase.md',
-            'markdown-container',
-          );
-        }
-      });
-    </script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/knowledgebase.js"></script>
   </body>
 </html>
