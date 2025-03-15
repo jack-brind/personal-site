@@ -12,4 +12,8 @@ export default defineConfig({
       },
     },
   },
+  // Ensure assets are properly processed
+  assetsInclude: ['**/*.md'],
+  // Ensure public directory is properly handled
+  publicDir: 'public',
 });

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
-    <link rel="stylesheet" href="/src/style.css" />
     <title>KPIs Project</title>
+    <script type="module">
+      import '/src/style.css';
+    </script>
   </head>
   <body>
     <main>
@@ -130,10 +132,13 @@
 
       // Load the specific markdown file for this case study
       document.addEventListener('DOMContentLoaded', () => {
-        loadAndRenderMarkdown(
-          '/work/content/knowledgebase.md',
-          'markdown-container',
-        );
+        const markdownContainer = document.getElementById('markdown-container');
+        if (markdownContainer) {
+          loadAndRenderMarkdown(
+            '/work/content/knowledgebase.md',
+            'markdown-container',
+          );
+        }
       });
     </script>
   </body>
