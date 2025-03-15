@@ -12,7 +12,7 @@
       <div class="header">
         <button
           class="btn btn--ghost btn--back"
-          onclick="window.location.href='/index.html'"
+          onclick="window.location.href='/'"
         >
           <svg
             width="12"
@@ -76,13 +76,6 @@
 
     <!-- Script(s) -->
     <script type="module" src="/src/main.js"></script>
-    <script type="module">
-      import { loadAndRenderMarkdown } from '/src/markdown-renderer.js';
-
-      // Load the specific markdown file for this case study
-      document.addEventListener('DOMContentLoaded', () => {
-        loadAndRenderMarkdown('/work/content/kpis.md', 'markdown-container');
-      });
-    </script>
+    <script type="module" src="/src/kpis.js"></script>
   </body>
 </html>

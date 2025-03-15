@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/work/kpis", "dest": "/work/kpis.html" },
+    { "src": "/work/content/(.*)", "dest": "/work/content/$1" }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
