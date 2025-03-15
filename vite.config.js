@@ -7,7 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'public/about.html'),
-        kpis: resolve(__dirname, 'public/work/kpis.html'),
+        kpis: resolve(__dirname, 'public/kpis.html'),
       },
     },
   },
