@@ -12,10 +12,7 @@
       <div class="header">
         <div class="header__headline">
           <div class="header__title--work">
-            <button
-              class="btn btn--ghost"
-              onclick="window.location.href='/index.html'"
-            >
+            <button class="btn btn--ghost" onclick="window.location.href='/'">
               <svg
                 width="12"
                 height="12"
@@ -133,7 +130,10 @@
 
       // Load the specific markdown file for this case study
       document.addEventListener('DOMContentLoaded', () => {
-        loadAndRenderMarkdown('/work/content/kpis.md', 'markdown-container');
+        loadAndRenderMarkdown(
+          '/work/content/knowledgebase.md',
+          'markdown-container',
+        );
       });
     </script>
   </body>

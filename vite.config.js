@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'public/about.html'),
         kpis: resolve(__dirname, 'public/kpis.html'),
+        knowledgebase: resolve(__dirname, 'public/knowledgebase.html'),
       },
     },
   },
