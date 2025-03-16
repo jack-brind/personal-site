@@ -32,15 +32,19 @@ We had a good amount of feedback on this problem already which came primarily fr
 
 This provided a good amount of insight, but I had some gaps in knowledge and assumptions to validate so we also conducted a survey to customers to dig a little deeper into some of the key themes identified initially. The results of the survey provided some clarity.
 
-<img src="/work/content/research.png" alt="Research insights" class="markdown-content__image lightbox-image" />
-
 <div class="banner">
   <div class="banner-icon insight-icon">💡</div>
   <div class="banner-content">
     <div class="banner-header">Research insights</div>
     <div class="banner-text"> 
       <p>
-        One interesting emerging themes that we identified during from the survey and subsequent follow ups with respondents was the need for targetless KPIs. Based on customer feedback and feedback from sales, our assumption was that KPIs were intrinsically target-based. However, it was clear that customers also wanted to track metrics without targets. This was key insight that we would not have considered prior to the survey.
+        Some of the highlighted insights gathered from research were:
+        <ul style="margin-bottom: 0; margin-top: 6px;">
+          <li>Collective KPIs made up nearly a third of the split</li>
+          <li>Weekly KPIs were the most popular</li>
+          <li>The importance of being able to drill downs into KPIs was rated 92%</li>
+          <li>Most respondents were exporting reports to excel to track KPIs</li>
+        </ul>
       </p>
     </div>
   </div>
@@ -99,64 +103,3 @@ KPIs in recruitment is a vast field with a lot of space left to play. Future con
 **_There were many different challenges and edge cases that needed to be addressed during this project. If you'd like to know more, please get in touch._**
 
 **This is a short breakdown of the project and there was a lot more work that went on behind the scenes. Want to know more?** `<button>Conact me</button>`.
-
-<!-- Modal HTML -->
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeImageModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
-
-<style>
-/* Modal styles */
-.modal-image {
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.modal-image:hover {
-  opacity: 0.8;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-</style>
-
-<script>
-function openImageModal(src) {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = src;
-}
-
-function closeImageModal() {
-  document.getElementById("imageModal").style.display = "none";
-}
-</script>

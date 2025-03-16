@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
     <title>KPIs Project</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <!-- Add marked library from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script type="module" src="/assets/js/kpis.js"></script>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <main>
@@ -78,6 +75,13 @@
     </div>
 
     <!-- Script(s) -->
-    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import { loadAndRenderMarkdown } from '/src/markdown-renderer.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loadAndRenderMarkdown('/src/kpis.md', 'markdown-container');
+      });
+    </script>
   </body>
 </html>
