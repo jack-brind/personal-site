@@ -1,5 +1,7 @@
 'use-strict';
 
+import { inject } from '@vercel/analytics';
+
 const svgArrow = `
       <svg
         width="6"

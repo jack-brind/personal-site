@@ -737,26 +737,25 @@
 
 /* Markdown layer for markdown-specific styles */
 @layer markdown {
-  .markdown-content {
+  .article-content {
     max-width: 720px;
     margin: 0 auto;
   }
 
-  .markdown-figure {
+  .article-content__figure {
     margin: var(--spacing-8) 0;
     display: flex;
     flex-direction: column;
   }
 
-  .markdown-figure figcaption {
+  .article-content__figure figcaption {
     margin-top: -16px;
     color: var(--text-muted);
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-medium);
   }
 
-  /* Markdown-specific heading styles */
-  .markdown-content__image {
+  .article-content__image {
     width: 130%;
     align-self: center;
     height: auto;
@@ -766,7 +765,7 @@
     outline-offset: -1px;
   }
 
-  .markdown-content__image--app {
+  .article-content__image--app {
     width: 130%;
     align-self: center;
     height: auto;
@@ -784,25 +783,25 @@
     margin-right: 0;
   }
 
-  .markdown-content h2 {
+  .article-content h2 {
     margin-top: var(--spacing-10);
     margin-bottom: var(--spacing-6);
     font-size: var(--font-size-6);
     font-family: var(--font-sans);
   }
 
-  .markdown-content h3,
-  .markdown-content h4,
-  .markdown-content h5,
-  .markdown-content h6 {
+  .article-content h3,
+  .article-content h4,
+  .article-content h5,
+  .article-content h6 {
     margin-top: var(--spacing-4);
     margin-bottom: var(--spacing-5);
     font-size: var(--font-size-5);
     font-family: var(--font-sans);
   }
 
-  .markdown-content ul,
-  .markdown-content ol {
+  .article-content ul,
+  .article-content ol {
     color: var(--text-primary);
     font-family: var(--font-sans);
     font-size: var(--font-size-5);
@@ -814,7 +813,7 @@
     padding-left: var(--spacing-10);
   }
 
-  .markdown-content blockquote {
+  .article-content blockquote {
     border-left: 4px solid var(--border-default);
     padding-left: 1em;
     margin-left: 0;

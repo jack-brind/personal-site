@@ -33,9 +33,7 @@
         <div class="article__hero-header">
           <h1>itris KPI Dashboard</h1>
           <h4>
-            Building a flexible, customisable and powerful KPI dashboard for
-            recruitment businesses to track performance of individuals, teams
-            and business goals
+            Product design, interaction design and user research<br />2024
           </h4>
         </div>
         <div class="article__hero-image-bloom--kpi"></div>
@@ -45,10 +43,8 @@
           class="article__hero-image--kpi skew-reverse"
         />
       </div>
-      <!-- <hr class="article__divider" /> -->
-      <div id="markdown-container" class="markdown-content">
-        <!-- markdownlint-disable MD033 -->
 
+      <section class="article-content">
         <h2>Context</h2>
         <p>
           Recruitment is a numbers-driven industry, where KPIs play a critical
@@ -121,11 +117,9 @@
                   Most respondents were exporting reports to excel to track KPIs
                 </li>
               </ul>
-              <p></p>
             </div>
           </div>
         </div>
-
         <h2>Solution</h2>
         <p>
           Once the research phase was complete, I collaborated with the
@@ -147,48 +141,48 @@
           ability to drill down and report on any metric to see the activity
           that contributed to the metric.
         </p>
-        <figure class="markdown-figure">
+        <figure class="article-content__figure">
           <img
             src="/work/content/configuration.png"
             alt="Settings area where KPIs are configured and managed"
-            class="markdown-content__image--app lightbox-image"
+            class="article-content__image--app lightbox-image"
             style="cursor: pointer"
           />
-          <figcaption>KPI configuration</figcaption>
+          <figcaption>Table view of configured KPIs</figcaption>
         </figure>
-
-        <figure class="markdown-figure">
+        <figure class="article-content__figure">
           <img
-            src="/work/content/config.png"
+            src="/work/content/new-kpi.png"
             alt="Image description"
-            class="markdown-content__image--app lightbox-image"
+            class="article-content__image--app lightbox-image sunken-image"
             style="cursor: pointer"
           />
-          <figcaption>KPI configuration modal</figcaption>
+          <figcaption>Modal to create a new KPI</figcaption>
         </figure>
-
         <p>
           It was also crucial that KPIs were communicated to the user well.
           After many iterations of the KPI card, I settled on a final design
           that struck the right balance between information density and visual
           weight.
         </p>
-        <figure class="markdown-figure">
+        <figure class="article-content__figure">
           <img
             src="/work/content/kpi-anatomy.png"
             alt="KPI widget card anatomy"
-            class="markdown-content__image lightbox-image sunken-image"
+            class="article-content__image lightbox-image sunken-image"
             style="cursor: pointer"
           />
           <figcaption>KPI widget card anatomy in hover state</figcaption>
         </figure>
-
-        <img
-          src="/work/content/dashboard.png"
-          alt="KPI dashboard"
-          class="markdown-content__image--app lightbox-image"
-          style="cursor: pointer"
-        />
+        <figure class="article-content__figure">
+          <img
+            src="/work/content/dashboard.png"
+            alt="KPI dashboard"
+            class="article-content__image lightbox-image"
+            style="cursor: pointer"
+          />
+          <figcaption>Final dashboard design to visualise KPIs</figcaption>
+        </figure>
 
         <h2>Outcome</h2>
         <ul>
@@ -225,8 +219,7 @@
           >
           <code>&lt;button&gt;Conact me&lt;/button&gt;</code>.
         </p>
-      </div>
-      <!-- <div id="markdown-container" class="markdown-content"></div> -->
+      </section>
     </main>
 
     <footer>
@@ -254,46 +247,6 @@
       <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
-    <!-- Remove or comment out any other scripts -->
-    <!-- <script type="module" src="/src/main.js"></script> -->
-
-    <!-- This should be the last script -->
-    <!-- <script type="module">
-      import { loadAndRenderMarkdown } from './markdown-renderer.js';
-
-      try {
-        const response = await fetch('./kpis.md');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const markdownContent = await response.text();
-
-        // Verify we're getting markdown content
-        if (
-          !markdownContent.includes('Recruitment is a numbers-driven industry')
-        ) {
-          throw new Error('Received unexpected content');
-        }
-
-        // Try rendering directly to the container
-        const container = document.getElementById('markdown-container');
-        container.innerHTML = 'Processing markdown...';
-
-        await loadAndRenderMarkdown('./kpis.md', 'markdown-container');
-
-        // Verify the content after rendering
-        const finalContent = container.innerHTML;
-        if (!finalContent.includes('<h2>Context</h2>')) {
-          console.error(
-            'Content may not have rendered properly:',
-            finalContent.substring(0, 200),
-          );
-        }
-      } catch (error) {
-        console.error('Detailed error:', error);
-        document.getElementById('markdown-container').innerHTML =
-          `Error loading content: ${error.message}`;
-      }
-    </script> -->
+    <script src="/script.js"></script>
   </body>
 </html>
