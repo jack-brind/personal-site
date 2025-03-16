@@ -1,8 +1,5 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "engines": {
-    "node": "18"
-  }
+  "framework": "vite"
 }
