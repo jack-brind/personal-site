@@ -6,10 +6,10 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'src/about.html'),
-        kpis: resolve(__dirname, 'src/kpis.html'),
-        knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
+        main: 'index.html',
+        about: 'src/about.html',
+        kpis: 'src/kpis.html',
+        knowledgebase: 'src/knowledgebase.html',
       },
     },
     emptyOutDir: true,
