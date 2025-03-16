@@ -6,6 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        style: resolve(__dirname, 'style.css'),
         about: resolve(__dirname, 'src/about.html'),
         kpis: resolve(__dirname, 'src/kpis.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
@@ -14,15 +15,7 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
   },
-  // Ensure assets are properly processed
   assetsInclude: ['**/*.md'],
-  // Ensure public directory is properly handled
   publicDir: 'public',
-  // Add clean URLs
-  appType: 'spa',
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
-  },
+  base: '',
 });
