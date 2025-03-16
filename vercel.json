@@ -5,5 +5,9 @@
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
     { "source": "/kpis", "destination": "/kpis.html" }
+  ],
+  "redirects": [
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/kpis.html", "destination": "/kpis", "permanent": true }
   ]
 }

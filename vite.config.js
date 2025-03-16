@@ -11,6 +11,11 @@ export default defineConfig({
         kpis: resolve(__dirname, 'src/kpis.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
       },
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: 'chunks/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
     },
     emptyOutDir: true,
   },
