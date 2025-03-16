@@ -1,5 +1,9 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/kpis", "destination": "/kpis.html" }
+  ]
 }
