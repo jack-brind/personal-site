@@ -1,9 +1,10 @@
 {
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/about", "dest": "/about.html" },
     { "src": "/kpis", "dest": "/kpis.html" },
     { "src": "/knowledgebase", "dest": "/knowledgebase.html" },
-    { "src": "/work/content/(.*)", "dest": "/work/content/$1" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist"

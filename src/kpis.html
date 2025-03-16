@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
     <title>KPIs Project</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <main>
@@ -75,12 +75,12 @@
     </div>
 
     <!-- Script(s) -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/main.js"></script>
     <script type="module">
-      import { loadAndRenderMarkdown } from '/src/markdown-renderer.js';
+      import { loadAndRenderMarkdown } from '/markdown-renderer.js';
 
       document.addEventListener('DOMContentLoaded', () => {
-        loadAndRenderMarkdown('/src/kpis.md', 'markdown-container');
+        loadAndRenderMarkdown('/kpis.md', 'markdown-container');
       });
     </script>
   </body>

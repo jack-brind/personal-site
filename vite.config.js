@@ -11,6 +11,8 @@ export default defineConfig({
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
       },
     },
+    outDir: 'dist',
+    emptyOutDir: true,
   },
   // Ensure assets are properly processed
   assetsInclude: ['**/*.md'],
@@ -21,14 +23,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-    },
-  },
-  // Add URL rewriting for development
-  server: {
-    proxy: {
-      '/about': '/src/about.html',
-      '/kpis': '/src/kpis.html',
-      '/knowledgebase': '/src/knowledgebase.html',
     },
   },
 });
