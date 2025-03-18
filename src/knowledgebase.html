@@ -4,127 +4,287 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
-    <title>KPIs Project</title>
+    <title>Knowledgebase Project</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <main>
       <div class="header">
-        <div class="header__headline">
-          <div class="header__title--work">
-            <button class="btn btn--ghost" onclick="window.location.href='/'">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
-                />
-              </svg>
-              Back
-            </button>
-          </div>
-        </div>
-        <!-- <div>
-          <button id="theme-toggle">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              class="theme-icon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M7.84334 0.870695C7.96261 0.679143 7.95701 0.436343 7.82903 0.25035C7.70106 0.0643582 7.47448 -0.0302513 7.25016 0.0086273C5.25303 0.354755 3.45794 1.42243 2.21456 3.00366C0.97117 4.58491 0.368539 6.56647 0.524053 8.56235C0.679568 10.5582 1.5821 12.4255 3.05581 13.8004C4.52953 15.1753 6.46892 15.9594 8.49615 15.9999L8.5064 16C9.89472 16.0035 11.2604 15.6528 12.471 14.9818C13.6817 14.3109 14.6961 13.3425 15.4161 12.1706C15.5333 11.9798 15.5273 11.7391 15.4007 11.5542C15.2739 11.3693 15.0499 11.2741 14.8268 11.3105C14.4743 11.368 14.118 11.3998 13.7608 11.4057C12.5208 11.3971 11.3054 11.0637 10.2387 10.4394C9.17013 9.81416 8.28926 8.91956 7.68639 7.84739C7.08353 6.77522 6.78033 5.56405 6.80792 4.33806C6.83549 3.11207 7.19285 1.91539 7.84334 0.870695Z"
-              />
-            </svg>
-          </button>
-        </div> -->
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 2rem;
-          flex-direction: column;
-          position: relative;
-        "
-      >
-        <h1 style="text-align: center; font-size: 32px; margin-top: 24px">
-          itris Knowledgebase
-        </h1>
-        <h4
-          style="
-            text-align: center;
-            font-size: 16px;
-            color: oklch(0.541 0.012 261.77);
-            font-weight: 500;
-          "
-          class="italic"
+        <button
+          class="btn btn--ghost btn--back"
+          onclick="window.location.href='/index.html'"
         >
-          More information like a subtitle or blurb about a high-level summary.
-          This should cover a key point of the project.
-        </h4>
-        <div
-          style="
-            position: absolute;
-            width: 80%;
-            height: 40%;
-            background: radial-gradient(
-              ellipse,
-              rgba(0, 0, 0, 0.2) 0%,
-              rgba(0, 0, 0, 0.1) 40%,
-              transparent 70%
-            );
-            filter: blur(100px);
-            z-index: 0;
-            top: 40%;
-            border-radius: 50%;
-          "
-        ></div>
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+
+      <div class="article__hero">
+        <div class="article__hero-header">
+          <h1>itris Knowledgebase</h1>
+          <h4>Product design, interaction design<br />2022</h4>
+        </div>
+        <div class="article__hero-image-bloom--knowledgebase"></div>
         <img
-          style="
-            width: 90%;
-            border-radius: 12px;
-            height: auto;
-            object-fit: cover;
-            margin-top: 24px;
-            --mask-bottom: linear-gradient(
-              to bottom,
-              #000 50%,
-              transparent 90%
-            );
-            --mask-left: linear-gradient(to left, #000 90%, transparent 100%);
-            --mask-bottom-left: linear-gradient(
-              -110deg,
-              #000 65%,
-              transparent 85%
-            );
-            mask-image: var(--mask-bottom);
-            mask-composite: intersect;
-            position: relative;
-            z-index: 1;
-          "
-          src="/assets/images/Web Small.png"
-          alt="KPI image"
+          src="/assets/images/knowledgebase-article.png"
+          alt="Knowledgebase hero image"
+          class="article__hero-image--knowledgebase"
         />
       </div>
-      <hr />
-      <div id="markdown-container" class="markdown-content"></div>
+
+      <section class="article-content">
+        <h2>Context</h2>
+        <p>
+          High quality documentation is an important cornerstone of any software
+          product, particularly if the product contains some complex workflows.
+          Having easily accessible, well maintained and structured documentation
+          provides some key benefits to a business including:
+        </p>
+        <ul>
+          <li>Quicker onboarding for new users</li>
+          <li>Seamless learning experiences and reduction in learning curve</li>
+          <li>Increased trust in the company</li>
+          <li>Competitive advantage</li>
+        </ul>
+        <p>
+          Ultimately if users feel confident that they can use a product, they
+          are more likely to be advocates and it dramatically reduces support
+          and training calls. When a user feels confident that they know how to
+          use a product, satisfaction increases, as does their performance. That
+          was the objective when creating the itris Knowledgebase but it did not
+          come without it's challenges.
+        </p>
+        <p>
+          I led the design and collaborated with key stakeholders from across
+          the business to produce a high-quality learning resource for the
+          company and the users of the product.
+        </p>
+        <h2>Problem</h2>
+        <p>
+          At the time, documentation existed as PDFs on a shared drive. Users
+          did have access to these documents, but they were often difficult to
+          find for users as well as itris staff. As a result, documents were
+          often duplicated and changed to align more closely with the department
+          consuming them which led to scattered documentation that was quickly
+          out of date.
+        </p>
+        <p>
+          This gave rise to an increasing amount of inconsistency for users as
+          there was not an easily accessible, central source of truth for
+          learning materials. Additionally, the training team was also offering
+          training courses but these were big commitments from customers and
+          proved to be inefficient for an industry that typically have high
+          staff turnover.
+        </p>
+        <p>
+          This was something that needed to be addressed as it was becoming an
+          issue for the business and leading to users not getting the expected
+          level of service they expected. It was also not meeting the standards
+          of quality set by the business.
+        </p>
+
+        <h2>Goals</h2>
+        <div class="goals">
+          <div class="user-goals">
+            <h3>User</h3>
+            <ul>
+              <li>
+                Easily accessible, high-quality learning materials for
+                self-education
+              </li>
+              <li>
+                Sign-posting in the product for features with more advanced
+                concepts
+              </li>
+              <li>
+                Written and video materials so that users can learn at their own
+                pace in their preferred method
+              </li>
+            </ul>
+          </div>
+          <div class="business-goals">
+            <h3>Business</h3>
+            <ul>
+              <li>Remove friction for self-educating for users</li>
+              <li>Increase user trust in the product and the company</li>
+              <li>
+                Single <em>source of truth</em> repository for documentation
+              </li>
+              <li>Lighten the burden on customer success and training teams</li>
+              <li>Promote learning opportunities in the product</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Research</h2>
+        <p>
+          I looked into options of using an off-the-shelf solution to
+          documentation and researched products like GitBook and Notion, but
+          they lacked the customisability that we needed. I also looked into
+          whether we could expose our Confluence articles publicly, but this
+          came with too many trade-offs and again, a lack of customisation.
+        </p>
+        <p>
+          I then looked at some best-in-class documentation for some inspiration
+          and found myself drawn to Stripe Guides in particular. I also looked
+          at Apple's support docs as well as Atlassian's documentation.
+        </p>
+
+        <h2>Opportunity</h2>
+        <p>
+          Since none of the off-the-shelf solutions were viable, I explored the
+          idea of creating our own purpose-built site that catered for the
+          different learning journeys for a user and somewhere users could also
+          find top tips, FAQs and product release notes.
+        </p>
+
+        <h2>Challenges</h2>
+        <ul>
+          <li>
+            All of the learning materials were currently in PDFs and our
+            internal docs platform so these would need to be ported over to the
+            site (which was in markdown format)
+          </li>
+          <li>
+            A new iteration of our visual language was in progress but it was
+            immature so implementing this would add to the scope as new
+            components would need to be created specifically for the
+            knowledgebase
+          </li>
+          <li>
+            The training team would need to learn and become familiar with VS
+            Code, writing articles in markdown and have a base understanding of
+            git version control.
+          </li>
+        </ul>
+
+        <figure style="margin: 56px 0" class="article-content__figure">
+          <div class="image-wrapper perspective-image-container">
+            <img
+              src="/assets/images/kb-components.png"
+              alt="Image of the new components for the knowledgebase"
+              class="article-content__image--app perspective-image"
+              style="cursor: default"
+            />
+          </div>
+          <figcaption style="margin-top: 16px">
+            A showcase of the new components for the knowledgebase
+          </figcaption>
+        </figure>
+
+        <h2>Solution</h2>
+        <p>
+          I spent some time exploring different designs and after many different
+          routes and meetings with stakeholders, I settled on a final version of
+          the designs. Throughout the ideation phase, it was important to ensure
+          that the design <em>felt right</em> and was aligned with the brand.
+        </p>
+        <p>
+          The final product contained a landing page, articles accessible
+          through a series route (mirroring training courses) or categories
+          route, search capabilities, release notes, top tips and FAQs.
+        </p>
+
+        <figure class="article-content__figure">
+          <img
+            src="/assets/images/landing.png"
+            alt="Image of the hero section of the knowledgebase landing page"
+            class="article-content__image--app lightbox-image"
+            style="cursor: default"
+          />
+
+          <figcaption>
+            The landing page contains sections such as popular articles, latest
+            top tips, and the latest release
+          </figcaption>
+        </figure>
+
+        <figure class="article-content__figure">
+          <img
+            src="/assets/images/knowledgebase-categories.png"
+            alt="Image of the series and categories for the knowledgebase"
+            class="article-content__image--app lightbox-image"
+            style="cursor: default"
+          />
+
+          <figcaption>
+            Learning page containing training series and article categories
+          </figcaption>
+        </figure>
+
+        <figure class="article-content__figure">
+          <img
+            src="/assets/images/knowledgebase-article.png"
+            alt="Image of the knowledgebase article design"
+            class="article-content__image--app lightbox-image"
+            style="cursor: default"
+          />
+
+          <figcaption>Knowledgebase article design</figcaption>
+        </figure>
+
+        <h2 style="margin-top: 56px">Results</h2>
+        <p>
+          The knowledgebase was a success and received positive feedback from
+          users and stakeholders (and even a competitor). Since its release in
+          2022, there are 200+ articles on the site, as well as 50+ top tips and
+          60+ FAQs.
+        </p>
+        <p>
+          Monthly traffic to the knowledgebase is X and the number of training
+          and support enquiries has dropped by nearly 50%.
+        </p>
+        <blockquote>
+          As a result of the knowledgebase, the demands on our services changed
+          and the volume of inbound calls and emails reduced considerably. We
+          were also able to reduce the training function's headcount from 5
+          members of staff down to 1, whilst still maintaining strong customer
+          feedback.
+          <span>Ian Farrow, Operations Director</span>
+        </blockquote>
+
+        <hr />
+
+        <p>
+          <em
+            >If you're interested in taking a deeper dive into this project,
+            please get in touch.</em
+          >
+        </p>
+      </section>
     </main>
 
     <footer>
-      <!-- Your site footer here -->
       <p>&copy; 2024 Jack Brind</p>
     </footer>
-    <!-- <script type="module" src="/src/main.js"></script> -->
-    <!-- <script type="module" src="/src/markdown-renderer.js"></script> -->
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
   </body>
 </html>
