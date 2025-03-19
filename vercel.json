@@ -3,8 +3,10 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/kpis", "destination": "/kpis.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "redirects": [
     { "source": "/about.html", "destination": "/about", "permanent": true },
