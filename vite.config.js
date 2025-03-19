@@ -10,6 +10,10 @@ export default defineConfig({
         about: resolve(__dirname, 'src/about.html'),
         kpis: resolve(__dirname, 'src/kpis.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
+        complianceOverrides: resolve(
+          __dirname,
+          'src/compliance-overrides.html',
+        ),
       },
       output: {
         entryFileNames: '[name].js',
