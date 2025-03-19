@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/fav-light.svg" />
+    <title>Compliance Overrides</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <button
+          class="btn btn--ghost btn--back"
+          onclick="window.location.href='/index.html'"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+
+      <div class="article__hero">
+        <div class="article__hero-header">
+          <h1>Compliance Overrides</h1>
+          <h4>Product design, Interaction design<br />2024</h4>
+        </div>
+        <div class="article__hero-image-bloom--override"></div>
+        <img
+          src="/assets/images/override-dialogs.png"
+          alt="Overrides hero image"
+          class="article__hero-image--override skew-reverse"
+        />
+      </div>
+
+      <section class="article-content">
+        <h2>Context</h2>
+        <p>
+          Temporary and contract staffing businesses have a duty of care to
+          their clients to ensure that the workers that they place are fully
+          compliant. This includes such things as background checks,
+          certificates and qualifications and rights to work and the
+          requirements can vary between sectors dramatically. In itris, there
+          are two modes for compliance - Informational or Preventative and there
+          became a need to introduce the ability for users to override
+          preventative compliance requirements.
+        </p>
+        <p>
+          I collaborated with the product team and engineering to reach an
+          elegant solution.
+        </p>
+        <h2>Problem</h2>
+        <p>
+          There is no middle ground for compliance in itris, and that was
+          intentional - it is either stops a user from placing or extending a
+          non-compliant candidate, or it is allowed and the compliance status is
+          highlighted to the user. However, some customers wanted to confirm
+          placements far in advance where compliance requirements wouldn't be
+          satisfied initially, but would be in place before the start date. This
+          was particularly the case with the education sector where teachers
+          were placed at schools for the following school year months in advance
+          and our customers still wanted to be able to invoice their clients.
+        </p>
+        <p>
+          In its current state, this was causing customers to use inefficient
+          work-arounds and this led to potential customer churn and represented
+          a risk to revenue.
+        </p>
+
+        <h2>Goals</h2>
+        <div class="goals">
+          <div class="user-goals">
+            <h3>User</h3>
+            <ul>
+              <li>
+                Allow compliance requirements to be bypassed in certain
+                scenarios
+              </li>
+              <li>
+                Provide an audit trail of overridden compliance requirements
+              </li>
+              <li>Ensure compliance teams still maintained their SLAs</li>
+            </ul>
+          </div>
+          <div class="business-goals">
+            <h3>Business</h3>
+            <ul>
+              <li>Protect revenue</li>
+              <li>Reduce the risk of increased customer churn</li>
+            </ul>
+          </div>
+        </div>
+        <h2>Research</h2>
+        <p>
+          After collating feedback from customers, I noticed 3 categories of
+          requests:
+        </p>
+        <ol>
+          <li>
+            A manager typing a password in at their computer - This is prone to
+            exploitation and doesn't scale effectively for hybrid or remote
+            teams.
+          </li>
+          <li>
+            A hybrid between preventative and information compliance - Given the
+            sensitive, business critical nature of compliance, we intentionally
+            wanted the options to be strictly on of off and we didn't want to
+            blur the lines.
+          </li>
+          <li>
+            Draft placements - We had considered this as part of a wider
+            initiative, but this would have significantly increased the scope of
+            the project which we didn't have the appetite for at the time.
+          </li>
+        </ol>
+        <p>
+          These categories addressed specific customer's need but we needed to
+          keep the broader customer-base in mind. However, the idea of a
+          password entered to override compliance was a thread I wanted to pull
+          on a little more.
+        </p>
+
+        <h2>Constraints</h2>
+        <p>
+          For newly created placements records, the override code could not be
+          applied directly to the placement because it didn't yet exist.
+          Therefore, the solution needed to account for this.
+        </p>
+
+        <h2>Solution</h2>
+        <p>
+          The trouble with a password is that if a user sees that password as
+          someone is typing it in, they can use it again and again with no
+          repudiation. But it got me thinking about a common pattern seen in
+          modern software which is 2-Factor Authentication. What if we could use
+          something along the lines of a one time passcode to safely allow
+          compliance requirements to be overridden?
+        </p>
+        <p>
+          After meetings with the product team and developers, we decided on a
+          direction and implemented a method for privileged users to generate
+          unique, time-based codes for users to use to override compliance
+          restrictions. This also included an audit trail of when compliance was
+          overridden and who the code was issued by.
+        </p>
+
+        <figure class="article-content__figure">
+          <img
+            src="/assets/images/override-dialogs.png"
+            alt="Compliance override dialog"
+            class="article-content__image sunken-image-2"
+          />
+          <figcaption>Code generation and code usage modals</figcaption>
+        </figure>
+
+        <figure class="article-content__figure">
+          <img
+            src="/assets/images/components-override.png"
+            alt="Compliance override dialog"
+            class="article-content__image sunken-image-2"
+          />
+          <figcaption>
+            Improvements to some components to support the new feature
+          </figcaption>
+        </figure>
+
+        <figure class="article-content__figure">
+          <div class="article-content__image sunken-image-3">
+            <img
+              class="audit-image"
+              src="/assets/images/audit.png"
+              alt="KPI widget card anatomy"
+            />
+          </div>
+          <figcaption>Compliance override audit trail</figcaption>
+        </figure>
+        <p>
+          Crucially, overriding compliance did not mean that the candidate was
+          marked as compliant; they were still non-compliant. However, users
+          were unblocked and the placement could be created. These non-compliant
+          candidates would still be shown in reports.
+        </p>
+
+        <h2 style="margin-top: 32px">Outcome</h2>
+        <p>
+          Within a month of this improvement being released, one customer on an
+          older version upgraded with a contractual value of over £150k. They
+          were initially not prepared to upgrade without this feature. We were
+          also confident that the outcome of this project would improve customer
+          retention and cover the potential loss of revenue.
+        </p>
+
+        <hr />
+
+        <p>
+          <em
+            >If you're interested in talking more about this project, please get
+            in touch.</em
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Jack Brind</p>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>
