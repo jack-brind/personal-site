@@ -48,32 +48,32 @@
           Temporary and contract staffing businesses have a duty of care to
           their clients to ensure that the workers that they place are fully
           compliant. This includes such things as background checks,
-          certificates and qualifications and rights to work and the
+          certificates and qualifications, and rights to work, and the
           requirements can vary between sectors dramatically. In itris, there
-          are two modes for compliance - Informational or Preventative and there
-          became a need to introduce the ability for users to override
-          preventative compliance requirements.
+          are two modes for compliance — <i>Informational</i> or
+          <i>Preventative</i>, and there became a need to introduce the ability
+          for users to override preventative compliance requirements.
         </p>
         <p>
-          I collaborated with the product team and engineering to reach an
+          I collaborated with the product and development teams to reach an
           elegant solution.
         </p>
         <h2>Problem</h2>
         <p>
           There is no middle ground for compliance in itris, and that was
-          intentional - it is either stops a user from placing or extending a
-          non-compliant candidate, or it is allowed and the compliance status is
-          highlighted to the user. However, some customers wanted to confirm
-          placements far in advance where compliance requirements wouldn't be
-          satisfied initially, but would be in place before the start date. This
-          was particularly the case with the education sector where teachers
-          were placed at schools for the following school year months in advance
-          and our customers still wanted to be able to invoice their clients.
+          intentional — it either stops a user from placing or extending a
+          non-compliant candidate, or it is allowed, and the compliance status
+          is highlighted to the user. However, some customers wanted to confirm
+          placements far in advance, where compliance requirements wouldn't be
+          satisfied initially, but would be in place before the start date.
         </p>
         <p>
-          In its current state, this was causing customers to use inefficient
-          work-arounds and this led to potential customer churn and represented
-          a risk to revenue.
+          This was particularly the case with the education sector, where
+          teachers were placed at schools for the following school year far in
+          advance of the start date. Customers still wanted compliance to be
+          preventative, but needed to be able to create placement records to be
+          able to invoice their clients and in its current state, this was
+          causing customers to use inefficient workarounds.
         </p>
 
         <h2>Goals</h2>
@@ -106,51 +106,44 @@
         </p>
         <ol>
           <li>
-            A manager typing a password in at their computer - This is prone to
+            A manager typing a password in at their computer — This is prone to
             exploitation and doesn't scale effectively for hybrid or remote
             teams.
           </li>
           <li>
-            A hybrid between preventative and information compliance - Given the
+            A hybrid between preventative and information compliance — Given the
             sensitive, business critical nature of compliance, we intentionally
-            wanted the options to be strictly on of off and we didn't want to
+            wanted the options to be strictly on or off, and we didn't want to
             blur the lines.
           </li>
           <li>
-            Draft placements - We had considered this as part of a wider
+            Draft placements — We had considered this as part of a wider
             initiative, but this would have significantly increased the scope of
-            the project which we didn't have the appetite for at the time.
+            the project, which we didn't have the appetite for at the time.
           </li>
         </ol>
         <p>
-          These categories addressed specific customer's need but we needed to
+          These categories addressed specific customers' needs, but we needed to
           keep the broader customer-base in mind. However, the idea of a
           password entered to override compliance was a thread I wanted to pull
           on a little more.
-        </p>
-
-        <h2>Constraints</h2>
-        <p>
-          For newly created placements records, the override code could not be
-          applied directly to the placement because it didn't yet exist.
-          Therefore, the solution needed to account for this.
         </p>
 
         <h2>Solution</h2>
         <p>
           The trouble with a password is that if a user sees that password as
           someone is typing it in, they can use it again and again with no
-          repudiation. But it got me thinking about a common pattern seen in
-          modern software which is 2-Factor Authentication. What if we could use
-          something along the lines of a one time passcode to safely allow
+          ramifications. But it got me thinking about a common pattern seen in
+          modern software, which is 2-Factor Authentication. What if we could
+          use something along the lines of a one time passcode to safely allow
           compliance requirements to be overridden?
         </p>
         <p>
           After meetings with the product team and developers, we decided on a
           direction and implemented a method for privileged users to generate
-          unique, time-based codes for users to use to override compliance
-          restrictions. This also included an audit trail of when compliance was
-          overridden and who the code was issued by.
+          unique, time-based codes to override compliance restrictions. This
+          also included an audit trail of when compliance was overridden and who
+          the code was issued by.
         </p>
 
         <figure class="article-content__figure">
@@ -185,9 +178,9 @@
         </figure>
         <p>
           Crucially, overriding compliance did not mean that the candidate was
-          marked as compliant; they were still non-compliant. However, users
-          were unblocked and the placement could be created. These non-compliant
-          candidates would still be shown in reports.
+          marked as compliant; they were still non-compliant and would still be
+          highlighted in compliance reports. However, users were unblocked and
+          the placement could be created.
         </p>
 
         <h2 style="margin-top: 32px">Outcome</h2>
@@ -201,11 +194,16 @@
 
         <hr />
 
-        <p>
-          <em
-            >If you're interested in talking more about this project, please get
-            in touch.</em
-          >
+        <p class="italic">
+          If you're interested in talking more about this project, please
+          <a
+            href="/src/about.html"
+            style="
+              font-weight: var(--font-weight-regular);
+              color: var(--colour-blue);
+            "
+            >get in touch</a
+          >.
         </p>
       </section>
     </main>

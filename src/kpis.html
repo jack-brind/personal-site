@@ -45,30 +45,30 @@
       <section class="article-content">
         <h2>Context</h2>
         <p>
-          The recruitment industry is a numbers-driven and KPIs play a critical
+          The recruitment industry is numbers-driven and KPIs play a critical
           role in measuring individual, team, and organisational performance.
           For recruiters, these metrics influence promotions, pay reviews, and
           commissions, making them a powerful motivator. For a business, these
-          metrics indicate aspects like profitability and efficiency. By
+          metrics indicate profitability and efficiency, among other things. By
           providing clarity and focus on targets, KPIs help individuals
           understand expectations, driving both personal and business success.
         </p>
         <h2>Problem</h2>
         <p>
           While some data <em>was</em> available in itris, it was scattered
-          across different areas of the product, making it difficult to access
-          and track. There was also no way to record targets against any
-          metrics, nor was there a dedicated space for users to monitor
-          performance metrics efficiently. This led to frustration and
-          inefficiencies and as a result, users had to rely on workarounds, such
-          as exporting multiple reports and manipulating them in spreadsheets
-          which was time-consuming.
+          across different areas of the product, making it difficult to keep
+          track of. There was also no way to record targets against any metrics,
+          nor was there a dedicated space for users to monitor performance
+          metrics efficiently. This oversight manifested in increased
+          frustration and inefficiencies and as a result, users had to rely on
+          workarounds, such as exporting multiple reports and manipulating them
+          in spreadsheets, which was time-consuming and cumbersome.
         </p>
         <p>
-          This inefficiency and missing of target options on metrics had a
-          direct business impact, contributing to churn, lost deals, and
-          ultimately revenue risk. The gap was up to $1.7m in lost annual
-          revenue.
+          This inefficiency and lack of target options on metrics had a direct
+          business impact, contributing to churn, lost deals, and ultimately an
+          estimated <strong><i>£1.4m risk to annual revenue</i></strong
+          >.
         </p>
         <h2>Goals</h2>
         <div class="goals">
@@ -84,15 +84,15 @@
                 Users should be able to drill down into the data behind the
                 metrics
               </li>
-              <li>User should have a single place to visualise their KPIs</li>
+              <li>Users should have a single place to visualise their KPIs</li>
             </ul>
           </div>
           <div class="business-goals">
             <h3>Business</h3>
             <ul>
-              <li>Protect revenue and plug the gap</li>
+              <li>Protect the risked revenue</li>
               <li>Reduce the risk of customer churn</li>
-              <li>Remove any potential barriers to conversions</li>
+              <li>Remove barriers to sales conversions</li>
             </ul>
           </div>
         </div>
@@ -105,13 +105,16 @@
         </p>
         <p>
           This provided a good amount of insight, but I had some knowledge gaps
-          that I wanted to fill and assumptions to validate so I also conducted
-          a survey to customers to dig a little deeper into some of the key
+          that I wanted to fill and assumptions to validate. So, I also
+          conducted a survey to customers to dig a little deeper into some key
           themes identified initially. The results of the survey provided some
-          clarity including:
+          clarity, including:
         </p>
         <ul style="margin-bottom: 0; margin-top: 6px">
-          <li>Nearly a third of respondents set collective KPIs</li>
+          <li>
+            Nearly a third of respondents set collective KPIs for groups of
+            users as opposed to individual users
+          </li>
           <li>
             Weekly KPIs were the most popular, with monthly KPIs a close second
           </li>
@@ -130,12 +133,12 @@
             <div class="banner-text">
               <p>
                 Historically, we understood KPIs to be <i>target-based</i>, but
-                I recognised an interesting pattern in the survey and I was keen
-                to pull on the thread. After following up with some respondents,
-                my suspicions were confirmed that some KPIs were set without
-                specific targets. This became a key insight, and one we wouldn't
-                have considered in the initial scope without speaking to
-                customers.
+                I recognised an interesting pattern in the survey, and I was
+                keen to pull on the thread. After following up with some
+                respondents, my suspicions were confirmed that some KPIs were
+                set without specific targets. This became a key insight, and one
+                we wouldn't have considered in the initial scope without
+                speaking to customers.
               </p>
             </div>
           </div>
@@ -151,11 +154,13 @@
           <li>granular configurability for nuanced metrics</li>
           <li>historical tracking and auditing when targets are updated</li>
           <li>a dashboard for users to keep track of their performance</li>
-          <li>drill down capabilities to dig deeper into the data</li>
+          <li>
+            drill down capabilities to dig deeper into the data behind the KPIs
+          </li>
         </ul>
         <p>
           KPIs would be configurable in the settings area and would be tied to a
-          user, team or the whole organisation (i.e. all users).
+          user, team, or the whole organisation (i.e. all users).
         </p>
 
         <figure class="article-content__figure">
@@ -178,7 +183,7 @@
           It was also crucial that KPIs were communicated to the user well.
           After many iterations of the KPI card, I settled on a final design
           that struck the right balance between information density and visual
-          weight.
+          noise.
         </p>
 
         <figure class="article-content__figure">
@@ -193,8 +198,8 @@
         <p>
           The KPI cards were then displayed in a dedicated dashboard for the
           user so that they could have a single source of truth for their
-          individual performance as well as their contributions to team and
-          organisational metrics.
+          individual performance as well as their contributions to collective
+          team and organisational metrics.
         </p>
 
         <figure class="article-content__figure">
@@ -208,9 +213,8 @@
 
         <p>
           Users can also drill down into the data behind the KPIs to see the
-          activity that contributed to the metric. This slides out a panel to
-          the side to reveal the data where users can export the data or convert
-          it to a search.
+          activity that contributed to the metric. Users can export the data or
+          convert it to a search.
         </p>
 
         <figure class="article-content__figure">
@@ -224,44 +228,29 @@
 
         <h2>Outcome</h2>
         <p>
-          This project was a great example of collaboration between the product,
-          development and QA teams. Unfortunately, I don't have any numbers to
-          share on the impact of this project, but I am confident that, given
-          the revenue risk, this project has had a positive impact and has
-          increased chance of winning deals, retaining customers and reducing
-          churn.
-        </p>
-        <p>
-          I also learned a lot about the importance of KPIs and metrics in the
-          recruitment industry. In hindsight, I would have liked to have spent
-          more time refining the components in the KPI configuration modal to
-          see if it could benefit from a progressive disclosure pattern instead.
-          Due to time constraints and development cost, implementing this
-          pattern was outside of the scope. I would also have liked to have
-          explored how AI could help provide insights to recruiters on
-          strategies for improving their KPIs.
+          The feature shipped shortly before I left the company and so had not
+          yet been available for long enough to generate measurable results.
+          However, early internal feedback was very positive and as a result,
+          the sales team felt more confident during customer demos, and
+          stakeholders saw this as a key improvement given the potential revenue
+          at risk. This work directly addressed known pain points and is
+          expected to lead to more deal conversions and a lower risk to revenue.
         </p>
 
-        <h2>Future</h2>
-        <p>
-          KPIs in recruitment is a vast field with a lot of potential for future
-          improvements. Future considerations include:
-        </p>
-        <ul>
-          <li>More metrics</li>
-          <li>Private KPIs</li>
-          <li>Projections</li>
-          <li>Comparisons</li>
-          <li>Composite KPIs</li>
-        </ul>
         <hr />
 
-        <p>
-          <em
-            >This is a short project showcase and there were many challenges and
-            edge cases that needed to be addressed. If you'd like to know more,
-            please get in touch.</em
-          >
+        <p class="italic">
+          This is a short project showcase and there were many challenges and
+          edge cases that needed to be addressed. If you'd like to know more,
+          please
+          <a
+            href="/src/about.html"
+            style="
+              font-weight: var(--font-weight-regular);
+              color: var(--colour-blue);
+            "
+            >get in touch</a
+          >.
         </p>
       </section>
     </main>

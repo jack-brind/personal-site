@@ -14,7 +14,6 @@ export default defineConfig({
           __dirname,
           'src/compliance-overrides.html',
         ),
-        contact: resolve(__dirname, 'src/contact.html'),
       },
       output: {
         entryFileNames: '[name].js',
