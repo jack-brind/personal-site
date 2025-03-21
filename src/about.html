@@ -3,75 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg" />
     <title>Jack Brind - About</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <main>
       <div class="header">
+        <button
+          class="btn btn--ghost btn--back"
+          onclick="window.location.href='/index.html'"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+
+      <div class="about__hero">
         <div class="header__headline">
-          <div class="header__title--work">
-            <button
-              class="btn btn--ghost btn--back"
-              onclick="window.location.href='/'"
-            >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
-                />
-              </svg>
-              Back
-            </button>
-          </div>
+          <h1>Hey, I'm Jack 👋🏼</h1>
+          <h2>I'm a versatile and multi-disciplined Product Designer.</h2>
+          <p>
+            I believe that good design is effortless for users - simple,
+            consistent, and never over-engineered.
+          </p>
+          <p style="margin-top: 0px">
+            My passion lies in creating elegant solutions to complex problems,
+            crafting thoughtful, high-quality UI and improving design standards
+            by leveraging the latest and greatest tools and methods for product
+            teams.
+          </p>
         </div>
-        <div class="header__buttons">
-          <button id="linkedin-link" class="btn btn--default header__button">
-            LinkedIn
-            <svg
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="currentColor"
-              class="header__button-icon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
-              />
-            </svg>
-          </button>
-          <button id="cv-viewer" class="btn btn--default header__button">
-            <svg
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="currentColor"
-              class="header__button-icon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
-              />
-            </svg>
-          </button>
-          <button id="email-link" class="btn btn--default header__button">
+        <div class="header__polariod">
+          <img
+            src="/assets/images/jack.jpg"
+            class="header__polaroid-image"
+            alt="Polariod of Jack"
+          />
+          <span class="header__polariod-caption">Caption placeholder</span>
+        </div>
+      </div>
+
+      <div class="communications">
+        <div class="contact__buttons">
+          <button id="email-link" class="btn btn--default contact__button">
             Email
             <svg
               width="6"
               height="6"
               viewBox="0 0 6 6"
               fill="currentColor"
-              class="header__button-icon"
+              class="contact__button-icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
+              />
+            </svg>
+          </button>
+          <button id="cv-viewer" class="btn btn--default contact__button">
+            <svg
+              width="6"
+              height="6"
+              viewBox="0 0 6 6"
+              fill="currentColor"
+              class="contact__button-icon"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -82,48 +90,350 @@
             </svg>
           </button>
         </div>
-      </div>
-      <h1>About</h1>
-      <p>Myers-Briggs: INFP</p>
-      <p>
-        Most recently, I led design at itris Recruitment CRM, shaping the
-        recruitment software experience for thousands of customers. Now, I'm
-        exploring new opportunities—designing, learning, and building.
-      </p>
-      <p class="italic">
-        Good design feels effortless because it is—simple, consistent, and never
-        over-engineered. There's no excuse for bad software anymore.
-      </p>
 
-      <div class="experience">
-        <div class="experience__header">
-          <h2>Experience</h2>
-        </div>
-        <div class="experience__entry">
-          <h3>Lead Product Designer at itris Recruitment CRM</h3>
-          <p class="experience__entry--date">2023 - 2025</p>
-          <p>
-            In this role, I championed design as a strategic function within the
-            business, ensuring that product decisions were informed by user
-            insights, business objectives, and market demands. As the lead
-            design stakeholder, I worked closely with product managers,
-            engineers, and other departments to align the product strategy with
-            company goals.
-          </p>
-        </div>
-        <div class="experience__entry">
-          <h3>Product Designer at itris Recruitment CRM</h3>
-          <p class="experience__entry--date">2014 - 2023</p>
-          <p class="experience__entry--description">
-            I was responsible for leading the design on the flagship product -
-            Itris 9, as well as peripheral products including mobile app,
-            knowledgebase and user authentication portal. I built and maintained
-            a scalable design system that improved UI consistency and cohesion
-            across multiple products, dramatically reducing design and technical
-            debt.
-          </p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/jack-brind/"
+            target="_blank"
+            class="btn btn--ghost"
+          >
+            <img
+              src="/assets/images/linkedin.svg"
+              class="btn__icon--ghost social-icon"
+            />
+          </a>
+          <a
+            href="https://x.com/jack_brind"
+            target="_blank"
+            class="btn btn--ghost"
+          >
+            <img
+              src="/assets/images/twitter.svg"
+              class="btn__icon--ghost social-icon"
+            />
+          </a>
+          <a
+            href="https://layers.to/brindo"
+            target="_blank"
+            class="btn btn--ghost"
+          >
+            <img
+              src="/assets/images/layers.svg"
+              class="btn__icon--ghost social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/brindo91"
+            target="_blank"
+            class="btn btn--ghost"
+          >
+            <img
+              src="/assets/images/github.svg"
+              class="btn__icon--ghost social-icon"
+            />
+          </a>
+          <a
+            href="https://unsplash.com/@brindo_"
+            target="_blank"
+            class="btn btn--ghost"
+          >
+            <img
+              src="/assets/images/unsplash.svg"
+              class="btn__icon--ghost social-icon"
+            />
+          </a>
         </div>
       </div>
+
+      <section class="about__section">
+        <h2 class="about__h2">Need a good heading here...</h2>
+        <blockquote>
+          <p class="italic">
+            I love designing solutions that have a meaningful and lasting impact
+            for a business and it's customers.
+          </p>
+        </blockquote>
+        <p>
+          I’m a senior product designer who thrives in leading projects from
+          inception to execution. I bridge the gap between business objectives
+          and user needs, ensuring that every decision aligns with both strategy
+          and experience. From shaping product roadmaps and defining project
+          specs to conducting research, designing intuitive interfaces, and
+          overseeing implementation, I take ownership of the entire process.
+        </p>
+        <p>
+          I’m comfortable navigating uncertainty, whether that means driving a
+          0-to-1 product, refining an existing experience, or juggling multiple
+          initiatives at once. I can shift between deep, focused design work and
+          high-level strategic thinking, collaborating closely with teams or
+          leading projects independently. I'm very hands-on-I like getting into
+          the weeds and tweaking small details in the codebase and pragmatic—I
+          don’t just sketch bold ideas; I bring them to life.
+        </p>
+      </section>
+
+      <section class="about__section">
+        <h2 class="about__h2">My design principles</h2>
+        <p>I have a few, but these are the most important ones to me</p>
+        <div class="principles">
+          <div class="principle principle-simple">
+            <div class="principle__header">
+              <div class="principle__icon">
+                <img
+                  src="/assets/images/simple.svg"
+                  class="icon-simple"
+                  alt="Simple icon"
+                />
+              </div>
+              <h3>Simplicity over complexity</h3>
+            </div>
+            <p>
+              Ockham’s Razor teaches that the simplest solution is often best.
+              In product design, clarity reduces friction—if a solution needs
+              excessive explanation, it’s likely not the right one.
+            </p>
+          </div>
+          <div class="principle principle-details">
+            <div class="principle__header">
+              <div class="principle__icon">
+                <img
+                  src="/assets/images/details.svg"
+                  class="icon-details"
+                  alt="Simple icon"
+                />
+              </div>
+              <h3>Details and quality matters</h3>
+            </div>
+            <p>
+              Great products reflect a company’s values. Details shape
+              experiences, and quality must be ingrained in culture. There’s no
+              excuse for bad design—it often stems from neglect, not
+              limitations.
+            </p>
+          </div>
+          <div class="principle principle-quality">
+            <div class="principle__header">
+              <div class="principle__icon">
+                <img
+                  src="/assets/images/consistent.svg"
+                  class="icon-consistent"
+                  alt="Simple icon"
+                />
+              </div>
+              <h3>Consistency is key</h3>
+            </div>
+            <p>
+              Consistency empowers users and streamlines work for teams. A
+              predictable experience fosters control, while clear naming and
+              behavior prevent unnecessary friction, keeping design,
+              development, and testing efficient.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__section">
+        <h2 class="about__h2">Skills</h2>
+        <div class="skills-container"></div>
+      </section>
+
+      <section class="about__section">
+        <div class="experience">
+          <h2 class="about__h2">Experience</h2>
+          <div class="experience__entry">
+            <h3>Lead Product Designer at itris Recruitment CRM</h3>
+            <p class="experience__entry--date">2023 - 2025</p>
+            <p>
+              In this role, I championed design as a strategic function within
+              the business, ensuring that product decisions were informed by
+              user insights, business objectives, and market demands. As the
+              lead design stakeholder, I worked closely with product managers,
+              engineers, and other departments to align the product strategy
+              with company goals.
+            </p>
+          </div>
+          <div class="experience__entry">
+            <h3>Product Designer at itris Recruitment CRM</h3>
+            <p class="experience__entry--date">2014 - 2023</p>
+            <p class="experience__entry--description">
+              I was responsible for leading the design on the flagship product -
+              Itris 9, as well as peripheral products including mobile app,
+              knowledgebase and user authentication portal. I built and
+              maintained a scalable design system that improved UI consistency
+              and cohesion across multiple products, dramatically reducing
+              design and technical debt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__section">
+        <h2 class="about__h2">What others say about me</h2>
+        <p>Some nice words from some people I've worked with 👀</p>
+        <div class="testimonials">
+          <div class="testimonial">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <p class="italic">
+                “I worked closely with Jack as part of an initial team of 3 on
+                our core, new product, itris 9 for over 7 years as part of the
+                Product Team.
+              </p>
+              <p class="italic">
+                Jack's passion, work ethic and attention to detail made him a
+                critical member of the team. The result of Jack's work enabled
+                us to convert many existing clients from a cheaper more
+                feature-rich product to a more intuitive, attractive one that
+                costs more.”
+              </p>
+            </div>
+
+            <div class="testimonial__author">
+              <img
+                src="/assets/images/ian.jpeg"
+                class="testimonial__author--image"
+                alt="John Doe"
+              />
+              <span class="testimonial__author--name"
+                >Ian Farrow, Product Director at itris</span
+              >
+            </div>
+          </div>
+          <div class="testimonial">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <p class="italic">
+                “I had the pleasure of working closely with Jack for seven years
+                on itris 9, and throughout that time, he consistently impressed
+                me with his eye for design, attention to detail, strong work
+                ethic, and high standards.
+              </p>
+              <p class="italic">
+                I'm incredibly proud of what we achieved during those years, and
+                it wouldn't have been possible without Jack. I wouldn’t hesitate
+                to recommend him to any team.”
+              </p>
+            </div>
+            <div class="testimonial__author">
+              <img
+                src="/assets/images/adam.jpeg"
+                class="testimonial__author--image"
+                alt="John Doe"
+              />
+              <span class="testimonial__author--name"
+                >Adam Dullage, Product Owner at itris</span
+              >
+            </div>
+          </div>
+          <div class="testimonial">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <p class="italic">
+                “I had the pleasure of working closely with Jack for seven years
+                on itris 9, and throughout that time, he consistently impressed
+                me with his eye for design, attention to detail, strong work
+                ethic, and high standards.
+              </p>
+              <p class="italic">
+                I'm incredibly proud of what we achieved during those years, and
+                it wouldn't have been possible without Jack. I wouldn’t hesitate
+                to recommend him to any team.”
+              </p>
+            </div>
+            <div class="testimonial__author">
+              <img
+                src="/assets/images/adam.jpeg"
+                class="testimonial__author--image"
+                alt="John Doe"
+              />
+              <span class="testimonial__author--name"
+                >Andy Dobson, Operations Director at itris</span
+              >
+            </div>
+          </div>
+          <div class="testimonial">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <p class="italic">
+                “I've had the privilege of working with Jack for several years,
+                and his exceptional talent has consistently impressed me. His
+                meticulous attention to detail, unwavering work ethic, and deep
+                passion for design set him apart. Thanks to his contributions,
+                our product has greatly benefited and evolved.
+              </p>
+              <p class="italic">
+                I wholeheartedly recommend Jack as both a valuable team player
+                and a true asset to any organisation.”
+              </p>
+            </div>
+            <div class="testimonial__author">
+              <img
+                src="/assets/images/nancy.jpeg"
+                class="testimonial__author--image"
+                alt="John Doe"
+              />
+              <span class="testimonial__author--name"
+                >Nancy Cusack, Training Manager at itris</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="about__h2">Outside of work</h2>
+        <p>
+          When I'm not designing, I enjoy long country walks, playing golf and
+          photography (you can check out some of my photos on
+          <a href="https://unsplash.com/@brindo_" target="_blank">Unsplash</a>).
+          I also love to go snowboarding when I get the chance and I have always
+          loved travelling to new places.
+        </p>
+        <p>
+          Aside from that I love to learn new things. I am currently learning
+          JavaScript, for example and am keen to learn React too! The first app
+          I created was a Flashcards PWA for anything programming related -
+          check it out on
+          <a href="https://github.com/brindo91/flashcards" target="_blank"
+            >GitHub</a
+          >.
+        </p>
+        <p>
+          I love listening to podcasts and reading too. I'm currently enjoying
+          And the Mountains Echoed by Khaled Hosseini.
+        </p>
+
+        <div class="photo__collection">
+          <div class="photo__collection--item">
+            <img
+              src="/assets/images/ld.jpg"
+              class="header__polaroid-image"
+              alt="Polariod of Jack"
+            />
+            <span class="photo__collection--caption">Caption placeholder</span>
+          </div>
+          <div class="photo__collection--item">
+            <img
+              src="/assets/images/me-3.png"
+              class="header__polaroid-image"
+              alt="Polariod of Jack"
+            />
+            <span class="photo__collection--caption">Caption placeholder</span>
+          </div>
+          <div class="photo__collection--item">
+            <img
+              src="/assets/images/maggie.jpg"
+              class="header__polaroid-image"
+              alt="Polariod of Jack"
+            />
+            <span class="photo__collection--caption">Caption placeholder</span>
+          </div>
+          <div class="photo__collection--item">
+            <img
+              src="/assets/images/me-2.png"
+              class="header__polaroid-image"
+              alt="Polariod of Jack"
+            />
+            <span class="photo__collection--caption">Caption placeholder</span>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="container">
@@ -131,23 +441,5 @@
       </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
-    <!-- <script type="module">
-      document.addEventListener('DOMContentLoaded', () => {
-        // Add event listeners for the buttons
-        document
-          .getElementById('linkedin-link')
-          .addEventListener('click', () => {
-            window.open('https://www.linkedin.com/in/jackbrind/', '_blank');
-          });
-
-        document.getElementById('cv-viewer').addEventListener('click', () => {
-          window.open('/assets/cv.pdf', '_blank');
-        });
-
-        document.getElementById('email-link').addEventListener('click', () => {
-          window.location.href = 'mailto:jack@brind.io';
-        });
-      });
-    </script> -->
   </body>
 </html>

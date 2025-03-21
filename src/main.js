@@ -121,3 +121,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+const skills = [
+  'User Research',
+  'Interaction design',
+  'Prototyping',
+  'Design systems',
+  'Design thinking',
+  'Product design',
+  'Visual design',
+  'Design systems',
+  'Design leadership',
+  'Product strategy',
+  'Product ownership',
+  'Product growth',
+  'Collaboration',
+  'HTML',
+  'CSS',
+  'Mobile design',
+  'Desktop design',
+  'Web design',
+  'Figma',
+  'Product growth',
+];
+
+const container = document.querySelector('.skills-container');
+
+container.innerHTML = skills
+  .map(skill => `<span class="skill-pill">${skill}</span>`)
+  .join('');

@@ -11,7 +11,7 @@
     <main>
       <section>
         <div class="header">
-          <div class="header__headline">
+          <div class="">
             <div class="header__headline-profile-image">
               <img
                 class="profile-image"
@@ -20,23 +20,16 @@
               />
             </div>
             <div class="header__title">
-              <h1>Jack Brind</h1>
-              <h3>Senior Product Designer</h3>
+              <h1 class="index__title--h1">Jack Brind</h1>
+              <h3 class="index__title--h3">Senior Product Designer</h3>
             </div>
           </div>
         </div>
         <p>
-          I'm a versatile and multi-disciplined Senior Product Designer with
-          over a decade of experience crafting thoughtful, high-quality
-          interfaces across desktop, web, and mobile. I'm passionate about
-          refining design processes, improving standards, and leveraging new
-          tools and I ensure design isn't just beautiful, but seamless and
-          efficient.
-        </p>
-        <p>
-          I also have experience in product management, user research, and
-          stakeholder engagement. I love product management and have a keen eye
-          for business and product strategy.
+          I’m a Product Designer with over a decade of experience crafting
+          thoughtful, high-quality interfaces across desktop, web, and mobile.
+          In my most recent role, I led design at itris Recruitment CRM, shaping
+          recruitment software experiences.
         </p>
 
         <div class="header__buttons">
@@ -59,12 +52,31 @@
               />
             </svg>
           </button>
+          <!-- <button
+            id="get-in-touch"
+            class="btn btn--default header__button"
+            onclick="window.location.href='/src/contact.html'"
+          >
+            Get in touch
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="currentColor"
+              class="header__button-icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.07847 10.9191C6.79149 11.2059 6.32676 11.2072 6.03818 10.922V10.922C5.74711 10.6343 5.7458 10.1646 6.03526 9.87533L9.15452 6.75764H0.757637C0.339205 6.75764 0 6.41843 0 6V6C0 5.58157 0.339205 5.24236 0.757636 5.24236H9.15452L6.03588 2.13028C5.74591 1.84091 5.74637 1.37097 6.03692 1.08218V1.08218C6.32596 0.794893 6.79293 0.795543 7.08116 1.08363L11.2924 5.29272C11.6831 5.68328 11.6831 6.31672 11.2924 6.70728L7.07847 10.9191Z"
+              />
+            </svg>
+          </button> -->
         </div>
       </section>
       <!-- <hr /> -->
       <div class="section-header" style="margin-top: 64px">
         <h2 class="section-header__title">Work</h2>
-        <!-- <p>A selection of projects I've worked on.</p> -->
+        <p>A selection of highlighted projects</p>
       </div>
       <div class="projects">
         <a href="/src/kpis.html" class="projects__card">
@@ -133,8 +145,8 @@
             <div class="projects__card-content">
               <h4 class="projects__card-title">itris Knowledgebase</h4>
               <p class="projects__card-paragraph">
-                A learning hub allowing users to find answers to their questions
-                and self-educate with best practices
+                A learning hub for users to get the most out of itris and
+                self-educate with best practices
               </p>
             </div>
           </div>
@@ -171,8 +183,8 @@
                 Implementing compliance overrides
               </h4>
               <p class="projects__card-paragraph">
-                A feature to allow users to override compliance restrictions for
-                specific users.
+                Allowing users to override temporarily compliance restrictions
+                in a simple and frictionless way
               </p>
             </div>
           </div>
@@ -186,13 +198,57 @@
     </main>
     <footer>
       <p>&copy; 2025 Jack Brind</p>
-      <div class="links">
-        <a href="https://unsplash.com/@brindo_">Unsplash</a>
-        <a href="https://github.com/brindo91">GitHub</a>
-        <a href="https://www.linkedin.com/in/jack-brind/">LinkedIn</a>
-        <a href="https://x.com/Brindo_">Twitter</a>
-        <a href="https://layers.to/brindo">Layers</a>
-        <a href="https://dribbble.com/brindo">Dribbble</a>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jack-brind/"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/brindo91"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
       </div>
     </footer>
 
