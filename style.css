@@ -1598,4 +1598,66 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  @media (max-width: 640px) {
+    .testimonials {
+      grid-template-columns: 1fr;
+    }
+
+    .about__hero {
+      flex-direction: column;
+    }
+
+    .header__polariod {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 380px;
+      margin: 24px auto;
+      padding: 20px 12px 32px 12px;
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-stroked-md);
+      transform: none;
+    }
+
+    .header__polaroid-image {
+      --scale-factor: 0.5;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: calc(var(--radius-sm) * var(--scale-factor));
+    }
+
+    .principles {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-10);
+      width: 100%;
+      margin: 24px 0;
+    }
+
+    .photo__collection {
+      display: none;
+    }
+
+    .communications {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-10);
+      margin-bottom: 24px;
+    }
+
+    .about__section {
+      gap: var(--spacing-4);
+      margin-bottom: 12px;
+    }
+
+    .skills-container {
+      margin-bottom: 24px;
+    }
+  }
 }
