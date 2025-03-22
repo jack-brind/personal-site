@@ -9,6 +9,26 @@
   </head>
   <body>
     <main>
+      <div class="header">
+        <button
+          class="btn btn--ghost btn--back"
+          onclick="window.location.href='/index.html'"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
+
       <div class="about__hero">
         <div class="header__headline">
           <h1>Hey, I'm Jack 👋🏼</h1>
@@ -69,25 +89,6 @@
                 clip-rule="evenodd"
                 d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
               />
-            </svg>
-          </button>
-          <button id="about-me-btn" class="btn btn--ghost">
-            About me
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="currentColor"
-              class="contact__button-icon"
-              version="1.1"
-            >
-              <path
-                d="M5.860176 0.35304C5.65278 0.40334400000000004 5.47494 0.5762400000000001 5.421996 0.7790279999999999C5.4027 0.85296 5.401344000000001 1.137636 5.400696 5.237916L5.4 9.61782 3.507 7.726032C1.9655280000000002 6.185544 1.6023239999999999 5.828436 1.551108 5.8029720000000005C1.303728 5.679984 1.002252 5.7378 0.823104 5.942604C0.647316 6.143544 0.626328 6.45198 0.773856 6.666C0.796608 6.699 1.907544 7.817280000000001 3.242604 9.151068C5.569968 11.476188 5.673192 11.577516000000001 5.74746 11.609844C5.90616 11.678904 6.09384 11.678904 6.25254 11.609844C6.326808000000001 11.577516000000001 6.430032000000001 11.476188 8.757396 9.151068C10.092456 7.817280000000001 11.203392000000001 6.699 11.226144 6.666C11.373672000000001 6.45198 11.352684 6.143544 11.176896000000001 5.942604C10.997748000000001 5.7378 10.696272 5.679984 10.448892 5.8029720000000005C10.397675999999999 5.828436 10.034472000000001 6.185544 8.493 7.726032L6.6000000000000005 9.61782 6.599304 5.237916C6.598656000000001 1.137636 6.5973 0.85296 6.578004000000001 0.7790279999999999C6.4981919999999995 0.47331599999999996 6.1692 0.278076 5.860176 0.35304"
-                stroke="none"
-                fill-rule="evenodd"
-                stroke-width="0.012"
-              ></path>
             </svg>
           </button>
         </div>
@@ -267,8 +268,9 @@
           />
         </a>
       </div>
+      <!-- <hr /> -->
 
-      <div id="about-sections" class="about-sections">
+      <div class="about-sections">
         <section class="about__section">
           <h2 class="about__h2">About me</h2>
           <blockquote>
@@ -278,7 +280,7 @@
             </p>
           </blockquote>
           <p>
-            I'm a Senior Product Designer with over a decade of experience
+            I’m a Senior Product Designer with over a decade of experience
             crafting simple, intuitive and engaging design solutions across
             desktop, web, and mobile. In my most recent role, I led design at
             itris Recruitment CRM, building better, more intuitive workflows for
@@ -292,12 +294,12 @@
             better decisions.
           </p>
           <p>
-            As an end-to-end product designer, I'm involved from the very
+            As an end-to-end product designer, I’m involved from the very
             start—shaping product strategy, aligning user needs with business
-            goals, and leading project discovery through to implementation. I'm
-            comfortable navigating ambiguity, whether it's driving new features,
+            goals, and leading project discovery through to implementation. I’m
+            comfortable navigating ambiguity, whether it’s driving new features,
             iterating on an existing experience, or juggling multiple
-            fast-moving initiatives. I'm highly hands-on and detail-oriented,
+            fast-moving initiatives. I’m highly hands-on and detail-oriented,
             often refining small details in code to get it feeling
             <i>just right</i>.
           </p>
@@ -323,7 +325,7 @@
               <p>
                 Favour simplicity over complexity. Often, the simplest solution
                 is the best one. In product design, clarity reduces friction—if
-                a solution requires excessive explanation, it's probably not the
+                a solution requires excessive explanation, it’s probably not the
                 right one.
               </p>
             </div>
@@ -394,7 +396,7 @@
             <div class="testimonial">
               <div class="testimonial__content">
                 <p class="italic">
-                  "I worked closely with Jack as part of an initial team of 3 on
+                  “I worked closely with Jack as part of an initial team of 3 on
                   our core, new product, itris 9 for over 7 years as part of the
                   Product Team.
                 </p>
@@ -403,7 +405,7 @@
                   critical member of the team. The result of Jack's work enabled
                   us to convert many existing clients from a cheaper, more
                   feature-rich product to a more intuitive, attractive one that
-                  costs more.
+                  costs more.”
                 </p>
               </div>
 
@@ -421,15 +423,15 @@
             <div class="testimonial">
               <div class="testimonial__content">
                 <p class="italic">
-                  "I had the pleasure of working closely with Jack for seven
+                  “I had the pleasure of working closely with Jack for seven
                   years on itris 9, and throughout that time, he consistently
                   impressed me with his eye for design, attention to detail,
                   strong work ethic, and high standards.
                 </p>
                 <p class="italic">
                   I'm incredibly proud of what we achieved during those years,
-                  and it wouldn't have been possible without Jack. I wouldn't
-                  hesitate to recommend him to any team."
+                  and it wouldn't have been possible without Jack. I wouldn’t
+                  hesitate to recommend him to any team.”
                 </p>
               </div>
               <div class="testimonial__author">
@@ -446,14 +448,14 @@
             <div class="testimonial">
               <div class="testimonial__content">
                 <p class="italic">
-                  "Jack led the design on itris and played a key role in the
+                  “Jack led the design on itris and played a key role in the
                   product strategy and roadmap. He was well respected and
                   accrued a great deal of influence throughout the business.
                 </p>
                 <p class="italic">
                   Jack is very professional and and hard working and I would
                   recommend him to any team looking for a talented, driven
-                  product designer."
+                  product designer.”
                 </p>
               </div>
               <div class="testimonial__author">
@@ -470,7 +472,7 @@
             <div class="testimonial">
               <div class="testimonial__content">
                 <p class="italic">
-                  "I've had the privilege of working with Jack for several
+                  “I've had the privilege of working with Jack for several
                   years, and his exceptional talent has consistently impressed
                   me. His meticulous attention to detail, unwavering work ethic,
                   and deep passion for design set him apart. Thanks to his
@@ -478,7 +480,7 @@
                 </p>
                 <p class="italic">
                   I wholeheartedly recommend Jack as both a valuable team player
-                  and a true asset to any organisation."
+                  and a true asset to any organisation.”
                 </p>
               </div>
               <div class="testimonial__author">
