@@ -69,6 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.open('/assets/cv/Jack_Brind_CV.pdf', '_blank');
   });
 
+  // About me button smooth scroll
+  document
+    .getElementById('about-me-btn')
+    ?.addEventListener('click', function () {
+      document
+        .getElementById('about-sections')
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+
   // Lightbox functionality
   const lightbox = document.querySelector('.lightbox');
   const lightboxContent = document.querySelector('.lightbox-content');
