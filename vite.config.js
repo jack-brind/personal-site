@@ -7,11 +7,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        kpis: resolve(__dirname, 'src/kpis.html'),
-        knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
+        kpis: resolve(__dirname, 'src/kpis/index.html'),
+        knowledgebase: resolve(__dirname, 'src/knowledgebase/index.html'),
         complianceOverrides: resolve(
           __dirname,
-          'src/compliance-overrides.html',
+          'src/compliance-overrides/index.html',
         ),
       },
       output: {

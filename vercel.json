@@ -3,11 +3,24 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/kpis", "destination": "/kpis.html" }
+    { "source": "/kpis", "destination": "/kpis.html" },
+    { "source": "/knowledgebase", "destination": "/knowledgebase.html" },
+    {
+      "source": "/compliance-overrides",
+      "destination": "/compliance-overrides.html"
+    }
   ],
   "redirects": [
-    { "source": "/about.html", "destination": "/about", "permanent": true },
-    { "source": "/kpis.html", "destination": "/kpis", "permanent": true }
+    { "source": "/kpis.html", "destination": "/kpis", "permanent": true },
+    {
+      "source": "/knowledgebase.html",
+      "destination": "/knowledgebase",
+      "permanent": true
+    },
+    {
+      "source": "/compliance-overrides.html",
+      "destination": "/compliance-overrides",
+      "permanent": true
+    }
   ]
 }
