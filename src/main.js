@@ -158,3 +158,5 @@ const container = document.querySelector('.skills-container');
 container.innerHTML = skills
   .map(skill => `<span class="skill-pill">${skill}</span>`)
   .join('');
+
+inject();
