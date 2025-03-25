@@ -646,7 +646,7 @@
   }
 
   .header__polariod:hover {
-    transform: scale(1.2) rotate(5deg) translate(64px, 16px);
+    transform: scale(1.2) rotate(5deg) translate(64px, 32px);
     box-shadow: var(--shadow-stroked-lg);
   }
 
