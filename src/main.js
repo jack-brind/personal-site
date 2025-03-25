@@ -1,6 +1,7 @@
 'use-strict';
 
 import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const svgArrow = `
       <svg
@@ -160,3 +161,4 @@ container.innerHTML = skills
   .join('');
 
 inject();
+injectSpeedInsights();
