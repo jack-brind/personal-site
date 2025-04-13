@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
+    <title>Redesigning itris: Navigation & Information Architecture</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+
+            <li>
+              <button href="/contact" class="btn">Contact</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main role="main" style="margin-top: 164px">
+      <div class="article__hero">
+        <div>
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li><a href="/work" style="color: var(--text-muted)">Work</a></li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a
+                  href="/src/redesign-foundations.html"
+                  style="color: var(--text-primary)"
+                  >Redesigning itris: Navigation & Information Architecture</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1
+            style="
+              font-size: 3.25rem;
+              font-family: var(--font-display);
+              font-feature-settings: 'ss03' on;
+              font-weight: 600;
+              text-wrap: balance;
+              line-height: 1.3;
+              letter-spacing: -0.015em;
+            "
+          >
+            Redesigning itris: Navigation & Information Architecture
+          </h1>
+          <img
+            src="/assets/images/card.png"
+            alt="Chrome"
+            style="width: 700px; margin: 24px 0"
+          />
+          <!-- <p>
+            I spent 18 months redesigning a platform I'd worked on for over a
+            decade. It was my redemption arc. And then it got cancelled.
+          </p> -->
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; align-items: center">
+        <div class="segment-control">
+          <button
+            class="segment-control__option"
+            data-tooltip="Ok, grab a coffee... and snacks"
+            data-read-time="12m"
+          >
+            Deep dive
+          </button>
+          <button
+            class="segment-control__option segment-control__option--active"
+            data-tooltip="Short on time? Here's a summary"
+            data-read-time="5m"
+          >
+            TL;DR
+          </button>
+        </div>
+        <p id="read-time">16m read</p>
+      </div>
+
+      <div style="display: flex; gap: 56px; flex-direction: row-reverse">
+        <div class="contents-panel" data-segment="deep-dive">
+          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+          <ul class="contents-panel__list">
+            <li class="contents-panel__item">
+              <a href="#introduction" class="contents-panel__link"
+                >Introduction</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#background" class="contents-panel__link">Background</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#challenges" class="contents-panel__link">Challenges</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#solution" class="contents-panel__link">Solution</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#results" class="contents-panel__link">Results</a>
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1">
+          <div id="tldr" style="width: 720px; margin: 0 auto">
+            <section class="article-content">
+              <h2>TL;DR</h2>
+              <p>
+                Most design case studies are polished success stories. This
+                isn't one of them. It's about an 18-month redesign of itris, a
+                recruitment CRM I worked on — a project I poured everything
+                into, only for it to be cancelled before launch. But this story
+                isn't about the product that shipped. It's about growth,
+                hindsight, and the lessons I learned along the way.
+              </p>
+              <p>
+                I fell into design unexpectedly after joining the company as a
+                documentation writer straight out of university. By questioning
+                inconsistencies in the product — like a button that literally
+                did nothing — I was gradually invited to suggest improvements.
+                That curiosity grew into a career. Eventually, I became the
+                company's first product designer and was tasked with redesigning
+                their ageing desktop CRM product, which we rebuilt and released
+                in 2020.
+              </p>
+              <p>
+                That launch should have been a proud moment, but I felt uneasy.
+                My skills had evolved faster than the product had. The UI no
+                longer reflected my design sensibilities, and we'd built it on a
+                tech stack (WPF) that was already starting to creak under modern
+                expectations. Despite the positive feedback, I knew we could do
+                better — and I wanted another shot at it.
+              </p>
+              <p>
+                In 2023, I got that chance. The company greenlit a web-based
+                version, and I saw it as a fresh start. This wasn't just a port
+                — it was an opportunity to rethink everything: the architecture,
+                the interactions, the experience. I brought a decade of hard-won
+                lessons, helped choose Vue.js and Storybook, and began laying
+                the foundation for a scalable, modern design system with a small
+                cross-functional team.
+              </p>
+              <p>
+                This series documents that journey — not just the pixels and
+                patterns, but the thinking behind them. It's not a conventional
+                case study, because it wasn't a conventional project. It's a
+                reflection on what it means to let go, to evolve, and to design
+                not just a better product, but a better version of yourself.
+              </p>
+            </section>
+          </div>
+          <div id="deep-dive" style="width: 720px; margin: 0 auto">
+            <section class="article-content">
+              <h2>Introduction</h2>
+              <p>
+                In my previous article, I outlined the need for a redesign of
+                itris. This article follows more of a case study like structure,
+                but it's still not your traditional cookie cutter case study -
+                sorry to disappoint. It does, however, cover the strategy and
+                thought process behind tearing down the house and rebuilding.
+              </p>
+              <p>
+                Like a building, a product needs to have rock solid foundations
+                to support something that will in place for a long time. A
+                product's usability is directly tied to the IA and navigation so
+                getting this right was paramount. Starting with the IA is like
+                creating the container to hold the rest of the redesigned views,
+                so starting here made sense.
+              </p>
+            </section>
+            <section class="article-content">
+              <h2>Auditing the current IA</h2>
+              <p>
+                I'd love to share a nice clean process here but to tell you the
+                truth, due to it being a side project for much of the time
+                because of other priorities, the process was messy and
+                scattered. I'd have the odd spurt of focus on it and then have
+                to drop it again so momentum was hard to keep up. Therefore, the
+                process wasn't linear at all.
+              </p>
+              <p>
+                At first, looking at what the redesign could be, it was tempting
+                to jump straight in and tackle the key parts, but it was
+                important to maintain a level of focus and the chrome was
+                arguably the part of the itris 9 that needed the most attention.
+                And I loved it. I really enjoy fiddling with the details on core
+                functional components so it was good fun working on this. I
+                enjoy these types of challenges.
+              </p>
+              <p>This is what the itris 9 chrome looked like:</p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/9ia.png"
+                  alt="Chrome"
+                  class="article-content__image--app lightbox-image"
+                  style="outline: none; width: 720px"
+                />
+                <figcaption>Caption</figcaption>
+              </figure>
+              <p>
+                I could list more issues than there are pixels in this screen.
+                The key ones are:
+              </p>
+              <ul>
+                <li>Colour is not timeless</li>
+                <li>
+                  The action bar blue has a poor contrast ratio with the white
+                  foregrounds of 3.32:1
+                </li>
+                <li>
+                  The nav bar at the top has a load of icons without labels
+                  (even internally this was becoming a problem!)
+                </li>
+                <li>
+                  The sidebar sub-menu was the same for all main records and a
+                  bit redundant
+                </li>
+                <li>
+                  The sidebar sub-menu interaction of opening and closing was
+                  clunky
+                </li>
+                <li>
+                  The action bar was directly related to the loaded view but
+                  there was a disconnect
+                </li>
+                <li>
+                  The admin bar was in the same hierarchical level as the action
+                  buttons for the loaded view
+                </li>
+                <li>The admin bar didn't have labels</li>
+                <li>
+                  The nav bar and action bar took up far too much vertical real
+                  estate
+                </li>
+                <li>
+                  The status bar was unnecessary most of the time and could
+                  easily be moved
+                </li>
+              </ul>
+              <p>There's plenty more that I won't bore you with.</p>
+            </section>
+            <section class="article-content">
+              <h2>Process</h2>
+              <p>
+                Narrative - needed to break everything out (37 things) then
+                piece it all back together in a better way. Dismantling an
+                existing product to piece the puzzle back together again in a
+                better way. Any analogies here? Homeland - Carrie with a pin
+                board. The process was pretty simple. Break it and put it back
+                together in a better way. But that isn't so easy:
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/Pepe_Silvia.jpg"
+                  alt="Chrome"
+                  style="border-radius: 8px"
+                />
+                <figcaption>Caption</figcaption>
+              </figure>
+              <p>
+                I needed to break these things out into their own separate
+                pieces. First, I ignored the action bar - these were directly
+                related to records and had absolutely no right to be part of the
+                IA and chrome.
+              </p>
+              <p>
+                What I was left with was the nav bar buttons, the quick find,
+                the sidebar menu and admin panel. So I noted down each piece
+                that I needed to find a new home for - a total of 37 items.
+              </p>
+              <figure class="article-content__figure">
+                <img src="/assets/images/items.png" alt="Chrome" />
+                <figcaption>Caption</figcaption>
+              </figure>
+              <p>
+                At this point, I needed to work out how to group these items
+                logically. It didn't make sense to have these as one long list
+                because it would lack any sort of hierarchy and look too
+                cluttered and lead to sidebar overload.
+              </p>
+              <p>
+                From customer feedback, we knew that some customers wanted to be
+                able to customise their workflows. For example, for a recruiter,
+                areas like timesheets and financial exports weren't important.
+                Likewise, for compliance officers, they only really needed
+                access to compliance areas and not really anything related to
+                recruiter workflows. Financial people only really needed access
+                to jobs and placements and candidate records. So we knew we
+                wanted to make it customisable.
+              </p>
+              <p>
+                So I grouped all the items in logical groupings. At this point,
+                the groupings weren't perfect, but they gave me at least some
+                semblance of order.
+              </p>
+              <figure class="article-content__figure">
+                <img src="/assets/images/items-sorted.png" alt="Chrome" />
+                <figcaption>Grouped logically</figcaption>
+              </figure>
+              <p>
+                I then looked at some products that I use regularly and other
+                popular products to get some inspiration for the IA. Almost all
+                of the products that I use had just a single a sidebar. I also
+                looked at different design systems and some popular Figma UI
+                libraries like Untitled UI, for example.
+              </p>
+              <p>
+                Inspiration was drawn from MacOS, Linear, Campsite, Notion,
+                Confluence, YouTube, etc.
+              </p>
+              <p>
+                From then, I had a good idea of how I wanted to proceed. So I
+                started looking at options. One of the key things that I wanted
+                to change was the dark blue background for the chrome. It was
+                called Midnight Blue and it was the base colour for itris 9, but
+                it looked old very quickly. For a product to be timeless, or at
+                least look fresher for longer, neutral colours is what I was
+                aiming to use. For the new product, I also wanted to have a dark
+                mode (this was asked for countless times, but there was too much
+                design and technical debt to get it working in itris 9).
+              </p>
+              <p>
+                Another thing I wanted to add to the sidebar was a nice
+                productivity section that allowed you to pin records, views and
+                areas to the sidebar in a section that would come to be known as
+                Shortcuts. For now, however, this was sidelined until I had the
+                rest of the sidebar figured out.
+              </p>
+              <p>
+                So I started to put together some ideas for a sidebar - this is
+                just a selection of some of the designs I worked through and I
+                didn't love any of them. I did quite like the style of number 3
+                with the blue accent and elevated white button with legs coming
+                out but something about it just didn't really sit well with me.
+              </p>
+              <p>
+                The other thing I needed to consider was how the items in the
+                sidebar would be customised and none of these worked very nicely
+                with that. I experimented with the idea of having a curated list
+                at the top and a section for all items at the bottom where you
+                could pin and unpin to the curated list but this didn't feel
+                right either.
+              </p>
+              <figure class="article-content__figure">
+                <img src="/assets/images/sidebar-options.png" alt="Chrome" />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                Eventually, after lot of playing around, things started to fall
+                into place, but there were some things I needed to work out
+                first.
+              </p>
+              <h2>Submenu</h2>
+              <p>
+                In the itris 9 sidebar, the main records (applicant, company,
+                contact, job and placement records) had sub-menus when you
+                clicked on them.
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/submenu.png"
+                  alt="Chrome"
+                  style="width: 180px"
+                />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                Clicking on the main header menu item would expand and collapse
+                the menu, but it also opened the associated Record Hub which is
+                a sort of dashboard for the record where you can your recently
+                opened records, favourites, recently created, and some more. So
+                this menu had 2 contexts:
+              </p>
+              <ol>
+                <li>Opened the hub</li>
+                <li>Opened / closed the sub-menu</li>
+              </ol>
+              <p>
+                This is a bit awkward with 2 behaviours so I wanted to fix this.
+                In each sub menu, we had the same 3 buttons - New, Search and
+                Group. New would obviously open the new record form which made
+                sense. But search and group would just open the record search
+                and record groups areas with the record type pre-selected. So
+                for example, if you clicked Groups under Companies, it would
+                open the Groups area with Companies pre-selected.
+              </p>
+              <p>
+                The interaction the sub menu wasn't smooth either. The
+                interaction was janky and it would move the menu around which
+                didn't feel nice either. So I explored what we could do to make
+                this better in the new version.
+              </p>
+              <p>
+                Sidenote: One of my UX pet hates is where a loaded view
+                refreshes after a period of time and you select an option that
+                changes 0.132ms before you click it and you click the wrong
+                thing. This happens on the Siri suggestions list on iOS and it
+                boils my piss.
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/submenu.gif"
+                  alt="Chrome"
+                  style="width: 180px"
+                />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                The main problem with the interaction was that the sub-menus
+                were mutually exclusive so you couldn't have both open at the
+                same time, nor was there any signifier on the menu to afford
+                opening or any way to stop this behaviour.
+              </p>
+              <p>
+                The group and search buttons were redundant as they were just
+                nice workflow enhancements that didn't have that much of an
+                impact. Removing these was a happy tradeoff. So that left me
+                with creating new records. In itris 9, this was the primary
+                workflow for creating new records so I wanted to preserve this
+                paradigm to make the transition a painless as possible for users
+                that had already built up that mental model.
+              </p>
+              <p>
+                I had previously explored the idea of having a curated list of
+                pinned menu items and another section for all tools that and
+                users would be able to move menu items between those lists by
+                pinning and unpinning. The pin button would be in the right side
+                of the menu. However, late explorations led me away from that
+                route but I still liked the idea of having an action on the menu
+                item. So I settled on having a new button on each menu items
+                where a new instance of something could be created and this
+                would be shown on hover. This kept context nicely.
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/menu-item.png"
+                  alt="Chrome"
+                  style="width: 260px"
+                />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                After that I needed to work out how customisation would work.
+                Bit first, I needed to finalise the groupings.
+              </p>
+              <h2>Groupings</h2>
+              <p>
+                We then ranked them high to low priority (based on user's
+                interactions with them). With a total of 37 pieces of the
+                puzzle, I couldn't put all of them in the menu. Some that were
+                infrequently used needed to go elsewhere. These were like the
+                secondary navigations that were needed now and again and so
+                didn't belong in the main groupings. What I ended up with was
+                this:
+              </p>
+              <figure class="article-content__figure">
+                <img src="/assets/images/groupings.png" alt="Chrome" />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                The orange items would be in dropdown menus and the purple would
+                all be accessible from the main sidebar menu. But the purple
+                items would form the primary navigation options.
+              </p>
+              <h2>Menu customisation</h2>
+              <p>
+                With 18 possible menu items, we needed a way of being able to
+                curate the most important ones for a user. I had worked out the
+                menu item component:
+              </p>
+              <figure class="article-content__figure">
+                <img src="/assets/images/figma-components.png" alt="Chrome" />
+                <figcaption>
+                  Some later concepts of the sidebar as it was coming together.
+                </figcaption>
+              </figure>
+              <p>
+                Next steps - work out sidebar width and collapsing behaviour,
+                how would you customise, shortcuts? What is fixed in workspace?
+                Etc
+              </p>
+              <h2>The redesign</h2>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/new.png"
+                  alt="Chrome"
+                  class="article-content__image--app lightbox-image"
+                />
+                <figcaption>Caption</figcaption>
+              </figure>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>

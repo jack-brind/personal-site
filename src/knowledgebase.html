@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <main role="main">
-      <div class="header">
-        <button
-          class="btn btn--ghost btn--back"
-          onclick="window.location.href='/'"
-        >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
-            />
-          </svg>
-          Back
+    <nav role="navigation">
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
         </button>
-      </div>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
 
+            <li>
+              <button href="/contact" class="btn">Contact</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main role="main">
       <div class="article__hero">
         <div class="article__hero-header">
           <h1>itris Knowledgebase</h1>

@@ -4,259 +4,397 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
-    <title>KPIs Showcase</title>
+    <title>itris KPI Dashboard</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <main role="main">
-      <div class="header">
-        <button
-          class="btn btn--ghost btn--back"
-          onclick="window.location.href='/'"
-        >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
-            />
-          </svg>
-          Back
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
         </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+            <li>
+              <button
+                style="display: none"
+                href="/contact"
+                class="btn btn--primary"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-
+    </nav>
+    <main role="main">
       <div class="article__hero">
-        <div class="article__hero-header">
-          <h1>itris KPI Dashboard</h1>
-          <h4>Product design, Interaction design, User research<br />2024</h4>
+        <div>
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li><a href="/work" style="color: var(--text-muted)">Work</a></li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a href="/src/kpis.html" style="color: var(--text-primary)"
+                  >itris KPI Dashboard</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1
+            style="
+              font-size: 3.25rem;
+              font-family: var(--font-display);
+              font-feature-settings: 'ss03' on;
+              font-weight: 600;
+              text-wrap: balance;
+              line-height: 1.3;
+              letter-spacing: -0.015em;
+            "
+          >
+            itris KPI Dashboard
+          </h1>
+          <img
+            src="/assets/images/card-kpis.png"
+            alt="Chrome"
+            style="width: 700px; margin: 24px 0"
+          />
         </div>
-        <div class="article__hero-image-bloom--kpi"></div>
-        <img
-          src="/assets/images/kpi-svg.svg"
-          alt="KPI image"
-          class="article__hero-image--kpi skew-reverse"
-        />
       </div>
 
-      <section class="article-content">
-        <h2>Context</h2>
-        <p>
-          The recruitment industry is numbers-driven and KPIs play a critical
-          role in measuring individual, team, and organisational performance.
-          For recruiters, these metrics influence promotions, pay reviews, and
-          commissions, making them a powerful motivator. For a business, these
-          metrics indicate profitability and efficiency, among other things. By
-          providing clarity and focus on targets, KPIs help individuals
-          understand expectations, driving both personal and business success.
-        </p>
-        <h2>Problem</h2>
-        <p>
-          While some data <em>was</em> available in itris, it was scattered
-          across different areas of the product, making it difficult to keep
-          track of. There was also no way to record targets against any metrics,
-          nor was there a dedicated space for users to monitor performance
-          metrics efficiently. This oversight manifested in increased
-          frustration and inefficiencies and as a result, users had to rely on
-          workarounds, such as exporting multiple reports and manipulating them
-          in spreadsheets, which was time-consuming and cumbersome.
-        </p>
-        <p>
-          This inefficiency and lack of target options on metrics had a direct
-          business impact, contributing to churn, lost deals, and ultimately an
-          estimated <strong><i>£1.4m risk to annual revenue</i></strong
-          >.
-        </p>
-        <h2>Goals</h2>
-        <div class="goals">
-          <div class="user-goals">
-            <h3>User</h3>
-            <ul>
-              <li>Remove user frustration</li>
-              <li>
-                Provide a streamlined, efficient and flexible way to track
-                metrics
-              </li>
-              <li>
-                Users should be able to drill down into the data behind the
-                metrics
-              </li>
-              <li>Users should have a single place to visualise their KPIs</li>
-            </ul>
-          </div>
-          <div class="business-goals">
-            <h3>Business</h3>
-            <ul>
-              <li>Protect the risked revenue</li>
-              <li>Reduce the risk of customer churn</li>
-              <li>Remove barriers to sales conversions</li>
-            </ul>
-          </div>
+      <div style="display: flex; gap: 12px; align-items: center">
+        <div class="segment-control">
+          <button
+            class="segment-control__option segment-control__option--active"
+            data-tooltip="Short on time? Here's a summary"
+            data-read-time="3m"
+          >
+            TL;DR
+          </button>
+          <button
+            class="segment-control__option"
+            data-tooltip="Ok, grab a coffee... and snacks"
+            data-read-time="12m"
+          >
+            Deep dive
+          </button>
         </div>
-        <h2>Research</h2>
-        <p>
-          We had a good amount of feedback on this problem already which came
-          primarily from speaking to customers and other feedback streams, but
-          also from the sales team. In addition, I analysed some competitors as
-          well as similar stand-alone tools in the market.
-        </p>
-        <p>
-          This provided a good amount of insight, but I had some knowledge gaps
-          that I wanted to fill and assumptions to validate. So, I also
-          conducted a survey to customers to dig a little deeper into some key
-          themes identified initially. The results of the survey provided some
-          clarity, including:
-        </p>
-        <ul style="margin-bottom: 0; margin-top: 6px">
-          <li>
-            Nearly a third of respondents set collective KPIs for groups of
-            users as opposed to individual users
-          </li>
-          <li>
-            Weekly KPIs were the most popular, with monthly KPIs a close second
-          </li>
-          <li>
-            The importance of being able to drill down into the KPI data was
-            rated 92%
-          </li>
-          <li>
-            Most respondents were exporting reports to Excel to track KPIs
-          </li>
-        </ul>
-        <div class="banner">
-          <div class="banner-icon insight-icon">💡</div>
-          <div class="banner-content">
-            <div class="banner-header">Key insight</div>
-            <div class="banner-text">
+        <p id="read-time"></p>
+      </div>
+
+      <div style="display: flex; gap: 56px; flex-direction: row-reverse">
+        <!-- TL;DR contents -->
+        <div class="contents-panel" data-segment="tldr">
+          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+          <ul class="contents-panel__list">
+            <li class="contents-panel__item">
+              <a href="#tldr-context" class="contents-panel__link">Context</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-problem" class="contents-panel__link">Problem</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-goals" class="contents-panel__link">Goals</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-research" class="contents-panel__link">Research</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-solution" class="contents-panel__link">Solution</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-outcome" class="contents-panel__link">Outcome</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contents-panel" data-segment="deep-dive">
+          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+          <ul class="contents-panel__list">
+            <li class="contents-panel__item">
+              <a href="#context" class="contents-panel__link">Context BBB</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#problem" class="contents-panel__link">Problem</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#goals" class="contents-panel__link">Goals</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#solution" class="contents-panel__link">Solution</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#outcome" class="contents-panel__link">Outcome</a>
+            </li>
+          </ul>
+        </div>
+
+        <div style="flex: 1">
+          <div id="tldr" style="width: 720px; margin: 0 auto">
+            <section class="article-content">
+              <h2 id="tldr-context">Context</h2>
               <p>
-                Historically, we understood KPIs to be <i>target-based</i>, but
-                I recognised an interesting pattern in the survey, and I was
-                keen to pull on the thread. After following up with some
-                respondents, my suspicions were confirmed that some KPIs were
-                set without specific targets. This became a key insight, and one
-                we wouldn't have considered in the initial scope without
-                speaking to customers.
+                The recruitment industry is numbers-driven and KPIs play a
+                critical role in measuring individual, team, and organisational
+                performance. For recruiters, these metrics influence promotions,
+                pay reviews, and commissions, making them a powerful motivator.
+                For a business, these metrics indicate profitability and
+                efficiency, among other things. By providing clarity and focus
+                on targets, KPIs help individuals understand expectations,
+                driving both personal and business success.
               </p>
-            </div>
+
+              <img
+                src="/assets/images/kpi-svg.svg"
+                alt="KPI image"
+                class="article__hero-image--kpi skew-reverse"
+              />
+
+              <h2 id="tldr-problem">Problem</h2>
+              <p>
+                While some data <em>was</em> available in itris, it was
+                scattered across different areas of the product, making it
+                difficult to keep track of. There was also no way to record
+                targets against any metrics, nor was there a dedicated space for
+                users to monitor performance metrics efficiently. This oversight
+                manifested in increased frustration and inefficiencies and as a
+                result, users had to rely on workarounds, such as exporting
+                multiple reports and manipulating them in spreadsheets, which
+                was time-consuming and cumbersome.
+              </p>
+              <p>
+                This inefficiency and lack of target options on metrics had a
+                direct business impact, contributing to churn, lost deals, and
+                ultimately an estimated
+                <strong><i>£1.4m risk to annual revenue</i></strong
+                >.
+              </p>
+              <h2 id="tldr-goals">Goals</h2>
+              <div class="goals">
+                <div class="user-goals">
+                  <h3>User</h3>
+                  <ul>
+                    <li>Remove user frustration</li>
+                    <li>
+                      Provide a streamlined, efficient and flexible way to track
+                      metrics
+                    </li>
+                    <li>
+                      Users should be able to drill down into the data behind
+                      the metrics
+                    </li>
+                    <li>
+                      Users should have a single place to visualise their KPIs
+                    </li>
+                  </ul>
+                </div>
+                <div class="business-goals">
+                  <h3>Business</h3>
+                  <ul>
+                    <li>Protect the risked revenue</li>
+                    <li>Reduce the risk of customer churn</li>
+                    <li>Remove barriers to sales conversions</li>
+                  </ul>
+                </div>
+              </div>
+              <h2 id="tldr-research">Research</h2>
+              <p>
+                We had a good amount of feedback on this problem already which
+                came primarily from speaking to customers and other feedback
+                streams, but also from the sales team. In addition, I analysed
+                some competitors as well as similar stand-alone tools in the
+                market.
+              </p>
+              <p>
+                This provided a good amount of insight, but I had some knowledge
+                gaps that I wanted to fill and assumptions to validate. So, I
+                also conducted a survey to customers to dig a little deeper into
+                some key themes identified initially. The results of the survey
+                provided some clarity, including:
+              </p>
+              <ul style="margin-bottom: 0; margin-top: 6px">
+                <li>
+                  Nearly a third of respondents set collective KPIs for groups
+                  of users as opposed to individual users
+                </li>
+                <li>
+                  Weekly KPIs were the most popular, with monthly KPIs a close
+                  second
+                </li>
+                <li>
+                  The importance of being able to drill down into the KPI data
+                  was rated 92%
+                </li>
+                <li>
+                  Most respondents were exporting reports to Excel to track KPIs
+                </li>
+              </ul>
+              <div class="banner">
+                <div class="banner-icon insight-icon">💡</div>
+                <div class="banner-content">
+                  <div class="banner-header">Key insight</div>
+                  <div class="banner-text">
+                    <p>
+                      Historically, we understood KPIs to be
+                      <i>target-based</i>, but I recognised an interesting
+                      pattern in the survey, and I was keen to pull on the
+                      thread. After following up with some respondents, my
+                      suspicions were confirmed that some KPIs were set without
+                      specific targets. This became a key insight, and one we
+                      wouldn't have considered in the initial scope without
+                      speaking to customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h2 id="tldr-solution">Solution</h2>
+              <p>
+                Once the research phase was complete, I collaborated with the
+                development, product and QA teams to outline the initial scope
+                for the project. The scope consisted of:
+              </p>
+              <ul>
+                <li>a total of 25 configurable metrics to track</li>
+                <li>granular configurability for nuanced metrics</li>
+                <li>
+                  historical tracking and auditing when targets are updated
+                </li>
+                <li>
+                  a dashboard for users to keep track of their performance
+                </li>
+                <li>
+                  drill down capabilities to dig deeper into the data behind the
+                  KPIs
+                </li>
+              </ul>
+              <p>
+                KPIs would be configurable in the settings area and would be
+                tied to a user, team, or the whole organisation (i.e. all
+                users).
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/configuration.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app lightbox-image"
+                />
+                <figcaption>Table view of configured KPIs</figcaption>
+              </figure>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/new-kpi.png"
+                  alt="Image of a modal for creating new KPIs"
+                  class="article-content__image--app sunken-image__new-kpi"
+                />
+                <figcaption>Modal to create a new KPI</figcaption>
+              </figure>
+              <p>
+                It was also crucial that KPIs were communicated to the user
+                well. After many iterations of the KPI card, I settled on a
+                final design that struck the right balance between information
+                density and visual noise.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/kpi-anatomy.png"
+                  alt="KPI widget card anatomy"
+                  class="article-content__image sunken-image"
+                />
+                <figcaption>KPI widget card anatomy in hover state</figcaption>
+              </figure>
+
+              <p>
+                The KPI cards were then displayed in a dedicated dashboard for
+                the user so that they could have a single source of truth for
+                their individual performance as well as their contributions to
+                collective team and organisational metrics.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/dashboard.png"
+                  alt="KPI dashboard"
+                  class="article-content__image lightbox-image"
+                />
+                <figcaption>
+                  Final dashboard design to visualise KPIs
+                </figcaption>
+              </figure>
+
+              <p>
+                Users can also drill down into the data behind the KPIs to see
+                the activity that contributed to the metric. Users can export
+                the data or convert it to a search.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/drill-down.png"
+                  alt="Drill down panel"
+                  class="article-content__image lightbox-image"
+                />
+                <figcaption>Dashboard with drill down panel open</figcaption>
+              </figure>
+
+              <h2 id="tldr-outcome">Outcome</h2>
+              <p>
+                The feature shipped shortly before I left the company and so had
+                not yet been available for long enough to generate measurable
+                results. However, early internal feedback was very positive and
+                as a result, the sales team felt more confident during customer
+                demos, and stakeholders saw this as a key improvement given the
+                potential revenue at risk. This work directly addressed known
+                pain points and is expected to lead to more deal conversions and
+                a lower risk to revenue.
+              </p>
+
+              <hr />
+
+              <p class="italic">
+                The UI in this case study represents the direction I was taking
+                as part of a product redesign initiative. Although the project
+                was later deprioritised and not released, this work is a more
+                accurate reflection of my current design approach.<br /><br />
+                This is a short project showcase and there were many challenges
+                and edge cases that needed to be addressed. If you'd like to
+                know more, please
+                <a
+                  href="/"
+                  style="
+                    font-weight: var(--font-weight-regular);
+                    color: var(--colour-blue);
+                  "
+                  >get in touch</a
+                >.
+              </p>
+            </section>
           </div>
         </div>
-        <h2>Solution</h2>
-        <p>
-          Once the research phase was complete, I collaborated with the
-          development, product and QA teams to outline the initial scope for the
-          project. The scope consisted of:
-        </p>
-        <ul>
-          <li>a total of 25 configurable metrics to track</li>
-          <li>granular configurability for nuanced metrics</li>
-          <li>historical tracking and auditing when targets are updated</li>
-          <li>a dashboard for users to keep track of their performance</li>
-          <li>
-            drill down capabilities to dig deeper into the data behind the KPIs
-          </li>
-        </ul>
-        <p>
-          KPIs would be configurable in the settings area and would be tied to a
-          user, team, or the whole organisation (i.e. all users).
-        </p>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/configuration.png"
-            alt="Settings area where KPIs are configured and managed"
-            class="article-content__image--app lightbox-image"
-          />
-          <figcaption>Table view of configured KPIs</figcaption>
-        </figure>
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/new-kpi.png"
-            alt="Image of a modal for creating new KPIs"
-            class="article-content__image--app sunken-image__new-kpi"
-          />
-          <figcaption>Modal to create a new KPI</figcaption>
-        </figure>
-        <p>
-          It was also crucial that KPIs were communicated to the user well.
-          After many iterations of the KPI card, I settled on a final design
-          that struck the right balance between information density and visual
-          noise.
-        </p>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/kpi-anatomy.png"
-            alt="KPI widget card anatomy"
-            class="article-content__image sunken-image"
-          />
-          <figcaption>KPI widget card anatomy in hover state</figcaption>
-        </figure>
-
-        <p>
-          The KPI cards were then displayed in a dedicated dashboard for the
-          user so that they could have a single source of truth for their
-          individual performance as well as their contributions to collective
-          team and organisational metrics.
-        </p>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/dashboard.png"
-            alt="KPI dashboard"
-            class="article-content__image lightbox-image"
-          />
-          <figcaption>Final dashboard design to visualise KPIs</figcaption>
-        </figure>
-
-        <p>
-          Users can also drill down into the data behind the KPIs to see the
-          activity that contributed to the metric. Users can export the data or
-          convert it to a search.
-        </p>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/drill-down.png"
-            alt="Drill down panel"
-            class="article-content__image lightbox-image"
-          />
-          <figcaption>Dashboard with drill down panel open</figcaption>
-        </figure>
-
-        <h2>Outcome</h2>
-        <p>
-          The feature shipped shortly before I left the company and so had not
-          yet been available for long enough to generate measurable results.
-          However, early internal feedback was very positive and as a result,
-          the sales team felt more confident during customer demos, and
-          stakeholders saw this as a key improvement given the potential revenue
-          at risk. This work directly addressed known pain points and is
-          expected to lead to more deal conversions and a lower risk to revenue.
-        </p>
-
-        <hr />
-
-        <p class="italic">
-          The UI in this case study represents the direction I was taking as
-          part of a product redesign initiative. Although the project was later
-          deprioritised and not released, this work is a more accurate
-          reflection of my current design approach.<br /><br />
-          This is a short project showcase and there were many challenges and
-          edge cases that needed to be addressed. If you'd like to know more,
-          please
-          <a
-            href="/"
-            style="
-              font-weight: var(--font-weight-regular);
-              color: var(--colour-blue);
-            "
-            >get in touch</a
-          >.
-        </p>
-      </section>
+      </div>
     </main>
 
     <footer role="contentinfo">

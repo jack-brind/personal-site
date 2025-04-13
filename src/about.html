@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg" />
+    <title>About Jack</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+            <li>
+              <button
+                style="display: none"
+                href="/contact"
+                class="btn btn--primary"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+          <button class="nav__burger" aria-label="Toggle menu">
+            <span class="nav__burger-line"></span>
+            <span class="nav__burger-line"></span>
+            <span class="nav__burger-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav__mobile">
+        <ul class="nav__mobile-links">
+          <li><a href="/work">Work</a></li>
+          <li style="display: none"><a href="/writing">Writing</a></li>
+          <li><a href="/src/about.html">About</a></li>
+          <li>
+            <button
+              style="display: none"
+              href="/contact"
+              class="btn btn--primary"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="background-pattern"></div>
+    <main role="main" style="margin-top: 128px">
+      <div
+        class="about__hero"
+        style="display: flex; gap: 56px; flex-direction: row"
+      >
+        <div class="header__headline">
+          <div class="bento-card__tags">
+            <span class="tag cs-tag">About me</span>
+          </div>
+          <h1
+            style="
+              font-size: 2.5rem;
+              font-family: var(--font-display);
+              font-feature-settings: 'ss03' on;
+              font-weight: 600;
+              text-wrap: balance;
+              line-height: 1.3;
+              letter-spacing: -0.005em;
+            "
+          >
+            Versatile and multi-disciplined Product Designer
+          </h1>
+          <div>
+            <p>
+              I have 10+ years experience crafting simple, intuitive and
+              engaging design solutions across desktop, web, and mobile. I love
+              designing solutions that have a meaningful and lasting impact for
+              a business and it's customers. In my most recent role, I led
+              design at itris Recruitment CRM, building better, more intuitive
+              workflows for recruiters.
+            </p>
+            <p>
+              As an end-to-end product designer, I'm involved from the very
+              start— shaping product strategy, user needs with business goals,
+              and leading project discovery through to implementation. I'm
+              comfortable navigating ambiguity, whether it's driving new
+              features, iterating on an existing experience, or juggling
+              multiple fast-moving initiatives. I'm highly hands-on and
+              detail-oriented, often refining small details in code to get it
+              feeling <i>just right</i>.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="header__polariod">
+            <img
+              src="/assets/images/jack.jpg"
+              class="header__polaroid-image"
+              alt="Polariod of Jack"
+            />
+            <span class="header__polariod-caption"></span>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/jackbrind"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/linkedin.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://x.com/jack_brind"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/twitter.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://layers.to/brindo"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/layers.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://github.com/jack-brind"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/github.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://unsplash.com/@brindo_"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/unsplash.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+          </div>
+          <div class="communications">
+            <div class="contact__buttons">
+              <button id="email-link" class="btn btn--default contact__button">
+                Email
+                <svg
+                  width="6"
+                  height="6"
+                  viewBox="0 0 6 6"
+                  fill="currentColor"
+                  class="contact__button-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
+                  />
+                </svg>
+              </button>
+              <button id="cv-viewer" class="btn btn--default contact__button">
+                <svg
+                  width="6"
+                  height="6"
+                  viewBox="0 0 6 6"
+                  fill="currentColor"
+                  class="contact__button-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about-sections" class="about-sections">
+        <section class="about__section">
+          <h2 class="about__h2">My design principles</h2>
+          <p style="text-wrap: auto">
+            These core principles shape how I approach design.
+          </p>
+          <div class="principles">
+            <div class="principle principle-simple">
+              <div class="principle__header">
+                <div class="principle__icon">
+                  <img
+                    src="/assets/images/simple.svg"
+                    class="icon-simple"
+                    alt="Simple icon"
+                  />
+                </div>
+                <h3>Simplicity over complexity</h3>
+              </div>
+              <p>
+                Favour simplicity over complexity. Often, the simplest solution
+                is the best one. In product design, clarity reduces friction—if
+                a solution requires excessive explanation, it's probably not the
+                right one.
+              </p>
+            </div>
+
+            <div class="principle principle-details">
+              <div class="principle__header">
+                <div class="principle__icon">
+                  <img
+                    src="/assets/images/holistic.svg"
+                    class="icon-details"
+                    alt="Simple icon"
+                  />
+                </div>
+                <h3>Think holistically</h3>
+              </div>
+              <p>
+                Design decisions should align with a broader narrative, not
+                exist in isolation. When each part of a product contributes to a
+                wider goal, it creates a lasting experience that supports the
+                product's growth and evolution.
+              </p>
+            </div>
+            <div class="principle principle-quality">
+              <div class="principle__header">
+                <div class="principle__icon">
+                  <img
+                    src="/assets/images/intention.svg"
+                    class="icon-consistent"
+                    alt="Simple icon"
+                  />
+                </div>
+                <h3>Design with intention</h3>
+              </div>
+              <p>
+                Design should be deliberate and every detail should serve a
+                purpose. When intention drives design, what follows is clarity,
+                focus and usability, and a meaningful contribution to the user
+                experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about__section">
+          <h2 class="about__h2">Skills</h2>
+          <div class="skills-container"></div>
+        </section>
+
+        <section class="about__section">
+          <div class="experience">
+            <h2 class="about__h2">Experience</h2>
+            <blockquote class="experience">
+              <div class="experience__entry">
+                <h3>Lead Product Designer at itris Recruitment CRM</h3>
+                <p class="experience__entry--date">2023 - 2025</p>
+              </div>
+              <div class="experience__entry">
+                <h3>Senior Product Designer at itris Recruitment CRM</h3>
+                <p class="experience__entry--date">2020 - 2023</p>
+              </div>
+              <div class="experience__entry">
+                <h3>Product Designer at itris Recruitment CRM</h3>
+                <p class="experience__entry--date">2014 - 2020</p>
+              </div>
+              <div class="experience__entry">
+                <h3>Technical Writer at itris Recruitment CRM</h3>
+                <p class="experience__entry--date">2013 - 2014</p>
+              </div>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="about__section">
+          <h2 class="about__h2">Recommendations</h2>
+          <p>Kind words from some people I've worked with over the years.</p>
+          <div class="testimonials">
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <p class="italic">
+                  "I worked closely with Jack as part of an initial team of 3 on
+                  our core, new product, itris 9 for over 7 years as part of the
+                  Product Team.
+                </p>
+                <p class="italic">
+                  Jack's passion, work ethic and attention to detail made him a
+                  critical member of the team. The result of Jack's work enabled
+                  us to convert many existing clients from a cheaper, more
+                  feature-rich product to a more intuitive, attractive one that
+                  costs more.
+                </p>
+              </div>
+
+              <div class="testimonial__author">
+                <img
+                  src="/assets/images/ian.jpeg"
+                  class="testimonial__author--image"
+                  alt="Ian Farrow"
+                />
+                <span class="testimonial__author--name"
+                  >Ian Farrow, Product Director at itris</span
+                >
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <p class="italic">
+                  "I had the pleasure of working closely with Jack for seven
+                  years on itris 9, and throughout that time, he consistently
+                  impressed me with his eye for design, attention to detail,
+                  strong work ethic, and high standards.
+                </p>
+                <p class="italic">
+                  I'm incredibly proud of what we achieved during those years,
+                  and it wouldn't have been possible without Jack. I wouldn't
+                  hesitate to recommend him to any team."
+                </p>
+              </div>
+              <div class="testimonial__author">
+                <img
+                  src="/assets/images/adam.jpeg"
+                  class="testimonial__author--image"
+                  alt="Adam Dullage"
+                />
+                <span class="testimonial__author--name"
+                  >Adam Dullage, Product Owner at itris</span
+                >
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <p class="italic">
+                  "Jack led the design on itris and played a key role in the
+                  product strategy and roadmap. He was well respected and
+                  accrued a great deal of influence throughout the business.
+                </p>
+                <p class="italic">
+                  Jack is very professional and hard working, and I would
+                  recommend him to any team looking for a talented, driven
+                  product designer."
+                </p>
+              </div>
+              <div class="testimonial__author">
+                <img
+                  src="/assets/images/andy.jpeg"
+                  class="testimonial__author--image"
+                  alt="Andy Dobson"
+                />
+                <span class="testimonial__author--name"
+                  >Andy Dobson, Operations Director at itris</span
+                >
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <p class="italic">
+                  "I've had the privilege of working with Jack for several
+                  years, and his exceptional talent has consistently impressed
+                  me. His attention to detail, work ethic, and deep passion for
+                  design set him apart. Thanks to his contributions, our product
+                  has greatly benefited and evolved.
+                </p>
+                <p class="italic">
+                  I wholeheartedly recommend Jack as both a valuable team player
+                  and a true asset to any organisation."
+                </p>
+              </div>
+              <div class="testimonial__author">
+                <img
+                  src="/assets/images/nancy.jpeg"
+                  class="testimonial__author--image"
+                  alt="Nancy Cusack"
+                />
+                <span class="testimonial__author--name"
+                  >Nancy Cusack, Training Manager at itris</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="about__h2">Outside of work</h2>
+          <p style="width: 80ch">
+            When I'm not designing, I love spending time with my wife and
+            daughter. I also enjoy long country walks, playing golf and
+            photography (you can check out some of my photos on
+            <a href="https://unsplash.com/@brindo_" target="_blank">Unsplash</a
+            >). I also love to go snowboarding when I get the chance, and I have
+            always loved travelling to new places.
+          </p>
+          <p style="width: 80ch">
+            Aside from that, I love to learn new things. I am currently learning
+            JavaScript and I want to learn React too. The first app I created
+            was a
+            <a href="https://github.com/jack-brind/flashcards" target="_blank"
+              >Flashcards PWA</a
+            >
+            to refresh my memory for anything programming related.
+          </p>
+
+          <div class="photo__collection">
+            <div class="photo__collection--item">
+              <img
+                src="/assets/images/ld.jpg"
+                class="header__polaroid-image"
+                alt="Buttermere Lake, Cumbria"
+              />
+              <span class="photo__collection--caption"></span>
+            </div>
+            <div class="photo__collection--item">
+              <img
+                src="/assets/images/me-and-amelia.png"
+                class="header__polaroid-image"
+                alt="Me and Amelia"
+              />
+              <span class="photo__collection--caption"></span>
+            </div>
+            <div class="photo__collection--item">
+              <img
+                src="/assets/images/maggie.jpg"
+                class="header__polaroid-image"
+                alt="Maggie, our cat"
+              />
+              <span class="photo__collection--caption"></span>
+            </div>
+            <div class="photo__collection--item">
+              <img
+                src="/assets/images/me-2.png"
+                class="header__polaroid-image"
+                alt="Photo of Jack"
+              />
+              <span class="photo__collection--caption"></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
