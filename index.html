@@ -23,25 +23,31 @@
         </button>
         <div class="nav__right">
           <ul class="nav__links">
-            <li><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/work">Work</a></li>
             <li style="display: none"><a href="/writing">Writing</a></li>
-            <li><a href="/src/about.html">About</a></li>
+            <!-- <li><a href="/src/about.html">About</a></li> -->
             <li>
               <button
-                style="display: none"
-                href="/contact"
+                onclick="window.location.href='/src/about.html'"
                 class="btn btn--primary"
               >
-                Contact
+                About
               </button>
+            </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main role="main" style="position: relative; z-index: 1; width: 840px">
-      <div class="about__hero">
+    <main
+      role="main"
+      class="landing-main"
+      style="position: relative; z-index: 1"
+    >
+      <div class="landing__hero">
         <div class="header__headline">
           <div>
             <h1>Hi, I'm Jack.</h1>
@@ -205,8 +211,7 @@
               </p>
               <img
                 src="/assets/images/audit.png"
-                class="article__hero-image--part-2"
-                style="width: 143%; margin: 6px -56px -56px 0px"
+                class="bento__override-image"
               />
             </a>
 
@@ -238,11 +243,7 @@
               <img
                 src="/assets/images/knowledgebase-article.png"
                 alt="Knowledgebase hero image"
-                style="
-                  border-radius: 6px;
-                  box-shadow: var(--shadow-stroked-sm);
-                  margin-top: 8px;
-                "
+                class="bento__knowledgebase-image"
               />
             </a>
           </div>

@@ -21,49 +21,27 @@
         </button>
         <div class="nav__right">
           <ul class="nav__links">
-            <li><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/work">Work</a></li>
             <li style="display: none"><a href="/writing">Writing</a></li>
-            <li><a href="/src/about.html">About</a></li>
+            <!-- <li><a href="/src/about.html">About</a></li> -->
             <li>
               <button
-                style="display: none"
-                href="/contact"
+                onclick="window.location.href='/src/about.html'"
                 class="btn btn--primary"
               >
-                Contact
+                About
               </button>
             </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
+            </li>
           </ul>
-          <button class="nav__burger" aria-label="Toggle menu">
-            <span class="nav__burger-line"></span>
-            <span class="nav__burger-line"></span>
-            <span class="nav__burger-line"></span>
-          </button>
         </div>
-      </div>
-      <div class="nav__mobile">
-        <ul class="nav__mobile-links">
-          <li><a href="/work">Work</a></li>
-          <li style="display: none"><a href="/writing">Writing</a></li>
-          <li><a href="/src/about.html">About</a></li>
-          <li>
-            <button
-              style="display: none"
-              href="/contact"
-              class="btn btn--primary"
-            >
-              Contact
-            </button>
-          </li>
-        </ul>
       </div>
     </nav>
     <div class="background-pattern"></div>
     <main role="main" style="margin-top: 128px">
-      <div
-        class="about__hero"
-        style="display: flex; gap: 56px; flex-direction: row"
-      >
+      <div class="about__hero">
         <div class="header__headline">
           <div class="bento-card__tags">
             <span class="tag cs-tag">About me</span>
@@ -109,7 +87,30 @@
               class="header__polaroid-image"
               alt="Polariod of Jack"
             />
-            <span class="header__polariod-caption"></span>
+            <span
+              class="header__polariod-caption"
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 6px;
+              "
+            >
+              <div>
+                <svg
+                  width="9"
+                  height="12"
+                  viewBox="0 0 9 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.5 12C4.6 12 4.69881 11.9779 4.78964 11.9353C4.88047 11.8926 4.96116 11.8304 5.02615 11.7529C5.43462 11.2941 9 6.92471 9 4.58824C9 3.37136 8.52589 2.20432 7.68198 1.34386C6.83807 0.483402 5.69347 0 4.5 0C3.30653 0 2.16193 0.483402 1.31802 1.34386C0.474106 2.20432 0 3.37136 0 4.58824C0 6.92471 3.56538 11.2659 3.97385 11.7529C4.03884 11.8304 4.11953 11.8926 4.21036 11.9353C4.30119 11.9779 4.4 12 4.5 12ZM4.5 3.17647C4.77385 3.17647 5.04155 3.25927 5.26925 3.4144C5.49695 3.56952 5.67442 3.79001 5.77922 4.04798C5.88402 4.30594 5.91144 4.5898 5.85801 4.86366C5.80458 5.13751 5.67271 5.38907 5.47907 5.5865C5.28543 5.78394 5.03871 5.9184 4.77013 5.97287C4.50154 6.02735 4.22314 5.99939 3.97013 5.89254C3.71713 5.78568 3.50088 5.60473 3.34873 5.37257C3.19659 5.14041 3.11538 4.86746 3.11538 4.58824C3.11538 4.21381 3.26126 3.85472 3.52093 3.58997C3.7806 3.32521 4.13278 3.17647 4.5 3.17647Z"
+                    fill="#8A8F98"
+                  />
+                </svg>
+              </div>
+              United Kingdom</span
+            >
           </div>
           <div class="social-links">
             <a
@@ -405,9 +406,9 @@
           </div>
         </section>
 
-        <section>
+        <section class="outside-of-work">
           <h2 class="about__h2">Outside of work</h2>
-          <p style="width: 80ch">
+          <p>
             When I'm not designing, I love spending time with my wife and
             daughter. I also enjoy long country walks, playing golf and
             photography (you can check out some of my photos on
@@ -415,7 +416,7 @@
             >). I also love to go snowboarding when I get the chance, and I have
             always loved travelling to new places.
           </p>
-          <p style="width: 80ch">
+          <p>
             Aside from that, I love to learn new things. I am currently learning
             JavaScript and I want to learn React too. The first app I created
             was a
