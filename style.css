@@ -59,6 +59,10 @@
   :root {
     --font-size: 16px;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 
   ::selection {
     background-color: var(--text-selection);
@@ -423,10 +427,6 @@
 
 /* Layout layer for structural components */
 @layer layout {
-  html {
-    scroll-behavior: smooth;
-  }
-
   .background-pattern {
     position: absolute;
     top: 0;
@@ -460,11 +460,7 @@
   @media (max-width: 640px) {
     .background-pattern {
       width: 100%;
-    }
-
-    .article-mobile-pattern {
-      display: none;
-    }
+  }
   }
 
   main {
