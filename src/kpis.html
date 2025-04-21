@@ -69,14 +69,7 @@
             </ul>
           </div>
           <h1 style="font-size: 42px">itris KPI Dashboard</h1>
-          <div
-            style="
-              display: flex;
-              gap: 20px;
-              flex-direction: column;
-              margin: 56px 0 56px;
-            "
-          >
+          <div class="article-information">
             <div style="display: flex; gap: 12px">
               <span class="role__badge">Product design</span>
               <span class="role__badge">Interaction design</span>
@@ -151,7 +144,7 @@
         <p id="read-time"></p>
       </div>
 
-      <div style="display: flex; gap: 104px; flex-direction: row-reverse">
+      <div class="article__container">
         <!-- TL;DR contents -->
         <div class="contents-panel" data-segment="tldr">
           <h3 class="contents-panel__title">ON THIS PAGE</h3>
@@ -203,7 +196,7 @@
         </div>
 
         <div style="flex: 1">
-          <div id="tldr" style="width: 720px; margin: 0 auto">
+          <div id="tldr">
             <section class="article-content">
               <h2 id="tldr-context">Context</h2>
               <p>
@@ -434,7 +427,7 @@
                 and edge cases that needed to be addressed. If you'd like to
                 know more, please
                 <a
-                  href="/"
+                  href="/src/about.html"
                   style="
                     font-weight: var(--font-weight-regular);
                     color: var(--colour-blue);
