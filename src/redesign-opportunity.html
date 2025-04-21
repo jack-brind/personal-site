@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
+    <title>itris Redesign: An opportunity (Part I)</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+
+            <li>
+              <button href="/contact" class="btn">Contact</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main role="main" style="margin-top: 56px">
+      <div
+        class="article-header"
+        style="padding: 64px 0 150px; display: flex; gap: 24px"
+      >
+        <div class="article-header__content">
+          <div class="article-header__meta">
+            <span class="tag writing-tag">WRITING</span>
+            <span class="article-header__date">March 2024</span>
+          </div>
+          <h1 class="article-header__title">The Redesign That Never Shipped</h1>
+          <p class="article-header__description">
+            I spent 18 months redesigning a platform I'd worked on for over a
+            decade. It was my redemption arc. And then it got cancelled.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            padding: 16px;
+            width: 200px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          "
+        >
+          <div>Role:</div>
+          <div>Product Designer</div>
+          <div>Duration:</div>
+          <div>18 months</div>
+          <div>Status:</div>
+          <div>Cancelled</div>
+        </div>
+      </div>
+
+      <div class="article__hero">
+        <div>
+          <img
+            src="/assets/images/applicant-record.png"
+            alt="KPI image"
+            class="article__hero-image--part-1"
+          />
+        </div>
+      </div>
+
+      <div id="deep-dive" style="width: 720px; margin: 0 auto">
+        <section class="article-content">
+          <h2>Preface</h2>
+          <p>
+            Most designers write about success stories — design projects that
+            shipped, metrics that soared, glowing customer feedback. And it
+            makes sense right? Why would you write a case study and pitch
+            yourself to would-be hiring managers without showing them how good
+            you are?
+          </p>
+          <p>Well, this isn't one of those stories.</p>
+          <p>
+            This is about a project I spent over 18 months working on — a
+            complete redesign of itris recruitment CRM — that never launched. It
+            was my chance to redeem past design mistakes, apply a decade of
+            experience sharpening my design skills and product sense, and build
+            something I could finally be truly proud of. And then it got
+            cancelled.
+          </p>
+          <p>
+            This isn't a series of traditional case studies. Not really, anyway,
+            because let's be honest, most cookie cutter case studies are kind of
+            dull. Packed with diagrams of the Double Diamond Methodology and
+            neatly packaged Design Thinking infographics walking us through
+            empathise, define, ideate, prototype, and test. Not to mention Bob,
+            the persona that was made up as your ideal user. Does anyone really
+            read these? I certainly don't. So this is more a story with some
+            case study content sprinkled in. More of a fly on the wall, behind
+            the scenes piece. It's a story of growth, written across multiple
+            articles.
+          </p>
+          <p>
+            This series is about what I learned — not just about product design,
+            but about letting go of something you'd grown attached to. Why a
+            series, you ask? This project was huge; too long for one article.
+            This first entry sets the scene and context. Think of this series as
+            a tasting menu. And this article? The amuse-bouche.
+          </p>
+        </section>
+        <section class="article-content">
+          <h2>Where it all started</h2>
+          <p>
+            Many a designer, regardless of domain, will know the feeling of
+            looking back at your earlier work wincing like you've just bitten
+            into a lemon.
+          </p>
+          <blockquote>Did I really think that was good?</blockquote>
+          <p>
+            I've been a product designer for over a decade. I landed my first
+            job when I was fresh out of university having picked up a Bachelor's
+            degree in Philosophy. Unlike many of my university friends who had
+            completed accounting and finance degrees or computer science
+            degrees, I couldn't really see myself becoming a Philosopher for a
+            living.
+          </p>
+          <p>
+            After exactly 9 days of freedom in-between university and real-life
+            (i.e. getting a job), I joined a software company that was looking
+            for someone to work on a fixed-term contract for 12 months
+            re-writing the documentation for their product. To write the
+            documentation, I had to learn the product and I would consistently
+            stumble across things that were inconsistent, awkward, clunky and
+            then some things that just simply didn't work.
+          </p>
+          <p>
+            I recall one scenario where I clicked on a button in a settings
+            screen and nothing happened. I asked the lead developer to look into
+            it and let me know what it is supposed to do.
+          </p>
+
+          <div class="chat-container">
+            <div class="chat-message">
+              <div>
+                <div class="chat-name">Developer</div>
+                <div class="chat-bubble chat-bubble--received">
+                  Ah yeah, you've found a Comedy Button.
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-message chat-message--sent">
+              <div class="chat-bubble chat-bubble--sent">A comedy button?</div>
+            </div>
+
+            <div class="chat-message">
+              <div>
+                <div class="chat-name">Developer</div>
+                <div class="chat-bubble chat-bubble--received">
+                  Yeah, they're buttons that don't do anything. There's no code
+                  behind it.
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-message chat-message--sent">
+              <div class="chat-bubble chat-bubble--sent">
+                Ok. So what do we do about this one?
+              </div>
+            </div>
+
+            <div class="chat-message">
+              <div>
+                <div class="chat-name">Developer</div>
+                <div class="chat-bubble chat-bubble--received">
+                  Why don't you have a think about what we should do and come
+                  back to me…
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            And there it was — my first baby step into product design. Over the
+            course of the next few months, I was trusted to come back with more
+            suggestions for improvements that formed part of a short initiative
+            to improve parts of the UI. The improvements were a drop in the
+            ocean, but it lit a spark I didn't expect — I really enjoyed it.
+          </p>
+          <p>Oh, and that comedy button was removed, by the way.</p>
+        </section>
+        <section class="article-content">
+          <h2>A brief history of itris Recruitment CRM</h2>
+          <p>
+            The product was called itris — a Recruitment CRM, established in
+            1998. Built to be the operational backbone of recruitment agencies,
+            at its core, it combines the functionality of a sales tool,
+            Applicant Tracking System (ATS), and Customer Relationship
+            Management (CRM) solution into one platform.
+          </p>
+          <p>
+            Speed and accuracy is everything in recruitment. The faster a
+            recruiter can respond to a job or match a suitable candidate, the
+            more likely they are to succeed. That need for speed shaped a lot of
+            the product's early design decisions, as did the fundamental focus
+            on accuracy.
+          </p>
+          <p>
+            When I joined, the flagship version was itris 8. It was released in
+            2008 and the design was heavily influenced by Windows Vista with a
+            lot of skeuomorphic glossy buttons and beveled edges. It was built
+            in Delphi (which, I'm told, was pretty popular back in the day),
+            using a SQL database for data storage — very cutting edge if you're
+            into early-2000s throwbacks.
+          </p>
+          <p>
+            But it was showing its age, and the market was moving on.
+            Competitors were gaining ground, and a big decision needed to be
+            made — one the CEO would later call "one of his biggest regrets."
+            (We'll get to that).
+          </p>
+        </section>
+        <section class="article-content">
+          <h2>Enter itris 9</h2>
+          <p>
+            Around the time I joined, there were murmurs of re-writing the
+            entire product from the ground up using a more modern stack - C# and
+            WPF and there had been some background work going on behind the
+            scenes to accommodate this new product. Towards the end of 2014,
+            when the articles had been largely re-written, and after having
+            shown my value, I was presented with the opportunity of staying on
+            and being the company's first dedicated designer.
+          </p>
+          <p>My brief? Design the future of itris.</p>
+          <p>
+            It's worth noting that my experience of product design thus far was
+            mostly question like "Should we make these icons a bit bigger?" and
+            "Is it worth adding a little description to this section?". Equipped
+            with exactly zero product sense, Microsoft Paint, and a worrying
+            amount of confidence, I gave it my best shot. Looking back, I quite
+            literally had no idea what I was doing. It took me at least a year
+            to even discover that UX design was a thing — I was too busy
+            designing things that looked cool after seeing things on Dribbble.
+          </p>
+          <p>
+            But over time, through a mix of time and a lot of trial and error, I
+            began to figure things out and it would lead to me redesigning an
+            entire platform from scratch. A platform that was complex and
+            already very mature serving customers around the world.
+          </p>
+          <p>
+            By 2016, itris 9 had began full time development and the initial
+            designs that I had put together were starting to be implemented in
+            code. At that early stage, I was still finding my feet and the
+            design was influenced by the flat design trend, popularised by iOS 7
+            and Windows Metro. From that point, the design had been established
+            because, well, I couldn't feasibly keep changing it - I had to
+            settle on something.
+          </p>
+          <figure class="article-content__figure">
+            <img
+              src="/assets/images/AWR.png"
+              alt="AWR"
+              class="article-content__image--app lightbox-image"
+            />
+            <figcaption>
+              An early screenshot of the Agency Worker Regulations feature from
+              2016. Would you believe me if I told you that this was done in
+              Microsoft Paint?
+            </figcaption>
+          </figure>
+          <p>
+            At first, the "design team" was just me and our Training Manager,
+            who had years of customer insight. Then, in 2017, a new PM came
+            onboard and introduced radical ideas like MVP, kanban boards,
+            feature creep, and (brace yourself) Jira.
+          </p>
+          <p>
+            It took 3 more challenging years to finally release the new product
+            in 2020, right in the middle of a global pandemic. Perfect timing.
+          </p>
+          <p>
+            That feeling should have been one of jubilation — celebration and
+            pride in the achievement. We finally had a product that was rebuilt
+            from scratch and a complete redesign. But for me, it was more of a
+            strange, melancholic anti-climax. I think it was because my taste
+            and design sensibilities had evolved faster than itris had.
+          </p>
+          <p>
+            The product itself was solid—robust in terms of workflow—but the UI
+            just looked… amateurish. It was too cluttered, lacked hierarchy, had
+            poor contrast. Basically, despite my own hubris, I knew I could do
+            better.
+          </p>
+          <figure class="article-content__figure">
+            <img
+              src="/assets/images/applicant-record.png"
+              alt="Applicant record"
+              class="article-content__image--app lightbox-image"
+            />
+            <figcaption>
+              A screenshot of an applicant record (redesign of this coming in
+              part IV). This one was Adobe XD.
+            </figcaption>
+          </figure>
+          <p>
+            Everyone else loved it. Internally, it was seen as a huge upgrade
+            over itris 8. It was also
+            <a
+              href="https://www.google.com/search?sca_esv=4f5a3464f54e4b81&rlz=1C5CHFA_enGB1085GB1085&sxsrf=AHTn8zruGxklG9uG8L8-cwZ6CITCZAgvVQ:1744267269894&si=APYL9btvhO6SAb8jF9HqTZMMa7vs_teLnZaEVrJZwRKFIIKjoXSFwJwCFuJBCZP6DT-QodsU4UYwcENEzPoHSlOX2TWvc6lSHpkxOLROoNCTwoHD_88xvG01i1eKksdsmejKnl5oUvzhVuFGXnYVK5ZeNXEV55_Smg%3D%3D&q=itris+Recruitment+CRM+Software+Reviews&sa=X&ved=2ahUKEwifvY_47cyMAxWGWEEAHd_bJ5kQ0bkNegQIJhAE&biw=2560&bih=1318&dpr=2"
+              >really well received by customers</a
+            >. But I felt stuck designing in a style I no longer believed in.
+          </p>
+          <p>
+            That's a weird place to be: when your skills and taste improve after
+            the work is done, and you can see exactly what you'd do differently
+            but you can't change it. Sure, I made some small incremental
+            changes, but at its core, the design language was deeply rooted in
+            the product and changing it fundamentally was just not commercially
+            viable.
+          </p>
+          <p>
+            At this point in my journey, I had 6 or so years of experience and I
+            had learned a lot. I'd gone from Microsoft Paint to Photoshop to
+            Adobe Xd and amassed a tonne of knowledge and become the champion of
+            design in the business. I desperately wanted to redesign it again!
+            For the next few years I had to design in a style that I didn't like
+            that much. It was frustrating.
+          </p>
+          <p>
+            Still, the product worked well at launch, and customers really liked
+            it, and they still do today. But as features grew and the user base
+            expanded, more explicit limitations began to surface beyond the
+            aesthetics. Interfaces became cluttered and workflows became
+            over-complicated as more features and improvements were added. Some
+            parts just simply didn't scale. More and more customer requests
+            ended up with us saying 'hmm, we probably need to change these x
+            things before we can facilitate that' - we were chasing out tail. We
+            had accrued a lot of design and technical debt already, faster than
+            we could pay it back.
+          </p>
+        </section>
+        <section class="article-content">
+          <h2>Where things started to break</h2>
+          <p>
+            To make matters more complicated, itris had always been a desktop
+            product, not accessible inside a browser (which was a hard sell in
+            the post Covid hybrid/remote working era) which is increasingly what
+            customers and prospects wanted. Remember I mentioned the CEO's
+            biggest regret? This was it - choosing to do another desktop product
+            instead of a web product. We had spent years rebuilding the product
+            in a desktop environment, which, at the time was still relevant
+            (just about) but over time, it became clear that if we wanted to
+            stay relevant, we needed to create a web front end.
+          </p>
+          <p>
+            Aside from the fact that it was what customers and prospects wanted,
+            there were technical constraints and challenges that had plagued
+            from day one. For example:
+          </p>
+          <ul>
+            <li>
+              WPF had no native responsiveness like <code>@media</code> queries
+            </li>
+            <li>
+              Animations were almost impossible due to WPF's single UI thread
+            </li>
+            <li>WPF was nowhere near as rich as HTML & CSS</li>
+            <li>There was no emoji support</li>
+            <li>
+              Customers and prospects repeatedly asked for @metion
+              functionality, but it wouldn't have been easy
+            </li>
+            <li>
+              Dark mode needed to be manually implemented but there was too much
+              technical debt
+            </li>
+            <li>No native SVG support</li>
+          </ul>
+          <p>There's plenty more that I won't bore you with.</p>
+        </section>
+        <section class="article-content">
+          <h2>A chance for redemption</h2>
+          <p>
+            Due to increasing demands, in 2023, the CEO made the decision to
+            sanction a web client for itris. The backend was solid so this would
+            be a new client layer, giving users the flexibility to work in
+            either the desktop or web version. It would be less work than before
+            because we were only creating a web view on top. We had some
+            modifications to make in the backend to support it but compared to
+            before, it wouldn't be as big.
+          </p>
+          <p>
+            And for me, it was a perfect scenario: a second chance. Not just to
+            "port" the product to the web, but to completely reimagine its
+            foundations — the architecture, navigation, interactions, and
+            overall experience. This time, I brought a decade of hard-won
+            lessons, sharper instincts, and a better eye for what truly matters
+            in product design. We didn't want a surface-level facelift. We
+            wanted to rethink how itris worked, felt, and fit into people's
+            daily lives. It was a chance to build something better — and,
+            quietly, to prove to myself how far I'd come.
+          </p>
+          <p>
+            It was a chance to revisit my own thinking, correct my earlier
+            mistakes, and approach it all with fresh eyes and a (slightly more)
+            grown-up perspective. I'd learned how to make better decisions, ask
+            better questions, and build systems that scale. A chance to
+            simplify, streamline, and finally design the product I wish I'd
+            known how to make the first time.
+          </p>
+          <p>
+            We assembled a small team of 3 - me (design), a PM and an engineer
+            to think about the initial scope. We also involved the whole
+            engineering team every Thursday for 6 weeks to throw our heads
+            together and discuss the path forwards. Ultimately, we settled on
+            using Vue.js for the front end framework and I also suggested that
+            we use Storybook for the components. I would also build a design
+            system to help speed everything up and introduce some consistency (I
+            will write about this in an upcoming post).
+          </p>
+          <blockquote>
+            Huge redesigns for established products are a huge risk, but
+            sometimes necessary. You need to make changes to facilitate growth,
+            but at the same time, a dramatic change could end up alienating
+            users that are comfortable. However, we had a somewhat unique
+            position in that itris 9 was a desktop product and so this web
+            version would be separate. Users would be able to run both versions
+            side by side so they could ease into it and we'd be able to get
+            feedback, similar to when Figma went from UI2 to UI3.
+          </blockquote>
+          <p>
+            There is a fantastic
+            <a href="https://linear.app/blog/a-design-reset">post by Linear</a>
+            on redesigns that I would urge you to read.
+          </p>
+        </section>
+        <section class="article-content">
+          <h2>The plan</h2>
+          <p>
+            Looking back, the hardest part wasn't choosing frameworks or picking
+            colours, it was carving out time and space to rethink the
+            foundations of the product itself. With just me on design and
+            ongoing work on itris 9, progress was slow and sporadic. But
+            gradually, we started to zoom out and make sense of what needed to
+            come first.
+          </p>
+          <p>
+            We kicked off "Web Fridays" which were dedicated sessions where the
+            PM and I casual sessions where the PM and I would talk about ideas,
+            untangle parts of the IA, and sketch early flows. Those
+            conversations made it clear that before we could design anything, we
+            had to get the structure right and approach the redesign
+            systematically.
+          </p>
+          <p>
+            For the next 18 months, we would be making good headway on the
+            project and everything was looking great.
+          </p>
+        </section>
+        <section class="article-content">
+          <h2>And then everything changed...</h2>
+          <p>
+            In 2024, the business was acquired. Not long after, the new owners
+            made a strategic decision to pull the plug on the web redesign
+            entirely — choosing instead to re-skin another product they already
+            owned.
+          </p>
+          <p>
+            Just like that, the project I'd spent over 18 months researching,
+            planning, sketching, prototyping, and nurturing… was gone.
+          </p>
+          <p>No big drama. No fanfare. Just a quiet full stop.</p>
+        </section>
+        <section class="article-content">
+          <h2>What I Took With Me</h2>
+          <p>
+            Was it disappointing? Of course. I'd poured so much of myself into
+            that project — not just my time, but my taste, my experience, my
+            growth as a designer. And to see it shelved for business reasons
+            beyond my control was, frankly, gutting.
+          </p>
+          <p>But I don't regret a minute of it.</p>
+          <p>
+            That web redesign taught me more than many projects that did ship.
+            It sharpened my instincts, my systems thinking, my product sense. It
+            gave me the chance to redeem earlier design choices and think more
+            holistically. It reminded me how to fight for the user — even when
+            the outcome isn't guaranteed.
+          </p>
+          <p>And most importantly, it helped me grow.</p>
+          <p>
+            That growth doesn't go away just because the work didn't launch. I
+            still carry it with me — in how I think, how I work, and how I
+            approach every challenge that comes next.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>

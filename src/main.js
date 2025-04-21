@@ -2,6 +2,10 @@
 
 import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const svgArrow = `
       <svg
@@ -130,35 +134,166 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // About page section animations
+  const aboutSections = document.querySelectorAll('.about__section');
+  if (aboutSections.length > 0) {
+    // Reset initial state
+    aboutSections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+    });
+
+    // Trigger animations
+    setTimeout(() => {
+      aboutSections.forEach((section, index) => {
+        setTimeout(() => {
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        }, index * 200); // 200ms delay between each section
+      });
+    }, 200); // Initial delay
+  }
 });
 
-const skills = [
-  'Web design',
-  'Mobile design',
-  'Desktop design',
-  'Figma',
-  'Design systems',
-  'Interaction design',
-  'Design thinking',
-  'Design leadership',
-  'Product strategy',
-  'Product ownership',
-  'Collaboration',
-  'Accessibility',
-  'HTML',
-  'CSS',
-  'UI / UX design',
-  'Technical writing',
-  'User Research',
-  'Prototyping',
-  'Product growth',
-];
+document.addEventListener('DOMContentLoaded', () => {
+  const skills = [
+    'Web design',
+    'Mobile design',
+    'Desktop design',
+    'Figma',
+    'Design systems',
+    'Interaction design',
+    'Design thinking',
+    'Design leadership',
+    'Product strategy',
+    'Product ownership',
+    'Collaboration',
+    'Accessibility',
+    'HTML',
+    'CSS',
+    'UI / UX design',
+    'Technical writing',
+    'User Research',
+    'Prototyping',
+    'Product growth',
+  ];
 
-const container = document.querySelector('.skills-container');
+  const container = document.querySelector('.skills-container');
 
-container.innerHTML = skills
-  .map(skill => `<span class="skill-pill">${skill}</span>`)
-  .join('');
+  if (container) {
+    container.innerHTML = skills
+      .map(skill => `<span class="skill-pill">${skill}</span>`)
+      .join('');
+  }
+});
+
+// Segment control functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const tldrSection = document.getElementById('tldr');
+  const deepDiveSection = document.getElementById('deep-dive');
+  const segmentOptions = document.querySelectorAll('.segment-control__option');
+  const readTimeElement = document.getElementById('read-time');
+  const mainContent = document.querySelector('main');
+
+  // Initially show TL;DR content and hide deep dive
+  if (tldrSection) {
+    tldrSection.style.display = 'block';
+  }
+  if (deepDiveSection) {
+    deepDiveSection.style.display = 'none';
+  }
+  if (mainContent) {
+    mainContent.setAttribute('data-segment', 'tldr');
+  }
+
+  // Set initial read time to TL;DR time
+  if (readTimeElement) {
+    const tldrOption = document.querySelector(
+      '.segment-control__option[data-read-time]',
+    );
+    if (tldrOption) {
+      const tldrReadTime = tldrOption.getAttribute('data-read-time');
+      readTimeElement.textContent = `${tldrReadTime} read`;
+    }
+  }
+
+  // Function to update read time
+  const updateReadTime = readTime => {
+    if (readTimeElement) {
+      readTimeElement.textContent = `${readTime} read`;
+    }
+  };
+
+  // Add smooth scrolling for contents panel links
+  const contentsLinks = document.querySelectorAll('.contents-panel__link');
+  contentsLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  segmentOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      // Remove active class from all options
+      segmentOptions.forEach(opt => {
+        opt.classList.remove('segment-control__option--active');
+      });
+
+      // Add active class to clicked option
+      option.classList.add('segment-control__option--active');
+
+      // Update read time
+      const readTime = option.getAttribute('data-read-time');
+      updateReadTime(readTime);
+
+      // Show/hide appropriate section and update contents panel
+      const isDeepDive = option.textContent.trim() === 'Deep dive';
+
+      if (tldrSection) {
+        tldrSection.style.display = isDeepDive ? 'none' : 'block';
+      }
+      if (deepDiveSection) {
+        deepDiveSection.style.display = isDeepDive ? 'block' : 'none';
+      }
+      if (mainContent) {
+        mainContent.setAttribute(
+          'data-segment',
+          isDeepDive ? 'deep-dive' : 'tldr',
+        );
+      }
+    });
+  });
+});
 
 inject();
 injectSpeedInsights();
+
+const navLeft = document.querySelector('.nav__left');
+
+navLeft.addEventListener('click', function () {
+  window.location.href = '/';
+  console.log('clicked');
+});
+
+// Mobile navigation
+const burgerButton = document.querySelector('.nav__burger');
+const mobileNav = document.querySelector('.nav__mobile');
+
+burgerButton.addEventListener('click', () => {
+  burgerButton.classList.toggle('is-active');
+  mobileNav.classList.toggle('is-open');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', e => {
+  if (!mobileNav.contains(e.target) && !burgerButton.contains(e.target)) {
+    burgerButton.classList.remove('is-active');
+    mobileNav.classList.remove('is-open');
+  }
+});

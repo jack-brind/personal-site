@@ -9,547 +9,363 @@
   </head>
   <body>
     <div class="background-pattern"></div>
-    <main role="main">
-      <div class="about__hero">
-        <div class="header__headline">
-          <h1>Hey, I'm Jack 👋🏼</h1>
-          <h2>
-            I'm a product designer with over a decade of experience designing
-            for B2B productivity tools.
-          </h2>
-          <p style="margin-top: 0px">
-            I focus on creating clean, thoughtful and intuitive UI, building
-            scalable design systems, and finding elegant solutions to complex
-            problems.
-          </p>
-          <p style="margin-top: 0px">
-            I'm always looking for ways to continuously improve design standards
-            and help product teams move faster.
-          </p>
-        </div>
-        <div class="header__polariod">
+    <img src="/assets/images/bloom.png" class="bloom" />
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
           <img
-            src="/assets/images/jack.jpg"
-            class="header__polaroid-image"
-            alt="Polariod of Jack"
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
           />
-          <span class="header__polariod-caption"></span>
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li style="display: none"><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <!-- <li><a href="/src/about.html">About</a></li> -->
+            <li>
+              <button
+                onclick="window.location.href='/src/about.html'"
+                class="btn btn--primary"
+              >
+                About
+              </button>
+            </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="communications">
-        <div class="contact__buttons">
-          <button id="email-link" class="btn btn--default contact__button">
-            Email
-            <svg
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="currentColor"
-              class="contact__button-icon"
-              xmlns="http://www.w3.org/2000/svg"
+    <main
+      role="main"
+      class="landing-main"
+      style="position: relative; z-index: 1"
+    >
+      <div class="landing__hero">
+        <div class="header__headline">
+          <div>
+            <h1>Hi, I'm Jack.</h1>
+            <p
+              style="
+                margin-bottom: -8px;
+                line-height: 1.8;
+                color: var(--text-secondary);
+                font-size: 18px;
+              "
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
+              I'm a
+              <span
+                class="highlight"
+                style="
+                  color: var(--text-primary);
+                  font-weight: var(--font-weight-semibold);
+                "
+                >product designer</span
+              >
+              with a focus on creating clean, thoughtful and
+              <span
+                class="highlight"
+                style="
+                  color: var(--text-primary);
+                  font-weight: var(--font-weight-semibold);
+                "
+                >intuitive UI</span
+              >, building scalable
+              <span
+                class="highlight"
+                style="
+                  color: var(--text-primary);
+                  font-weight: var(--font-weight-semibold);
+                "
+                >design systems</span
+              >, and finding elegant solutions to complex problems with
+              <span
+                class="highlight"
+                style="
+                  color: var(--text-primary);
+                  font-weight: var(--font-weight-semibold);
+                "
+                >experience in B2B</span
+              >
+              productivity tools.
+            </p>
+          </div>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/jackbrind"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/linkedin.svg"
+                class="btn__icon--ghost social-icon"
               />
-            </svg>
-          </button>
-          <button id="cv-viewer" class="btn btn--default contact__button">
-            <svg
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="currentColor"
-              class="contact__button-icon"
-              xmlns="http://www.w3.org/2000/svg"
+            </a>
+            <a
+              href="https://x.com/jack_brind"
+              target="_blank"
+              class="btn btn--ghost"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.24197 0.524784C1.24197 0.234954 1.47693 0 1.76676 0H5.47524C5.76507 0 6.00002 0.234954 6.00002 0.524784V4.24201C6.00002 4.53184 5.76507 4.76679 5.47524 4.76679C5.18541 4.76679 4.95045 4.53184 4.95045 4.24201V1.79173L0.895863 5.84633C0.690923 6.05127 0.358648 6.05127 0.153706 5.84633C-0.051235 5.64139 -0.0512355 5.30912 0.153705 5.10417L4.2083 1.04957H1.76676C1.47693 1.04957 1.24197 0.814615 1.24197 0.524784Z"
+              <img
+                src="/assets/images/twitter.svg"
+                class="btn__icon--ghost social-icon"
               />
-            </svg>
-          </button>
-          <button id="about-me-btn" class="btn btn--ghost">
-            About me
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="currentColor"
-              class="contact__button-icon"
-              version="1.1"
+            </a>
+            <a
+              href="https://layers.to/brindo"
+              target="_blank"
+              class="btn btn--ghost"
             >
-              <path
-                d="M5.860176 0.35304C5.65278 0.40334400000000004 5.47494 0.5762400000000001 5.421996 0.7790279999999999C5.4027 0.85296 5.401344000000001 1.137636 5.400696 5.237916L5.4 9.61782 3.507 7.726032C1.9655280000000002 6.185544 1.6023239999999999 5.828436 1.551108 5.8029720000000005C1.303728 5.679984 1.002252 5.7378 0.823104 5.942604C0.647316 6.143544 0.626328 6.45198 0.773856 6.666C0.796608 6.699 1.907544 7.817280000000001 3.242604 9.151068C5.569968 11.476188 5.673192 11.577516000000001 5.74746 11.609844C5.90616 11.678904 6.09384 11.678904 6.25254 11.609844C6.326808000000001 11.577516000000001 6.430032000000001 11.476188 8.757396 9.151068C10.092456 7.817280000000001 11.203392000000001 6.699 11.226144 6.666C11.373672000000001 6.45198 11.352684 6.143544 11.176896000000001 5.942604C10.997748000000001 5.7378 10.696272 5.679984 10.448892 5.8029720000000005C10.397675999999999 5.828436 10.034472000000001 6.185544 8.493 7.726032L6.6000000000000005 9.61782 6.599304 5.237916C6.598656000000001 1.137636 6.5973 0.85296 6.578004000000001 0.7790279999999999C6.4981919999999995 0.47331599999999996 6.1692 0.278076 5.860176 0.35304"
-                stroke="none"
-                fill-rule="evenodd"
-                stroke-width="0.012"
-              ></path>
-            </svg>
-          </button>
+              <img
+                src="/assets/images/layers.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://github.com/jack-brind"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/github.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+            <a
+              href="https://unsplash.com/@brindo_"
+              target="_blank"
+              class="btn btn--ghost"
+            >
+              <img
+                src="/assets/images/unsplash.svg"
+                class="btn__icon--ghost social-icon"
+              />
+            </a>
+          </div>
         </div>
 
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/jackbrind"
-            target="_blank"
-            class="btn btn--ghost"
-          >
-            <img
-              src="/assets/images/linkedin.svg"
-              class="btn__icon--ghost social-icon"
-            />
-          </a>
-          <a
-            href="https://x.com/jack_brind"
-            target="_blank"
-            class="btn btn--ghost"
-          >
-            <img
-              src="/assets/images/twitter.svg"
-              class="btn__icon--ghost social-icon"
-            />
-          </a>
-          <a
-            href="https://layers.to/brindo"
-            target="_blank"
-            class="btn btn--ghost"
-          >
-            <img
-              src="/assets/images/layers.svg"
-              class="btn__icon--ghost social-icon"
-            />
-          </a>
-          <a
-            href="https://github.com/jack-brind"
-            target="_blank"
-            class="btn btn--ghost"
-          >
-            <img
-              src="/assets/images/github.svg"
-              class="btn__icon--ghost social-icon"
-            />
-          </a>
-          <a
-            href="https://unsplash.com/@brindo_"
-            target="_blank"
-            class="btn btn--ghost"
-          >
-            <img
-              src="/assets/images/unsplash.svg"
-              class="btn__icon--ghost social-icon"
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="section-header" style="margin-top: 48px">
-        <h2 class="section-header__title">Work</h2>
-        <p>A selection of highlighted projects</p>
-      </div>
-      <div class="projects">
-        <a href="/src/kpis.html" class="projects__card">
-          <div class="projects__card-details">
-            <div
-              class="projects__card-icon-container projects__card-icon-container--kpi"
+        <div class="projects">
+          <!-- Old grid -->
+          <div class="bento-grid">
+            <!-- Card 1 - Featured -->
+            <a
+              href="/src/kpis.html"
+              class="bento-card card-5-8 bento-card--featured"
             >
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+              </div>
               <svg
-                width="14"
+                width="16"
                 height="14"
-                viewBox="0 0 14 14"
-                fill="currentColor"
-                class="projects__card-icon"
+                viewBox="0 0 16 14"
+                fill="white"
+                class="bento-card__arrow"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_130_77)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.32387 0.694879C7.35258 1.1081 7.04087 1.46635 6.62765 1.49505C5.57529 1.56816 4.56604 1.94182 3.71979 2.57163C2.87355 3.20143 2.22589 4.06092 1.85376 5.04797C1.48162 6.03502 1.40065 7.10815 1.62047 8.13986C1.84029 9.17158 2.35166 10.1185 3.09383 10.8682C3.83599 11.6178 4.77775 12.1387 5.80723 12.3688C6.83671 12.599 7.91063 12.5288 8.90139 12.1666C9.89216 11.8044 10.7581 11.1655 11.3964 10.3256C12.0347 9.48575 12.4185 8.48033 12.5022 7.42879C12.5351 7.01588 12.8964 6.70779 13.3093 6.74065C13.7222 6.77351 14.0303 7.13487 13.9975 7.54778C13.891 8.8856 13.4027 10.1647 12.5907 11.2332C11.7786 12.3017 10.6769 13.1147 9.41641 13.5754C8.15593 14.0362 6.78966 14.1255 5.47994 13.8327C4.17021 13.5398 2.97207 12.8772 2.02786 11.9235C1.08365 10.9698 0.433067 9.76503 0.153402 8.45244C-0.126263 7.13985 -0.0232534 5.77457 0.450192 4.51881C0.923637 3.26304 1.74762 2.16957 2.82424 1.36831C3.90086 0.567044 5.18486 0.0916706 6.5237 -0.00133992C6.93692 -0.0300465 7.29517 0.281661 7.32387 0.694879ZM6.64809 4.04624C6.79909 4.43195 6.60882 4.86703 6.22311 5.01803C5.892 5.14765 5.59843 5.35776 5.36894 5.62935C5.13945 5.90094 4.98128 6.22545 4.90873 6.57353C4.83618 6.92161 4.85154 7.28228 4.95342 7.62294C5.0553 7.96359 5.24049 8.27348 5.49224 8.52458C5.74399 8.77567 6.05436 8.96006 6.39529 9.06107C6.73621 9.16207 7.09694 9.1765 7.44485 9.10305C7.79275 9.02961 8.11686 8.8706 8.38787 8.64042C8.65887 8.41023 8.86822 8.11613 8.99699 7.7847C9.147 7.3986 9.5816 7.20722 9.9677 7.35723C10.3538 7.50724 10.5452 7.94184 10.3952 8.32793C10.1761 8.89176 9.81996 9.39209 9.35893 9.78368C8.89789 10.1753 8.34652 10.4458 7.75468 10.5707C7.16283 10.6956 6.54918 10.6711 5.9692 10.4993C5.38923 10.3275 4.86123 10.0138 4.43295 9.58661C4.00468 9.15944 3.68963 8.63226 3.51631 8.05274C3.34299 7.47321 3.31686 6.85963 3.44029 6.26746C3.56371 5.6753 3.83279 5.12324 4.2232 4.66122C4.61361 4.19919 5.11303 3.84176 5.6763 3.62125C6.06201 3.47025 6.4971 3.66053 6.64809 4.04624ZM11.4861 0.378747C11.4425 0.203988 11.3081 0.0662379 11.1345 0.0181538C10.9609 -0.0299304 10.7749 0.019085 10.6475 0.146464L8.64755 2.14646C8.52336 2.27065 8.47344 2.45089 8.51604 2.62128L8.87664 4.06372L6.74417 6.19625C6.45128 6.48915 6.45129 6.96402 6.74419 7.25691C7.03708 7.5498 7.51196 7.54979 7.80485 7.2569L9.93724 5.12444L11.3798 5.48508C11.5502 5.52768 11.7304 5.47775 11.8546 5.35356L13.8546 3.35356C13.9819 3.22618 14.0309 3.04014 13.9828 2.86654C13.9348 2.69295 13.797 2.55863 13.6223 2.51494L11.9134 2.0877L11.4861 0.378747Z"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_130_77">
-                    <rect width="14" height="14" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M9.43795 13.5588C9.05532 13.9412 8.43568 13.9429 8.05091 13.5626C7.66281 13.179 7.66106 12.5529 8.04701 12.1671L12.206 8.01018H1C0.447716 8.01018 0 7.56247 0 7.01018V6.98982C0 6.43753 0.447715 5.98982 1 5.98982H12.206L8.04784 1.84037C7.66121 1.45455 7.66183 0.827959 8.04923 0.442907C8.43461 0.059857 9.05724 0.060724 9.44155 0.444846L15.2924 6.29272C15.6831 6.68328 15.6831 7.31672 15.2924 7.70728L9.43795 13.5588Z"
+                />
               </svg>
-            </div>
-            <div class="projects__card-content">
-              <h4 class="projects__card-title">KPI dashboard</h4>
-              <p class="projects__card-paragraph">
+              <h3>itris KPI Dashboard</h3>
+              <p>
                 An intuitive and flexible KPI dashboard to track user and team
                 performance, and organisational goals
               </p>
-            </div>
-          </div>
-          <img
-            src="/assets/images/kpi-widgets.png"
-            alt="Image for KPI project"
-            class="projects__card-image skew-reverse"
-          />
-        </a>
-        <a href="/src/knowledgebase.html" class="projects__card">
-          <div class="projects__card-details">
-            <div
-              class="projects__card-icon-container projects__card-icon-container--user"
+              <img
+                src="/assets/images/kpi-svg.svg"
+                class="bento__kpi-image skew-reverse"
+              />
+            </a>
+
+            <!-- Card 2 -->
+            <a
+              href="/src/compliance-overrides.html"
+              class="bento-card card-3-8"
             >
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+              </div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
+                width="16"
                 height="14"
-                viewBox="0 0 14 14"
-                fill="currentColor"
-                class="projects__card-icon"
-                version="1.1"
+                viewBox="0 0 16 14"
+                fill="var(--text-muted)"
+                class="bento-card__arrow"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2.804676 0.538734C2.6668740000000004 0.5637380000000001 2.533734 0.6088180000000001 2.4010000000000002 0.67543C1.979278 0.887082 1.70646 1.245776 1.5943340000000001 1.736C1.571206 1.8371220000000001 1.5586200000000001 10.331524 1.5812160000000002 10.584C1.58914 10.672550000000001 1.605366 10.782800000000002 1.6172520000000001 10.829C1.735916 11.290104000000001 2.076452 11.677148 2.511306 11.845134C2.660196 11.902645999999999 8.177666 13.434946 8.337 13.463016C8.497174000000001 13.491254 8.765008 13.481566 8.925 13.441764C9.436224 13.31456 9.857050000000001 12.914019999999999 10.000606 12.418000000000001C10.043068 12.27128 10.065902000000001 12.091785999999999 10.065958 11.904494000000001L10.066 11.761974 10.6295 11.756472C11.190676 11.750998 11.193532000000001 11.75083 11.323284000000001 11.713548000000001C11.85436 11.560976 12.230162 11.179364 12.381502000000001 10.638964000000001C12.431636000000001 10.459904 12.43326 10.301312 12.428598 6.0200000000000005C12.424258 2.023756 12.42276 1.807736 12.398792 1.708C12.26547 1.153278 11.908638 0.7598220000000001 11.377925999999999 0.582372C11.17781 0.515452 11.348638 0.517916 6.987666000000001 0.51926C3.7025379999999997 0.5202819999999999 2.8854 0.524076 2.804676 0.538734M3.013122 1.939798L2.982 1.961582 2.982 6.237308L2.982 10.51302 3.0107000000000004 10.528378C3.026492 10.53682 4.28491 10.890054 5.8072 11.313316C8.768788 12.136782 8.621144000000001 12.100158 8.652084 12.018790000000001C8.660680000000001 11.996166 8.664390000000001 10.48761 8.66229 7.868126C8.659378 4.231751999999999 8.656550000000001 3.750586 8.638 3.7321899999999997C8.621186 3.7155299999999998 3.088344 1.9180000000000001 3.053862 1.9180000000000001C3.04857 1.9180000000000001 3.03023 1.927814 3.013122 1.939798M7.665 1.925658C7.6727 1.928654 8.003449999999999 2.035698 8.4 2.1635459999999997C8.796550000000002 2.2913799999999998 9.1721 2.420502 9.234568 2.450448C9.462572 2.559816 9.676492 2.751476 9.825199999999999 2.979606C9.948554 3.168858 10.017616 3.355506 10.051384 3.591C10.060484 3.654364 10.065538 4.867828 10.06572 7.0245L10.066 10.36 10.510878 10.36C10.89088 10.36 10.960306000000001 10.356822000000001 10.986878 10.338202L11.018 10.316417999999999 11.018 6.139L11.018 1.961582 10.986878 1.939798C10.95913 1.920352 10.777438 1.9181259999999998 9.303378 1.9191060000000002C8.394568 1.9197080000000002 7.657300000000001 1.922662 7.665 1.925658"
-                  stroke="none"
-                  fill-rule="evenodd"
-                  stroke-width="0.014"
-                ></path>
+                  d="M9.43795 13.5588C9.05532 13.9412 8.43568 13.9429 8.05091 13.5626C7.66281 13.179 7.66106 12.5529 8.04701 12.1671L12.206 8.01018H1C0.447716 8.01018 0 7.56247 0 7.01018V6.98982C0 6.43753 0.447715 5.98982 1 5.98982H12.206L8.04784 1.84037C7.66121 1.45455 7.66183 0.827959 8.04923 0.442907C8.43461 0.059857 9.05724 0.060724 9.44155 0.444846L15.2924 6.29272C15.6831 6.68328 15.6831 7.31672 15.2924 7.70728L9.43795 13.5588Z"
+                />
               </svg>
-            </div>
-            <div class="projects__card-content">
-              <h4 class="projects__card-title">Knowledgebase</h4>
-              <p class="projects__card-paragraph">
+              <h3>Compliance Overrides</h3>
+              <p>
+                Allowing users to temporarily override compliance restrictions
+              </p>
+              <img
+                src="/assets/images/audit.png"
+                class="bento__override-image"
+              />
+            </a>
+
+            <!-- Card 3 - itris Knowledgebase -->
+            <a
+              href="/src/knowledgebase.html"
+              class="bento-card card-5-8 stretch-bento"
+            >
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+              </div>
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="var(--text-muted)"
+                class="bento-card__arrow"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.43795 13.5588C9.05532 13.9412 8.43568 13.9429 8.05091 13.5626C7.66281 13.179 7.66106 12.5529 8.04701 12.1671L12.206 8.01018H1C0.447716 8.01018 0 7.56247 0 7.01018V6.98982C0 6.43753 0.447715 5.98982 1 5.98982H12.206L8.04784 1.84037C7.66121 1.45455 7.66183 0.827959 8.04923 0.442907C8.43461 0.059857 9.05724 0.060724 9.44155 0.444846L15.2924 6.29272C15.6831 6.68328 15.6831 7.31672 15.2924 7.70728L9.43795 13.5588Z"
+                />
+              </svg>
+              <h3>Rethinking the itris docs</h3>
+              <p>
                 A learning hub for users to get the most out of itris and
                 self-educate with best practices
               </p>
-            </div>
+              <img
+                src="/assets/images/knowledgebase-article.png"
+                alt="Knowledgebase hero image"
+                class="bento__knowledgebase-image"
+              />
+            </a>
           </div>
-          <img
-            src="/assets/images/knowledgebase-article.png"
-            alt="Image for user selection project"
-            class="projects__card-image skew-reverse projects__card-image--knowledgebase"
-          />
-        </a>
-        <a href="/src/compliance-overrides.html" class="projects__card">
-          <div class="projects__card-details">
-            <div
-              class="projects__card-icon-container projects__card-icon-container--nav"
+
+          <!-- New grid -->
+          <div style="display: none" class="bento-grid">
+            <!-- Card 1 - Featured -->
+            <a
+              href="/src/redesign-foundations.html"
+              class="bento-card card-5-8 bento-card--featured"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="currentColor"
-                class="projects__card-icon"
-                version="1.1"
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+                <!-- <span class="tag writing-tag">WRITING</span> -->
+              </div>
+              <p
+                class="bento-card__arrow"
+                style="
+                  position: absolute;
+                  top: 12px;
+                  right: 12px;
+                  font-size: 18px;
+                "
               >
-                <path
-                  d="M1.66201 0.40751200000000004C1.0382120000000001 0.468216 0.524692 0.947198 0.41706 1.568742C0.390614 1.721398 0.390614 6.678602000000001 0.41706 6.831258C0.51625 7.404054 0.969248 7.865032 1.547364 7.981470000000001C1.659084 8.003981999999999 5.283040000000001 8.01626 5.46 7.9947420000000005C5.609562 7.976542000000001 5.720414 7.924028 5.821172 7.823620000000001C5.999756 7.645666 6.04835 7.374416000000001 5.943042 7.143458000000001C5.8848020000000005 7.015736 5.732062 6.876884 5.595212 6.827282C5.563194 6.815676 5.024824 6.809292 3.644522 6.804126C1.74636 6.797028 1.737876 6.796874 1.6993900000000002 6.768132C1.678124 6.752256 1.647744 6.721876 1.631868 6.70061L1.603 6.661942000000001 1.603 4.2L1.603 1.738058 1.631868 1.6993900000000002C1.647744 1.678124 1.678124 1.647744 1.6993900000000002 1.631868L1.738058 1.603 6.599138000000001 1.603C11.219796 1.603 11.462094 1.6042180000000001 11.49792 1.627696C11.518654 1.641276 11.546724 1.669346 11.560304 1.6900659999999998C11.58346 1.7253880000000001 11.585434 1.8337900000000003 11.592 3.4223700000000004L11.599 5.117 11.630752000000001 5.19547C11.727898 5.435598000000001 11.914784000000001 5.577292 12.159 5.595968C12.273674000000002 5.604732 12.4061 5.575836 12.497968 5.522005999999999C12.593238000000001 5.46616 12.697636000000001 5.351794 12.745474 5.2508680000000005L12.789 5.159 12.792878000000002 3.416C12.795496000000002 2.2347080000000004 12.79194 1.641416 12.781832000000001 1.575C12.746888 1.345316 12.625788 1.084622 12.462800000000001 0.8882580000000001C12.276138 0.663376 11.964078 0.481852 11.654636000000002 0.41815199999999997C11.589550000000001 0.404754 10.485804 0.40034400000000003 6.678 0.39824400000000004C3.9868499999999996 0.39676 1.729658 0.400932 1.66201 0.40751200000000004M3.19368 3.424106C3.027332 3.468836 2.8670880000000003 3.577154 2.7636279999999998 3.714788C2.684234 3.820418 2.6704719999999997 3.847088 2.6335539999999997 3.9669700000000003C2.568706 4.177544 2.607304 4.459364 2.724764 4.633062C2.87791 4.85954 3.0907660000000003 4.981914 3.353 4.994234C3.6102360000000004 5.006316 3.781526 4.940726 3.963442 4.760476C4.12279 4.602583999999999 4.2 4.422544 4.2 4.208876C4.2 3.97873 4.1259820000000005 3.8005800000000005 3.963442 3.639524C3.8441340000000004 3.521308 3.7324980000000005 3.455564 3.596698 3.42356C3.484712 3.397156 3.292884 3.397422 3.19368 3.424106M6.401808 3.422118C6.168386 3.478678 5.953402 3.667384 5.8540160000000006 3.902976C5.836852 3.9436739999999997 5.815488 4.027142 5.8065560000000005 4.088476C5.756982000000001 4.428606 5.940802000000001 4.772768 6.251 4.92058C6.37084 4.9777000000000005 6.463898 4.998 6.605746 4.998C6.823292 4.998 7.006062 4.92198 7.1610700000000005 4.767028C7.325038 4.603144 7.396774000000001 4.430538 7.396774000000001 4.2C7.396774000000001 3.9696300000000004 7.325108 3.797136 7.1610700000000005 3.632678C7.05327 3.524598 6.911156 3.444518 6.778814000000001 3.4172740000000004C6.681948 3.3973240000000002 6.494138 3.399746 6.401808 3.422118M9.59371 3.423588C9.324196 3.4961640000000003 9.09335 3.729152 9.022888 3.9997019999999996C8.978620000000001 4.169648 9.002419999999999 4.3981840000000005 9.080582000000001 4.553738C9.218411999999999 4.8280259999999995 9.493652 4.998 9.8 4.998C10.166898 4.998 10.484418 4.753294 10.575964 4.399976C10.604174 4.291126 10.604174 4.108874 10.575964 4.000024C10.504494000000001 3.724168 10.275454 3.494554 10.000298 3.422888C9.900632 3.396932 9.691346000000001 3.397282 9.59371 3.423588M9.674 6.001968C8.63884 6.034504 7.641088000000001 6.50496 6.9510000000000005 7.285908000000001C6.44189 7.862036 6.120562 8.582559999999999 6.026482000000001 9.359C5.991258 9.649668 6.003606 10.151036 6.05283 10.43C6.196134000000001 11.241888 6.558874 11.937422 7.134848 12.504632C7.677236000000001 13.038788 8.32902 13.382712 9.078608 13.5303C9.322628000000002 13.578348 9.52147 13.596309999999999 9.807 13.5961C10.652012 13.595498 11.417728 13.335518 12.117 12.811792C12.307946000000001 12.668796 12.677798000000001 12.295696 12.826576 12.096C13.323576 11.428914 13.59043 10.658144 13.59484 9.877C13.596309999999999 9.617188 13.56033 9.513895999999999 13.420344 9.376136C13.143032 9.10322 12.697887999999999 9.156293999999999 12.487957999999999 9.487324000000001C12.426526 9.584190000000001 12.40743 9.670682000000001 12.390938 9.926882C12.382734000000001 10.054422 12.369266 10.196172 12.36102 10.241882C12.213026000000001 11.062478 11.690448 11.764046 10.96172 12.120443999999999C10.411660000000001 12.389468 9.848132 12.46217 9.264164000000001 12.33946C8.254932 12.127388 7.462518 11.331474 7.258776000000001 10.325224C7.163016 9.852318 7.188174000000001 9.425332000000001 7.3379460000000005 8.981C7.56945 8.294216 8.05385 7.74935 8.701 7.44779C9.029005999999999 7.294952 9.274188 7.234738000000001 9.673118 7.209062C9.929318 7.19257 10.01581 7.173474 10.112675999999999 7.112042C10.320968 6.979952 10.430434 6.740622 10.391108 6.503322000000001C10.354064000000001 6.279714 10.185182000000001 6.088082 9.968 6.023178C9.9064 6.004767999999999 9.808834 5.997726 9.674 6.001968M12.82323 6.8243C12.677223999999999 6.878102 12.651254 6.902518 11.22457 8.327648L9.800154 9.750524 9.38357 9.335886C9.15446 9.10784 8.939546 8.904266 8.906002 8.883504C8.816626000000001 8.828204 8.729196 8.805622 8.603 8.805244C8.421742 8.804698 8.29885 8.855378 8.17173 8.983113999999999C7.9964640000000005 9.159206000000001 7.951440000000001 9.440844 8.062558000000001 9.665964C8.098384000000001 9.738554 8.186107999999999 9.8322 8.661758 10.305638L9.219 10.86029 9.352 10.925446C9.507050000000001 11.001424 9.63417 11.03151 9.8 11.03151C9.96555 11.03151 10.092754 11.001465999999999 10.248 10.925712L10.381 10.860808 11.925046 9.318904C12.774272 8.470854000000001 13.48774 7.748118000000001 13.510518000000001 7.712824000000001C13.53331 7.677516000000001 13.561506 7.617666000000001 13.573182000000001 7.579824000000001C13.600454000000001 7.491456 13.600454000000001 7.306544 13.573182000000001 7.218176C13.519058000000001 7.042798 13.352612 6.877626 13.176002 6.824034C13.095376 6.799562 12.889968 6.799716 12.82323 6.8243"
-                  stroke="none"
-                  fill-rule="evenodd"
-                  stroke-width="0.014"
-                ></path>
-              </svg>
-            </div>
-            <div class="projects__card-content">
-              <h4 class="projects__card-title">Compliance overrides</h4>
-              <p class="projects__card-paragraph">
-                Allowing users to temporarily override compliance restrictions
-                in a simple and frictionless way
               </p>
-            </div>
-          </div>
-          <img
-            src="/assets/images/generate.png"
-            alt="Image for KPI project"
-            class="projects__card-image skew-reverse projects__card-image--override"
-          />
-        </a>
-      </div>
-
-      <div id="about-sections" class="about-sections">
-        <section class="about__section">
-          <h2 class="about__h2">About me</h2>
-          <p>
-            I'm a versatile and multi-disciplined Product Designer with 10+
-            years experience crafting simple, intuitive and engaging design
-            solutions across desktop, web, and mobile. I love designing
-            solutions that have a meaningful and lasting impact for a business
-            and it's customers. In my most recent role, I led design at itris
-            Recruitment CRM, building better, more intuitive workflows for
-            recruiters.
-          </p>
-
-          <p>
-            As an end-to-end product designer, I'm involved from the very
-            start—shaping product strategy, aligning user needs with business
-            goals, and leading project discovery through to implementation. I'm
-            comfortable navigating ambiguity, whether it's driving new features,
-            iterating on an existing experience, or juggling multiple
-            fast-moving initiatives. I'm highly hands-on and detail-oriented,
-            often refining small details in code to get it feeling
-            <i>just right</i>.
-          </p>
-        </section>
-
-        <section class="about__section">
-          <h2 class="about__h2">My design principles</h2>
-          <p style="text-wrap: auto">
-            These core principles shape how I approach design.
-          </p>
-          <div class="principles">
-            <div class="principle principle-simple">
-              <div class="principle__header">
-                <div class="principle__icon">
-                  <img
-                    src="/assets/images/simple.svg"
-                    class="icon-simple"
-                    alt="Simple icon"
-                  />
-                </div>
-                <h3>Simplicity over complexity</h3>
-              </div>
+              <h3>itris Platform Redesign</h3>
               <p>
-                Favour simplicity over complexity. Often, the simplest solution
-                is the best one. In product design, clarity reduces friction—if
-                a solution requires excessive explanation, it's probably not the
-                right one.
+                Breaking down the itris foundations and information architecture
+                redesign.
               </p>
-            </div>
+              <img
+                src="/assets/images/chrome.svg"
+                class="article__hero-image--part-1a"
+                style="margin-left: 96px"
+              />
+            </a>
 
-            <div class="principle principle-details">
-              <div class="principle__header">
-                <div class="principle__icon">
-                  <img
-                    src="/assets/images/holistic.svg"
-                    class="icon-details"
-                    alt="Simple icon"
-                  />
-                </div>
-                <h3>Think holistically</h3>
+            <!-- Card 2 -->
+            <a href="/src/redesign-velocity.html" class="bento-card card-3-8">
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
               </div>
-              <p>
-                Design decisions should align with a broader narrative, not
-                exist in isolation. When each part of a product contributes to a
-                wider goal, it creates a lasting experience that supports the
-                product's growth and evolution.
-              </p>
-            </div>
-            <div class="principle principle-quality">
-              <div class="principle__header">
-                <div class="principle__icon">
-                  <img
-                    src="/assets/images/intention.svg"
-                    class="icon-consistent"
-                    alt="Simple icon"
-                  />
-                </div>
-                <h3>Design with intention</h3>
-              </div>
-              <p>
-                Design should be deliberate and every detail should serve a
-                purpose. When intention drives design, what follows is clarity,
-                focus and usability, and a meaningful contribution to the user
-                experience.
-              </p>
-            </div>
-          </div>
-        </section>
+              <h3>Building a scalable design system</h3>
+              <p>Deep dive into the Velocity design system.</p>
+              <img
+                src="/assets/images/velocity.png"
+                class="article__hero-image--part-2"
+                style="
+                  margin: 6px -32px;
+                  border-top: 0.5px solid var(--border-default);
+                "
+              />
+            </a>
 
-        <section class="about__section">
-          <h2 class="about__h2">Skills</h2>
-          <div class="skills-container"></div>
-        </section>
-
-        <section class="about__section">
-          <div class="experience">
-            <h2 class="about__h2">Experience</h2>
-            <blockquote class="experience">
-              <div class="experience__entry">
-                <h3>Lead Product Designer at itris Recruitment CRM</h3>
-                <p class="experience__entry--date">2023 - 2025</p>
-              </div>
-              <div class="experience__entry">
-                <h3>Senior Product Designer at itris Recruitment CRM</h3>
-                <p class="experience__entry--date">2020 - 2023</p>
-              </div>
-              <div class="experience__entry">
-                <h3>Product Designer at itris Recruitment CRM</h3>
-                <p class="experience__entry--date">2014 - 2020</p>
-              </div>
-              <div class="experience__entry">
-                <h3>Technical Writer at itris Recruitment CRM</h3>
-                <p class="experience__entry--date">2013 - 2014</p>
-              </div>
-            </blockquote>
-          </div>
-        </section>
-
-        <section class="about__section">
-          <h2 class="about__h2">Recommendations</h2>
-          <p>Kind words from some people I've worked with over the years.</p>
-          <div class="testimonials">
-            <div class="testimonial">
-              <div class="testimonial__content">
-                <p class="italic">
-                  "I worked closely with Jack as part of an initial team of 3 on
-                  our core, new product, itris 9 for over 7 years as part of the
-                  Product Team.
-                </p>
-                <p class="italic">
-                  Jack's passion, work ethic and attention to detail made him a
-                  critical member of the team. The result of Jack's work enabled
-                  us to convert many existing clients from a cheaper, more
-                  feature-rich product to a more intuitive, attractive one that
-                  costs more.
-                </p>
-              </div>
-
-              <div class="testimonial__author">
-                <img
-                  src="/assets/images/ian.jpeg"
-                  class="testimonial__author--image"
-                  alt="Ian Farrow"
-                />
-                <span class="testimonial__author--name"
-                  >Ian Farrow, Product Director at itris</span
-                >
-              </div>
-            </div>
-            <div class="testimonial">
-              <div class="testimonial__content">
-                <p class="italic">
-                  "I had the pleasure of working closely with Jack for seven
-                  years on itris 9, and throughout that time, he consistently
-                  impressed me with his eye for design, attention to detail,
-                  strong work ethic, and high standards.
-                </p>
-                <p class="italic">
-                  I'm incredibly proud of what we achieved during those years,
-                  and it wouldn't have been possible without Jack. I wouldn't
-                  hesitate to recommend him to any team."
-                </p>
-              </div>
-              <div class="testimonial__author">
-                <img
-                  src="/assets/images/adam.jpeg"
-                  class="testimonial__author--image"
-                  alt="Adam Dullage"
-                />
-                <span class="testimonial__author--name"
-                  >Adam Dullage, Product Owner at itris</span
-                >
-              </div>
-            </div>
-            <div class="testimonial">
-              <div class="testimonial__content">
-                <p class="italic">
-                  "Jack led the design on itris and played a key role in the
-                  product strategy and roadmap. He was well respected and
-                  accrued a great deal of influence throughout the business.
-                </p>
-                <p class="italic">
-                  Jack is very professional and hard working, and I would
-                  recommend him to any team looking for a talented, driven
-                  product designer."
-                </p>
-              </div>
-              <div class="testimonial__author">
-                <img
-                  src="/assets/images/andy.jpeg"
-                  class="testimonial__author--image"
-                  alt="Andy Dobson"
-                />
-                <span class="testimonial__author--name"
-                  >Andy Dobson, Operations Director at itris</span
-                >
-              </div>
-            </div>
-            <div class="testimonial">
-              <div class="testimonial__content">
-                <p class="italic">
-                  "I've had the privilege of working with Jack for several
-                  years, and his exceptional talent has consistently impressed
-                  me. His attention to detail, work ethic, and deep passion for
-                  design set him apart. Thanks to his contributions, our product
-                  has greatly benefited and evolved.
-                </p>
-                <p class="italic">
-                  I wholeheartedly recommend Jack as both a valuable team player
-                  and a true asset to any organisation."
-                </p>
-              </div>
-              <div class="testimonial__author">
-                <img
-                  src="/assets/images/nancy.jpeg"
-                  class="testimonial__author--image"
-                  alt="Nancy Cusack"
-                />
-                <span class="testimonial__author--name"
-                  >Nancy Cusack, Training Manager at itris</span
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2 class="about__h2">Outside of work</h2>
-          <p>
-            When I'm not designing, I love spending time with my wife and
-            daughter. I also enjoy long country walks, playing golf and
-            photography (you can check out some of my photos on
-            <a href="https://unsplash.com/@brindo_" target="_blank">Unsplash</a
-            >). I also love to go snowboarding when I get the chance, and I have
-            always loved travelling to new places.
-          </p>
-          <p>
-            Aside from that, I love to learn new things. I am currently learning
-            JavaScript and I want to learn React too. The first app I created
-            was a
-            <a href="https://github.com/jack-brind/flashcards" target="_blank"
-              >Flashcards PWA</a
+            <!-- Card 3 - Opportunity (writing) -->
+            <a
+              href="/src/redesign-opportunity.html"
+              class="bento-card card-3-8"
             >
-            to refresh my memory for anything programming related.
-          </p>
+              <div class="bento-card__tags">
+                <span class="tag writing-tag">WRITING</span>
+              </div>
+              <h3>itris Redesign: An opportunity</h3>
+              <p>Correcting past mistakes and growth as a designer</p>
+              <img
+                src="/assets/images/app-snippet.png"
+                style="
+                  margin: 0px -250px -70px 0px;
+                  border-radius: 6px;
+                  box-shadow: var(--shadow-stroked-sm);
+                "
+              />
+            </a>
 
-          <div class="photo__collection">
-            <div class="photo__collection--item">
+            <!-- Card 4 - itris Knowledgebase -->
+            <a href="/src/knowledgebase.html" class="bento-card card-5-8">
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+              </div>
+              <h3>Rethinking the itris docs</h3>
+              <p>
+                Designing a knowledgebase and learning platform for itris users
+              </p>
               <img
-                src="/assets/images/ld.jpg"
-                class="header__polaroid-image"
-                alt="Buttermere Lake, Cumbria"
+                src="/assets/images/knowledgebase-article.png"
+                alt="Knowledgebase hero image"
+                style="
+                  border-radius: 6px;
+                  box-shadow: var(--shadow-stroked-sm);
+                  margin-top: 8px;
+                "
               />
-              <span class="photo__collection--caption"></span>
-            </div>
-            <div class="photo__collection--item">
+            </a>
+            <!-- Card 5 -->
+            <a href="/src/kpis.html" class="bento-card card-5-8">
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+                <!-- <span class="tag writing-tag">WRITING</span> -->
+              </div>
+              <h3>KPI dashboard</h3>
+              <p>Creating a KPI dashboard for the itris platform.</p>
               <img
-                src="/assets/images/me-and-amelia.png"
-                class="header__polaroid-image"
-                alt="Me and Amelia"
+                src="/assets/images/kpi-svg.svg"
+                class="skew-reverse"
+                style="margin-top: 56px; width: 890px; margin-left: -66px"
               />
-              <span class="photo__collection--caption"></span>
-            </div>
-            <div class="photo__collection--item">
-              <img
-                src="/assets/images/maggie.jpg"
-                class="header__polaroid-image"
-                alt="Maggie, our cat"
-              />
-              <span class="photo__collection--caption"></span>
-            </div>
-            <div class="photo__collection--item">
-              <img
-                src="/assets/images/me-2.png"
-                class="header__polaroid-image"
-                alt="Photo of Jack"
-              />
-              <span class="photo__collection--caption"></span>
-            </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="/src/redesign-velocity.html" class="bento-card card-3-8">
+              <div class="bento-card__tags">
+                <span class="tag cs-tag">WORK</span>
+              </div>
+              <h3>Building a scalable design system</h3>
+              <p>Deep dive into the Velocity design system.</p>
+              <img src="/assets/images/audit.png" style="margin: 6px 0 0 0" />
+            </a>
           </div>
-        </section>
+        </div>
       </div>
     </main>
+
     <footer role="contentinfo">
       <p>&copy; 2025 Jack Brind</p>
       <div class="social-links">
@@ -605,6 +421,7 @@
         </a>
       </div>
     </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

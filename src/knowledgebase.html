@@ -4,270 +4,401 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
-    <title>Knowledgebase Showcase</title>
+    <title>itris Knowledgebase</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <main role="main">
-      <div class="header">
-        <button
-          class="btn btn--ghost btn--back"
-          onclick="window.location.href='/'"
-        >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.92153 1.08094C5.20851 0.794103 5.67324 0.792805 5.96182 1.07803V1.07803C6.25289 1.36572 6.2542 1.83535 5.96474 2.12467L2.84548 5.24236L11.2424 5.24236C11.6608 5.24236 12 5.58157 12 6V6C12 6.41843 11.6608 6.75764 11.2424 6.75764L2.84548 6.75764L5.96412 9.86972C6.25409 10.1591 6.25363 10.629 5.96308 10.9178V10.9178C5.67404 11.2051 5.20707 11.2045 4.91884 10.9164L0.70764 6.70728C0.316879 6.31672 0.316879 5.68328 0.70764 5.29272L4.92153 1.08094Z"
-            />
-          </svg>
-          Back
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
         </button>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li style="display: none"><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <!-- <li><a href="/src/about.html">About</a></li> -->
+            <li>
+              <button
+                onclick="window.location.href='/src/about.html'"
+                class="btn btn--primary"
+              >
+                About
+              </button>
+            </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
 
+    <main role="main">
       <div class="article__hero">
-        <div class="article__hero-header">
-          <h1>itris Knowledgebase</h1>
-          <h4>Product design, Interaction design<br />2022</h4>
+        <div>
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li style="color: var(--text-muted)">Work</li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a
+                  href="/src/knowledgebase.html"
+                  style="color: var(--text-primary)"
+                  class="breadcrumb__link"
+                  >Rethinking the itris docs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1 style="font-size: 42px">Rethinking the itris docs</h1>
+          <div class="article-information">
+            <div style="display: flex; gap: 12px">
+              <span class="role__badge">Product design</span>
+              <span class="role__badge">Interaction design</span>
+            </div>
+            <div style="display: flex; gap: 12px">
+              <div style="display: flex; gap: 8px; align-items: center">
+                <img src="/public/assets/images/figma-logo.svg" alt="" />
+                <span
+                  style="
+                    font-size: 13px;
+                    font-weight: var(--font-weight-medium);
+                    color: var(--text-primary);
+                    line-height: 20px;
+                  "
+                  >Figma</span
+                >
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <span
+                style="
+                  font-size: 13px;
+                  font-weight: var(--font-weight-medium);
+                  line-height: 20px;
+                "
+                >2023</span
+              >
+              <span style="font-size: 9px; line-height: 20px">•</span>
+              <span
+                style="
+                  font-size: 13px;
+                  font-weight: var(--font-weight-medium);
+                  line-height: 20px;
+                "
+                >7 months</span
+              >
+            </div>
+          </div>
         </div>
-        <div class="article__hero-image-bloom--knowledgebase"></div>
-        <img
-          src="/assets/images/knowledgebase-article.png"
-          alt="Knowledgebase hero image"
-          class="article__hero-image--knowledgebase"
-        />
       </div>
 
-      <section class="article-content">
-        <h2>Context</h2>
-        <p>
-          High quality documentation is an important cornerstone of any software
-          product, particularly if the product contains some complex workflows.
-          Having easily accessible, well maintained and structured documentation
-          provides some key benefits to a business, including:
-        </p>
-        <ul>
-          <li>Quicker onboarding for new users</li>
-          <li>Easier learning curve</li>
-          <li>Increased trust in the company</li>
-          <li>Competitive advantage</li>
-        </ul>
-        <p>
-          Ultimately, if users feel confident that they can use a product, they
-          are more likely to be advocates and it dramatically reduces support
-          and training calls. That was the main objective we had when creating
-          the itris Knowledgebase.
-        </p>
-        <p>
-          I led the design and collaborated with key stakeholders from across
-          the business to produce a high-quality learning resource for the
-          company and the users of the product.
-        </p>
-        <h2>Problem</h2>
-        <p>
-          At the time, documentation existed as PDFs on a shared drive. Users
-          <i>did have access</i> to these documents, but you had to know where
-          to look to find them. As a result, documents were often duplicated and
-          changed to align more closely with the department consuming them,
-          which led to scattered documentation that was quickly out of date.
-        </p>
-        <p>
-          This gave rise to an increasing amount of inconsistency for users, as
-          there was not an easily accessible, central source of truth for
-          learning materials. Additionally, the training team was offering
-          training courses, but these were big commitments from customers and
-          proved to be inefficient for an industry that typically has a higher
-          than average staff turnover.
-        </p>
-        <p>
-          This was something that needed to be addressed as it was becoming an
-          issue for the business and leading to users not getting the level of
-          service they expected. It was also not meeting the standards of
-          quality set by the business.
-        </p>
-
-        <h2>Goals</h2>
-        <div class="goals">
-          <div class="user-goals">
-            <h3>User</h3>
-            <ul>
-              <li>
-                Easily accessible, high-quality learning materials for
-                self-education
-              </li>
-              <li>
-                Sign-posting in the product for features with more advanced
-                concepts
-              </li>
-              <li>
-                A collection of written and video materials so that users can
-                learn at their own pace in their preferred method
-              </li>
-            </ul>
-          </div>
-          <div class="business-goals">
-            <h3>Business</h3>
-            <ul>
-              <li>Remove friction with self-educating for users</li>
-              <li>Increase user trust in the product and the company</li>
-              <li>
-                Single <em>source of truth</em> repository for documentation
-              </li>
-              <li>Lighten the burden on customer success and training teams</li>
-              <li>Promote learning opportunities in the product</li>
-            </ul>
-          </div>
+      <div style="display: flex; gap: 104px; flex-direction: row-reverse">
+        <!-- TL;DR contents -->
+        <div class="contents-panel" data-segment="tldr">
+          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+          <ul class="contents-panel__list">
+            <li class="contents-panel__item">
+              <a href="#tldr-context" class="contents-panel__link">Context</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-problem" class="contents-panel__link">Problem</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-goals" class="contents-panel__link">Goals</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-research" class="contents-panel__link">Research</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-opportunity" class="contents-panel__link"
+                >Opportunity</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-challenges" class="contents-panel__link"
+                >Challenges</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-solution" class="contents-panel__link">Solution</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#tldr-results" class="contents-panel__link">Results</a>
+            </li>
+          </ul>
         </div>
 
-        <h2>Research</h2>
-        <p>
-          I looked into options of using an off-the-shelf solution to
-          documentation and researched products like GitBook and Notion, but
-          they lacked the customisation that we needed. Internally, we used
-          Confluence, so I also looked into whether we could expose those
-          articles publicly, but this came with too many trade-offs and again, a
-          lack of customisation.
-        </p>
+        <div style="flex: 1">
+          <div id="tldr">
+            <section class="article-content">
+              <h2 id="tldr-context">Context</h2>
+              <p>
+                High quality documentation is an important cornerstone of any
+                software product, particularly if the product contains some
+                complex workflows. Having easily accessible, well maintained and
+                structured documentation provides some key benefits to a
+                business, including:
+              </p>
+              <ul>
+                <li>Quicker onboarding for new users</li>
+                <li>Easier learning curve</li>
+                <li>Increased trust in the company</li>
+                <li>Competitive advantage</li>
+              </ul>
+              <p>
+                Ultimately, if users feel confident that they can use a product,
+                they are more likely to be advocates and it dramatically reduces
+                support and training calls. That was the main objective we had
+                when creating the itris Knowledgebase.
+              </p>
+              <p>
+                I led the design and collaborated with key stakeholders from
+                across the business to produce a high-quality learning resource
+                for the company and the users of the product.
+              </p>
 
-        <h2>Opportunity</h2>
-        <p>
-          Since none of the off-the-shelf solutions were viable, I explored the
-          idea of creating our own purpose-built site that catered for the
-          different learning journeys for a user. Also, somewhere users could
-          also find top tips, FAQs, and product release notes.
-        </p>
+              <img
+                src="/assets/images/knowledgebase-article.png"
+                alt="Knowledgebase hero image"
+                class="article__hero-image--knowledgebase"
+              />
 
-        <h2>Challenges</h2>
-        <ul>
-          <li>
-            All the learning materials were currently in PDFs and our internal
-            docs platform, so these would need to be ported over to the site
-            (which was in Markdown format)
-          </li>
-          <li>
-            A new iteration of our visual language was in progress, but it was
-            immature so implementing this would add to the scope as new
-            components would need to be created specifically for the
-            Knowledgebase
-          </li>
-          <li>
-            The training team would need to learn and become familiar with VS
-            Code, writing articles in Markdown and have a good understanding of
-            git
-          </li>
-        </ul>
+              <h2 id="tldr-problem">Problem</h2>
+              <p>
+                At the time, documentation existed as PDFs on a shared drive.
+                Users
+                <i>did have access</i> to these documents, but you had to know
+                where to look to find them. As a result, documents were often
+                duplicated and changed to align more closely with the department
+                consuming them, which led to scattered documentation that was
+                quickly out of date.
+              </p>
+              <p>
+                This gave rise to an increasing amount of inconsistency for
+                users, as there was not an easily accessible, central source of
+                truth for learning materials. Additionally, the training team
+                was offering training courses, but these were big commitments
+                from customers and proved to be inefficient for an industry that
+                typically has a higher than average staff turnover.
+              </p>
+              <p>
+                This was something that needed to be addressed as it was
+                becoming an issue for the business and leading to users not
+                getting the level of service they expected. It was also not
+                meeting the standards of quality set by the business.
+              </p>
 
-        <figure style="margin: 56px 0" class="article-content__figure">
-          <div class="image-wrapper perspective-image-container">
-            <img
-              src="/assets/images/kb-components.png"
-              alt="Image of the new components for the Knowledgebase"
-              class="article-content__image--app perspective-image"
-              style="cursor: default"
-            />
+              <h2 id="tldr-goals">Goals</h2>
+              <div class="goals">
+                <div class="user-goals">
+                  <h3>User</h3>
+                  <ul>
+                    <li>
+                      Easily accessible, high-quality learning materials for
+                      self-education
+                    </li>
+                    <li>
+                      Sign-posting in the product for features with more
+                      advanced concepts
+                    </li>
+                    <li>
+                      A collection of written and video materials so that users
+                      can learn at their own pace in their preferred method
+                    </li>
+                  </ul>
+                </div>
+                <div class="business-goals">
+                  <h3>Business</h3>
+                  <ul>
+                    <li>Remove friction with self-educating for users</li>
+                    <li>Increase user trust in the product and the company</li>
+                    <li>
+                      Single <em>source of truth</em> repository for
+                      documentation
+                    </li>
+                    <li>
+                      Lighten the burden on customer success and training teams
+                    </li>
+                    <li>Promote learning opportunities in the product</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h2 id="tldr-research">Research</h2>
+              <p>
+                I looked into options of using an off-the-shelf solution to
+                documentation and researched products like GitBook and Notion,
+                but they lacked the customisation that we needed. Internally, we
+                used Confluence, so I also looked into whether we could expose
+                those articles publicly, but this came with too many trade-offs
+                and again, a lack of customisation.
+              </p>
+
+              <h2 id="tldr-opportunity">Opportunity</h2>
+              <p>
+                Since none of the off-the-shelf solutions were viable, I
+                explored the idea of creating our own purpose-built site that
+                catered for the different learning journeys for a user. Also,
+                somewhere users could also find top tips, FAQs, and product
+                release notes.
+              </p>
+
+              <h2 id="tldr-challenges">Challenges</h2>
+              <ul>
+                <li>
+                  All the learning materials were currently in PDFs and our
+                  internal docs platform, so these would need to be ported over
+                  to the site (which was in Markdown format)
+                </li>
+                <li>
+                  A new iteration of our visual language was in progress, but it
+                  was immature so implementing this would add to the scope as
+                  new components would need to be created specifically for the
+                  Knowledgebase
+                </li>
+                <li>
+                  The training team would need to learn and become familiar with
+                  VS Code, writing articles in Markdown and have a good
+                  understanding of git
+                </li>
+              </ul>
+
+              <figure style="margin: 56px 0" class="article-content__figure">
+                <div class="image-wrapper perspective-image-container">
+                  <img
+                    src="/assets/images/kb-components.png"
+                    alt="Image of the new components for the Knowledgebase"
+                    class="article-content__image--app perspective-image"
+                    style="cursor: default"
+                  />
+                </div>
+                <figcaption style="margin-top: 16px">
+                  A showcase of the new components for the Knowledgebase
+                </figcaption>
+              </figure>
+
+              <h2 id="tldr-solution">Solution</h2>
+              <p>
+                I spent some time exploring different designs until, together
+                with key stakeholders, we settled on a final version. Throughout
+                the design explorations, it was important to ensure that the
+                design
+                <em>felt right</em> and was aligned with the brand.
+              </p>
+              <p class="italic">
+                For inspiration, I looked at some best-in-class documentation
+                and found myself drawn to Stripe Guides in particular. I also
+                looked at Apple's support docs as well as Atlassian's
+                documentation.
+              </p>
+              <p>
+                The final product contained a landing page, articles accessible
+                through a series route (mirroring training courses) or
+                categories route, search capabilities, release notes, top tips
+                and FAQs.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/landing.png"
+                  alt="Image of the hero section of the Knowledgebase landing page"
+                  class="article-content__image--app lightbox-image"
+                  style="cursor: default"
+                />
+
+                <figcaption>
+                  The landing page contains sections such as popular articles,
+                  latest top tips, and the latest release
+                </figcaption>
+              </figure>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/knowledgebase-categories.png"
+                  alt="Image of the series and categories for the Knowledgebase"
+                  class="article-content__image--app lightbox-image"
+                  style="cursor: default"
+                />
+
+                <figcaption>
+                  Learning page containing training series and article
+                  categories
+                </figcaption>
+              </figure>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/knowledgebase-article.png"
+                  alt="Image of the Knowledgebase article design"
+                  class="article-content__image--app lightbox-image"
+                  style="cursor: default"
+                />
+
+                <figcaption>Knowledgebase article design</figcaption>
+              </figure>
+
+              <h2 id="tldr-results" style="margin-top: 56px">Results</h2>
+              <p>
+                The Knowledgebase was a success and received positive feedback
+                from users, internal teams, and even a competitor. Since its
+                release in 2022, there are 200+ articles on the site, as well as
+                50+ top tips and 60+ FAQs.
+              </p>
+              <p>
+                Traffic to the Knowledgebase averages at around 1,600 visits per
+                month, and the number of training and support enquiries has
+                dropped significantly.
+              </p>
+              <blockquote>
+                <i
+                  >As a result of the Knowledgebase, the demands on our services
+                  changed and the volume of inbound calls and emails reduced
+                  considerably. We were also able to reduce the training
+                  department's headcount from 5 members of staff down to 1,
+                  whilst still maintaining strong customer feedback.</i
+                >
+                <span>Ian Farrow, Product Director</span>
+              </blockquote>
+            </section>
+            <hr />
+            <p class="italic">
+              The UI in this case study represents the direction I was taking as
+              part of a product redesign initiative. Although the project was
+              later deprioritised and not released, this work is a more accurate
+              reflection of my current design approach.<br /><br />If you're
+              interested in talking more about this project, please
+              <a
+                href="/src/about.html"
+                style="
+                  font-weight: var(--font-weight-regular);
+                  color: var(--colour-blue);
+                "
+                >get in touch</a
+              >.
+            </p>
           </div>
-          <figcaption style="margin-top: 16px">
-            A showcase of the new components for the Knowledgebase
-          </figcaption>
-        </figure>
-
-        <h2>Solution</h2>
-        <p>
-          I spent some time exploring different designs until, together with key
-          stakeholders, we settled on a final version. Throughout the design
-          explorations, it was important to ensure that the design
-          <em>felt right</em> and was aligned with the brand.
-        </p>
-        <p class="italic">
-          For inspiration, I looked at some best-in-class documentation and
-          found myself drawn to Stripe Guides in particular. I also looked at
-          Apple's support docs as well as Atlassian's documentation.
-        </p>
-        <p>
-          The final product contained a landing page, articles accessible
-          through a series route (mirroring training courses) or categories
-          route, search capabilities, release notes, top tips and FAQs.
-        </p>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/landing.png"
-            alt="Image of the hero section of the Knowledgebase landing page"
-            class="article-content__image--app lightbox-image"
-            style="cursor: default"
-          />
-
-          <figcaption>
-            The landing page contains sections such as popular articles, latest
-            top tips, and the latest release
-          </figcaption>
-        </figure>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/knowledgebase-categories.png"
-            alt="Image of the series and categories for the Knowledgebase"
-            class="article-content__image--app lightbox-image"
-            style="cursor: default"
-          />
-
-          <figcaption>
-            Learning page containing training series and article categories
-          </figcaption>
-        </figure>
-
-        <figure class="article-content__figure">
-          <img
-            src="/assets/images/knowledgebase-article.png"
-            alt="Image of the Knowledgebase article design"
-            class="article-content__image--app lightbox-image"
-            style="cursor: default"
-          />
-
-          <figcaption>Knowledgebase article design</figcaption>
-        </figure>
-
-        <h2 style="margin-top: 56px">Results</h2>
-        <p>
-          The Knowledgebase was a success and received positive feedback from
-          users, internal teams, and even a competitor. Since its release in
-          2022, there are 200+ articles on the site, as well as 50+ top tips and
-          60+ FAQs.
-        </p>
-        <p>
-          Traffic to the Knowledgebase averages at around 1,600 visits per
-          month, and the number of training and support enquiries has dropped
-          significantly.
-        </p>
-        <blockquote>
-          <i
-            >As a result of the Knowledgebase, the demands on our services
-            changed and the volume of inbound calls and emails reduced
-            considerably. We were also able to reduce the training department's
-            headcount from 5 members of staff down to 1, whilst still
-            maintaining strong customer feedback.</i
-          >
-          <span>Ian Farrow, Product Director</span>
-        </blockquote>
-
-        <hr />
-
-        <p class="italic">
-          If you're interested in taking a deeper dive into this project, please
-          <a
-            href="/"
-            style="
-              font-weight: var(--font-weight-regular);
-              color: var(--colour-blue);
-            "
-            >get in touch</a
-          >.
-        </p>
-      </section>
+        </div>
+      </div>
     </main>
 
     <footer role="contentinfo">

@@ -13,6 +13,7 @@ export default defineConfig({
           __dirname,
           'src/compliance-overrides.html',
         ),
+        about: resolve(__dirname, 'src/about.html'),
       },
       output: {
         entryFileNames: '[name].js',
