@@ -2607,10 +2607,10 @@
 /* Feedback Cards */
 .feedback-cards {
   position: relative;
-  margin: 48px 0;
+  margin: 32px 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .feedback-card {
