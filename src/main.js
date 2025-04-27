@@ -196,25 +196,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const readTimeElement = document.getElementById('read-time');
   const mainContent = document.querySelector('main');
 
-  // Initially show TL;DR content and hide deep dive
+  // Check if we're on the KPI page
+  const isKpiPage = window.location.pathname.includes('kpis.html');
+
+  // Initially show content based on page
   if (tldrSection) {
-    tldrSection.style.display = 'block';
+    tldrSection.style.display = isKpiPage ? 'none' : 'block';
   }
   if (deepDiveSection) {
-    deepDiveSection.style.display = 'none';
+    deepDiveSection.style.display = isKpiPage ? 'block' : 'none';
   }
   if (mainContent) {
-    mainContent.setAttribute('data-segment', 'tldr');
+    mainContent.setAttribute('data-segment', isKpiPage ? 'deep-dive' : 'tldr');
   }
 
-  // Set initial read time to TL;DR time
+  // Set initial read time based on page
   if (readTimeElement) {
-    const tldrOption = document.querySelector(
-      '.segment-control__option[data-read-time]',
+    const activeOption = document.querySelector(
+      `.segment-control__option${isKpiPage ? '.segment-control__option--active' : ''}[data-read-time]`,
     );
-    if (tldrOption) {
-      const tldrReadTime = tldrOption.getAttribute('data-read-time');
-      readTimeElement.textContent = `${tldrReadTime} read`;
+    if (activeOption) {
+      const readTime = activeOption.getAttribute('data-read-time');
+      readTimeElement.textContent = `${readTime} read`;
     }
   }
 
