@@ -63,13 +63,16 @@
                   href="/src/kpis.html"
                   style="color: var(--text-primary)"
                   class="breadcrumb__link"
-                  >itris KPI Dashboard</a
+                  >Giving recruiters a way to track their performance and
+                  KPIs</a
                 >
               </li>
             </ul>
           </div>
-          <h1 style="font-size: 42px">itris KPI Dashboard</h1>
-          <div class="article-information">
+          <h1 style="font-size: 42px; text-wrap: balance">
+            Giving recruiters a way to track their performance and KPIs
+          </h1>
+          <div class="article-information" style="margin: margin: 56px 0 40px;">
             <div style="display: flex; gap: 12px">
               <span class="role__badge">Product design</span>
               <span class="role__badge">Interaction design</span>
@@ -77,7 +80,7 @@
             </div>
             <div style="display: flex; gap: 12px">
               <div style="display: flex; gap: 8px; align-items: center">
-                <img src="/public/assets/images/figma-logo.svg" alt="" />
+                <img src="/assets/images/figma-logo.svg" alt="" />
                 <span
                   style="
                     font-size: 13px;
@@ -89,7 +92,7 @@
                 >
               </div>
               <div style="display: flex; gap: 8px; align-items: center">
-                <img src="/public/assets/images/ms-forms.svg" alt="" />
+                <img src="/assets/images/ms-forms.svg" alt="" />
                 <span
                   style="
                     font-size: 13px;
@@ -124,30 +127,40 @@
         </div>
       </div>
 
-      <div style="display: none; gap: 12px; align-items: center">
+      <!-- Segment control (TL;DR / Deep dive) -->
+      <div
+        style="
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          margin-bottom: 32px;
+        "
+      >
         <div class="segment-control">
           <button
-            class="segment-control__option segment-control__option--active"
+            class="segment-control__option"
             data-tooltip="Short on time? Here's a summary"
             data-read-time="3m"
           >
             TL;DR
           </button>
           <button
-            class="segment-control__option"
+            class="segment-control__option segment-control__option--active"
             data-tooltip="Ok, grab a coffee... and snacks"
             data-read-time="12m"
           >
             Deep dive
           </button>
         </div>
-        <p id="read-time"></p>
+        <p id="read-time">12m read</p>
       </div>
 
-      <div class="article__container">
+      <div class="article__container article-sections">
         <!-- TL;DR contents -->
         <div class="contents-panel" data-segment="tldr">
-          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+          <h3 class="contents-panel__title" id="contents-title">
+            ON THIS PAGE
+          </h3>
           <ul class="contents-panel__list">
             <li class="contents-panel__item">
               <a href="#tldr-context" class="contents-panel__link">Context</a>
@@ -170,27 +183,59 @@
           </ul>
         </div>
 
-        <div
-          style="display: none"
-          class="contents-panel"
-          data-segment="deep-dive"
-        >
-          <h3 class="contents-panel__title">ON THIS PAGE</h3>
+        <!-- Deep dive contents -->
+        <div class="contents-panel" data-segment="deep-dive">
+          <h3 class="contents-panel__title" id="contents-title">
+            ON THIS PAGE
+          </h3>
           <ul class="contents-panel__list">
             <li class="contents-panel__item">
-              <a href="#context" class="contents-panel__link">Context BBB</a>
+              <a href="#deep-dive-background" class="contents-panel__link"
+                >Background</a
+              >
             </li>
             <li class="contents-panel__item">
-              <a href="#problem" class="contents-panel__link">Problem</a>
+              <a href="#deep-dive-problem" class="contents-panel__link"
+                >Problem</a
+              >
             </li>
             <li class="contents-panel__item">
-              <a href="#goals" class="contents-panel__link">Goals</a>
+              <a href="#deep-dive-challenge" class="contents-panel__link"
+                >Challenge</a
+              >
             </li>
             <li class="contents-panel__item">
-              <a href="#solution" class="contents-panel__link">Solution</a>
+              <a href="#deep-dive-discovery" class="contents-panel__link"
+                >Discovery</a
+              >
             </li>
             <li class="contents-panel__item">
-              <a href="#outcome" class="contents-panel__link">Outcome</a>
+              <a href="#deep-dive-exploration" class="contents-panel__link"
+                >Design exploration</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#deep-dive-pivot" class="contents-panel__link">Pivot</a>
+            </li>
+            <li class="contents-panel__item">
+              <a href="#deep-dive-configuration" class="contents-panel__link"
+                >KPI Configuration</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#deep-dive-widgets" class="contents-panel__link"
+                >Dashboard widgets</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#deep-dive-outcome" class="contents-panel__link"
+                >Outcome</a
+              >
+            </li>
+            <li class="contents-panel__item">
+              <a href="#deep-dive-reflections" class="contents-panel__link"
+                >Reflections</a
+              >
             </li>
           </ul>
         </div>
@@ -406,16 +451,692 @@
 
               <h2 id="tldr-outcome">Outcome</h2>
               <p>
-                The feature shipped shortly before I left the company and so had
-                not yet been available for long enough to generate measurable
-                results. However, early internal feedback was very positive and
-                as a result, the sales team felt more confident during customer
-                demos, and stakeholders saw this as a key improvement given the
-                potential revenue at risk. This work directly addressed known
-                pain points and is expected to lead to more deal conversions and
-                a lower risk to revenue.
+                While the full release is pending, the early feedback loop with
+                sales demos and customer conversations confirmed strong
+                alignment with market needs. Early indications gave key
+                stakeholders confidence that the revenue gap can be narrowed.
+                This work directly addressed known pain points and is expected
+                to lead to more deal conversions and a lower risk to revenue.
               </p>
 
+              <hr />
+
+              <p class="italic">
+                The UI in this case study represents the direction I was taking
+                as part of a product redesign initiative. Although the project
+                was later deprioritised and not released, this work is a more
+                accurate reflection of my current design approach.<br /><br />
+                This is a short project showcase and there were many challenges
+                and edge cases that needed to be addressed. If you'd like to
+                know more, please
+                <a
+                  href="/src/about.html"
+                  style="
+                    font-weight: var(--font-weight-regular);
+                    color: var(--colour-blue);
+                  "
+                  >get in touch</a
+                >.
+              </p>
+            </section>
+          </div>
+          <div id="deep-dive">
+            <section class="article-content">
+              <p style="margin-top: 48px">
+                If managers and recruiters can easily set and track KPIs, they
+                can drive individual performance, team success, and business
+                profitability. Addressing that gap was essential to revenue
+                protection.
+              </p>
+              <p>
+                Building this functionality inside a recruitment CRM platform
+                used by hundreds of agencies, each with different team
+                structures, workflows, industries and metrics, required
+                designing across vastly different user structures and needs.
+                This project was complex and full of constraints and edge cases.
+              </p>
+              <p>
+                In early 2024, I led customer research, challenged assumptions
+                around performance tracking, and designed a scalable KPI system
+                that adapts to companies of any size or type.
+              </p>
+
+              <img
+                src="/assets/images/kpi-svg.svg"
+                alt="KPI image"
+                class="article__hero-image--kpi skew-reverse"
+              />
+
+              <h2 id="deep-dive-background">Background</h2>
+              <p>
+                itris is a Recruitment CRM used by staffing agencies to run
+                their businesses. At its core, itris combines the functionality
+                of a sales tool, Applicant Tracking System (ATS), and Customer
+                Relationship Management (CRM) solution into one platform.
+              </p>
+              <p>
+                Targets are commonplace in sales environments. The recruitment
+                industry is numbers-driven and KPIs play a critical role in
+                measuring individual, team, and organisational performance. For
+                recruiters, these metrics influence promotions, pay reviews, and
+                commissions, making them a powerful motivator. For a business,
+                these metrics indicate profitability and efficiency, among other
+                things. By providing clarity and focus on targets, KPIs help
+                individuals understand expectations, driving both personal and
+                business success.
+              </p>
+
+              <h2 id="deep-dive-problem">Problem</h2>
+              <p>
+                While itris had a robust and powerful reporting suite, users
+                couldn't:
+              </p>
+              <ul>
+                <li>
+                  Set performance targets for individuals, teams or the company
+                </li>
+                <li>Track and measure those targets over time</li>
+                <li>Visualise progress in one place</li>
+              </ul>
+              <p>
+                Without this functionality, recruiters and managers were left
+                exporting spreadsheets, building workarounds, or giving up
+                entirely.
+              </p>
+              <p>
+                Customers were increasingly frustrated, and the gap was hurting
+                the business with an estimated £1.4 million in annual revenue at
+                risk from churn and lost deals.
+              </p>
+              <div class="feedback-cards">
+                <div class="feedback-card feedback-card--primary">
+                  <div class="feedback-card__content">
+                    <p class="feedback-card__text">
+                      This is currently really difficult to manage within itris
+                      (unless we are doing it wrong..)
+                    </p>
+                    <span class="feedback-card__author"
+                      >Feedback from a large customer</span
+                    >
+                  </div>
+                </div>
+                <div class="feedback-card feedback-card--secondary">
+                  <div class="feedback-card__content">
+                    <p class="feedback-card__text">
+                      Please, please, please can you add a way to easily track
+                      performance and targets for our consultants. I'm having to
+                      pull 7 reports a week into excel to work out OTE and it is
+                      so time consuming!
+                    </p>
+                    <span class="feedback-card__author"
+                      >Feedback from a frustrated, mid-sized customer</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <p>
+                Customers needed a better way to assign and track targets and
+                assess user, team and organisational performance in a simple,
+                intuitive way.
+              </p>
+
+              <h2 id="deep-dive-challenge">Challenge</h2>
+              <p>
+                The recruitment industry spans every type of work and every type
+                of sector and our customer base reflected that. Some agencies
+                specialised by industry, others by function, and some had unique
+                team structures or workflows that needed to be catered for.
+                Anything we designed needed to flex across all of them.
+              </p>
+              <p>
+                From a KPIs point of view, we had to ask:
+                <strong class="italic"
+                  >What would be the most effective way to deliver a robust set
+                  of functionality that is flexible enough to accommodate all of
+                  the variations and use cases?</strong
+                >
+              </p>
+              <p>
+                The data was already there. Our challenge was to transform it
+                into something tangible that recruitment teams could use to
+                understand their performance and their expectations.
+              </p>
+
+              <h2 id="deep-dive-discovery">Discovery</h2>
+              <p>
+                At the start of the project, I knew there would be a lot of
+                unknowns. To deliver a good solution, I would need to spend more
+                time researching, learning, and speaking with customers.
+              </p>
+              <p>I started by gathering everything we already knew:</p>
+              <ul>
+                <li>Feedback from sales demos</li>
+                <li>Feedback from customers</li>
+                <li>
+                  Competitive research into other CRMs and standalone KPI tools
+                </li>
+                <li>
+                  Secondary research to understand common KPI tracking practices
+                  used by sales teams across different industries
+                </li>
+              </ul>
+              <p>
+                Customer and prospect feedback was a major source of insight at
+                itris, and we already had a good baseline of information to work
+                from. However, I still had some unanswered questions. I didn't
+                feel confident yet that we fully understood customer needs,
+                particularly around nuances like team structures, target
+                management, and reporting workflows.
+              </p>
+              <p>
+                To deepen our understanding and validate assumptions, we decided
+                to run a customer survey.
+              </p>
+
+              <h3 id="deep-dive-research">Survey</h3>
+              <p>
+                I worked closely with the Product Manager to build a survey that
+                would help us better understand customer needs around KPIs and
+                performance tracking. Our goals were to:
+              </p>
+              <ul>
+                <li>Learn how customers are currently tracking KPIs</li>
+                <li>Identify the most valuable metrics to include</li>
+                <li>
+                  Understand the most common configurations (individual vs
+                  collective, reset intervals, review frequency)
+                </li>
+                <li>Gather insight on how KPI data would be used</li>
+              </ul>
+              <h4>Survey results</h4>
+              <p>The biggest takeaways we had were:</p>
+              <ul>
+                <li>
+                  The importance of KPIs to customers was rated 8.74 out of 10
+                </li>
+                <li>
+                  The importance of drill down into KPIs data was rated 9.17 out
+                  of 10
+                </li>
+                <li>
+                  Most of the respondents were using manual CSV exports to track
+                  performance
+                </li>
+                <li>Many set collective team KPIs, not just individual ones</li>
+                <li>
+                  Weekly and monthly were the most common reset frequencies
+                </li>
+                <li>Targets were typically reviewed monthly or quarterly</li>
+                <li>
+                  Months and quarters were treated exclusively as calendar
+                  months, not 30 or 90 days
+                </li>
+              </ul>
+              <p>
+                This feedback proved to be incredibly valuable and made me much
+                more confident in an approach. However, there was interesting
+                theme that emerged from survey that we hadn't previously
+                considered. Historically, we understood KPIs to be intrinsically
+                <emphasis>target-based</emphasis> where individual's or team's
+                performance was based on targets to be hit. However, reading
+                between the lines in some of the comments prompted me to follow
+                up with some respondents to clarify some parts.
+              </p>
+              <p>
+                A good number of the respondents explained that they treated KPI
+                as much more of a business-level metric where they didn't
+                necessarily need a target assigned, but wanted to see the
+                performance on it's own to monitor activity rather than
+                performance. This became a key insight, and one that, as a team,
+                we wouldn't have considered in the initial scope without
+                conducting the survey and following up with customers.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/survey.png"
+                  alt="Teams message to the product team"
+                  style="cursor: default; margin: 32px auto; width: 75%"
+                />
+
+                <!-- <figcaption>
+                  One of my Teams messages to the product team
+                </figcaption> -->
+              </figure>
+
+              <h2 id="deep-dive-exploration">Design exploration</h2>
+              <p>
+                Armed with a better understanding of the customer need, I
+                started exploring some solutions. The project was split up into
+                2 main parts:
+              </p>
+              <ol>
+                <li>
+                  Configuration - The part that solves the directors and
+                  managers needs
+                </li>
+                <li>Dashboards - The part that solved the user needs</li>
+              </ol>
+              <h3>Configuring KPIs</h3>
+              <p>
+                The natural place to start was configuration. This was, however,
+                undoubtedly the most tricky part of the project. For KPI
+                configuration users initially needed to be able to:
+              </p>
+              <ul>
+                <li>
+                  Select a metric to track (a total of 25 initial metrics were
+                  agreed for the initial scope)
+                </li>
+                <li>Choose the reset interval (the duration)</li>
+                <li>
+                  Set the start and end dates of a KPI to track and audit
+                  historical data
+                </li>
+                <li>Select affiliate users and/or teams</li>
+                <li>
+                  Set whether the KPI includes a target and, if it does,
+                  configure the targets value
+                </li>
+              </ul>
+
+              <p>
+                The most obvious and simplistic solution was assigning KPIs
+                directly to users and teams in a user-owned model where each
+                user or team would have their own unique KPI configurations. I
+                explored this option, but this quickly proved to be inflexible
+                and it wouldn't scale at all.
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/early-config.png"
+                  alt="An early concept"
+                  class="article-content__image--app sunken-image__new-kpi"
+                  style="cursor: default; background: white; padding: 32px"
+                />
+
+                <figcaption>
+                  One of the early concepts for KPI configuration
+                </figcaption>
+              </figure>
+              <p>
+                We knew from additional information gathered in the survey that
+                KPIs weren't a one size fits all for some organisations,
+                particularly for customers who had a much more nuanced approach
+                that was based on seniority, experience, and expectations. For
+                smaller companies, this might be manageable but as soon as you
+                have a company >10 users, for example, with 10 KPIs each you
+                would then find yourself needing to update 100 KPIs when
+                anything changed (and typically targets were reviewed monthly or
+                quarterly). If you start creeping up into the 50 users, 100
+                users, etc this just becomes unbearable. Throw into the mix that
+                this only catered for individual users and for those that have
+                team or organisational KPIs, we would need even more surface
+                area to account for that. All in all, this approach was fraught
+                with issues and was a non-starter. I needed to find a more
+                flexible solution.
+              </p>
+              <h2 id="deep-dive-pivot">A pivot: Centralised KPIs</h2>
+              <p>
+                After several iterations and getting nowhere, I flipped the
+                model.
+              </p>
+              <p>
+                Instead of assigning individual KPIs to each user, was there a
+                way we could treat a KPI as a source of truth and simply assign
+                users to it? We knew that users might share the same KPI
+                template, albeit the target might be slightly different. This
+                alternative approach brought major benefits:
+              </p>
+              <ul>
+                <li>A single source of truth for configuration</li>
+                <li>
+                  Changes would cascade to all users unless explicitly
+                  overridden
+                </li>
+                <li>Supported both individual and collective targets</li>
+                <li>Reduced manual work for admins</li>
+              </ul>
+              <p>
+                After some initial ideas in Figma, it became apparent that the
+                trickiest part of this model would be gracefully handling
+                multiple users or teams in the same KPI configuration, with the
+                potential of having different targets.
+              </p>
+
+              <figure
+                class="article-content__figure"
+                style="margin-bottom: 56px"
+              >
+                <img
+                  src="/assets/images/kpi-config-early.png"
+                  alt="An early concept"
+                  class="article-content__image--app"
+                  style="cursor: default; border: none; outline: none"
+                />
+
+                <figcaption>
+                  An early concept, but it had some creases that needed ironing
+                  out…
+                </figcaption>
+              </figure>
+              <h2 id="deep-dive-configuration">An agreed configuration</h2>
+              <p>
+                After a number of rounds of iterations, collaborating with the
+                product team, an engineer and the sales director, we had a much
+                better idea of what a KPI configuration looked like.
+              </p>
+              <p>Each KPI would include:</p>
+              <ul>
+                <li>Metric: What are we tracking? (e.g. Jobs obtained)</li>
+                <li>
+                  Name: An option for customers to use their own terminology
+                  (e.g. Inbound Vacancies)
+                </li>
+                <li>
+                  Description: An optional text box for customers to inform
+                  users on how that can contribute to this KPI
+                </li>
+                <li>
+                  Filters: Additional filters depending on the metric (some
+                  metrics required more granularity than others)
+                </li>
+                <li>
+                  Reset Interval: How often did the target reset? Daily, weekly,
+                  monthly, quarterly or annually. This also included options for
+                  rolling weeks, months, quarters and years.
+                </li>
+                <li>
+                  Effective Dates: Window for the KPI to be relevant (essential
+                  for accurate historical KPI data audits and updates)
+                </li>
+                <li>
+                  Target: Optional target that supports numeric, monetary or
+                  percentage values
+                </li>
+                <li>
+                  Target Type: Set whether the KPI targets individuals or a
+                  collection of users / teams
+                </li>
+                <li>Assigned Users / Teams: Who is assigned to this KPI?</li>
+              </ul>
+              <p>
+                This model allowed for more nuanced setup including tailoring
+                targets to individuals and adding or removing users or teams
+                from a target easily.
+              </p>
+              <figure
+                class="article-content__figure"
+                style="margin-bottom: 56px"
+              >
+                <img
+                  src="/assets/images/new-kpi.png"
+                  alt="An early concept"
+                  style="cursor: default; margin: 24px auto; width: 90%"
+                />
+
+                <figcaption>
+                  The final version of the KPI configuration modal
+                </figcaption>
+              </figure>
+              <h3>Noteworthy details</h3>
+              <h4>Reset component</h4>
+              <p>
+                The reset component needed to cater for lots of different
+                configurations. I designed a flexible component that would allow
+                this nuance.
+              </p>
+              <figure
+                class="article-content__figure"
+                style="margin-bottom: 56px"
+              >
+                <img
+                  src="/assets/images/reset-component.png"
+                  alt="An early concept"
+                  class="article-content__image--app"
+                  style="cursor: default; padding: 32px"
+                />
+
+                <figcaption>The reset component</figcaption>
+              </figure>
+              <h4>Collective KPIs</h4>
+              <p>
+                We initially assumed collective KPIs would be important, and the
+                survey confirmed it. Nearly half of respondents advocated for a
+                collective option, so we made it a core part of the design.
+              </p>
+              <p>
+                By selecting Collective as the target type, the target was
+                attributed to a group of users / teams, rather than individuals.
+                For example, a group of five recruiters might have a quarterly
+                target of 150 new jobs obtained. Some might over-perform, others
+                underperform, but as long as the combined total hits 150, the
+                target is met.
+              </p>
+              <h4>Default target inheritance</h4>
+              <p>
+                When setting individual targets, users could set a default value
+                at the KPI level. This default was immediately inherited by any
+                user or team assigned to the KPI, making KPI management much
+                more scalable.
+              </p>
+              <p>
+                However, we needed a way for users to optionally set custom
+                target values at the individual level. To achieve this, we used
+                an input that displayed the inherited default target as a
+                placeholder. This allowed users to enter a custom value if
+                needed. When a custom value was entered, a reset button appeared
+                next to the field, enabling users to easily revert back to the
+                default.
+              </p>
+              <p>
+                One downside of this approach was that the placeholder styling
+                made the field appear disabled, and the lack of strong
+                affordance could cause confusion. Due to project timelines, we
+                consciously accepted this trade-off in order to ship a
+                functional solution quickly, with the plan to gather user
+                feedback and refine it in future iterations.
+              </p>
+              <figure
+                class="article-content__figure"
+                style="margin-bottom: 56px"
+              >
+                <img
+                  src="/assets/images/default-target.png"
+                  alt="An early concept"
+                  style="
+                    cursor: default;
+                    padding: 32px;
+                    width: 70%;
+                    margin: 0 auto 24px;
+                  "
+                />
+
+                <figcaption>
+                  An example of the default target inheritance
+                </figcaption>
+              </figure>
+
+              <h3>The KPI list</h3>
+              <p>
+                Once a KPI had been configured, it was displayed in a table with
+                all of the information needed.
+              </p>
+              <figure
+                class="article-content__figure"
+                style="margin-bottom: 56px"
+              >
+                <img
+                  src="/assets/images/configuration.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app lightbox-image"
+                  style="margin: 0 var(--spacing-10) var(--spacing-10)"
+                />
+                <figcaption>Table view of configured KPIs</figcaption>
+              </figure>
+
+              <h2 id="deep-dive-widgets">Widgets</h2>
+              <p>
+                Once the configuration was complete, I moved onto the KPI
+                dashboard. This dashboard needed to provide a simple and
+                effective way for users to understand everything they needed to
+                know about where they were with their performance at the current
+                point in time.
+              </p>
+              <p>
+                The layout scaffold of the dashboard was a common pattern that
+                we already used for business intelligence dashboards so the
+                cards were the main point of focus in this stage of the design.
+              </p>
+              <p>
+                The main challenge here was balancing information density and
+                visual clarity. It was important to make key details immediately
+                obvious without creating visual clutter. With the constraint of
+                the appropriate widget size and the amount of potential
+                information, this was a tough task.
+              </p>
+              <p>
+                In some cases, users could see over 20 cards in this dashboard
+                so I need to ensure that the cards showed enough information to
+                inform the user without overwhelming them.
+              </p>
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/card-explorations.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app lightbox-image"
+                  style="outline: none"
+                />
+                <figcaption>
+                  Some early explorations of KPI widget cards
+                </figcaption>
+              </figure>
+              <p>
+                In the initial planning, we explored including features like
+                outcome projections and comparisons to previous periods within
+                the cards. However, as we developed the concept further, we
+                realised these additions complicated the design and added more
+                complexity to an already significant project. To maintain a
+                clean, usable interface and keep the initial release focused, we
+                made the decision to de-prioritise these features. This allowed
+                us to reduce visual noise and deliver a clearer, more
+                streamlined user experience, while keeping the door open to
+                introducing these ideas in future iterations.
+              </p>
+              <p>
+                After a number of discussions with engineers and the product
+                team, we settled on a much more simple design. The final card
+                had:
+              </p>
+              <ul>
+                <li>
+                  The heading section is clear and shows enough primary
+                  information for the KPI
+                </li>
+                <li>
+                  Secondary information like description is available through
+                  clearly sign-posted hint in the hover state (not all KPIs had
+                  hints, so this made the design more predictable).
+                </li>
+                <li>
+                  A button for drilling down into the data behind the KPI (when
+                  hovering)
+                </li>
+                <li>
+                  A coloured indicator to clearly represent collective KPIs
+                </li>
+                <li>
+                  A minimal donut or gauge chart depending on whether the value
+                  was a percentage or not
+                </li>
+                <li>Clear statistical data to preset to the user</li>
+              </ul>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/kpi-cards1.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app sunken-image"
+                  style="padding: 32px"
+                />
+                <figcaption>KPI cards in target and targetless mode</figcaption>
+              </figure>
+
+              <p>
+                The result was a clean, breathable KPI widget layout that, when
+                replicated across an entire dashboard, had a good visual balance
+                and hierarchy to create a breathable dashboard.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/dashboard.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app lightbox-image"
+                />
+                <figcaption>KPI cards in target and targetless mode</figcaption>
+              </figure>
+
+              <p>
+                Drilling down was also available through a slide in side panel
+                that overlayed the dashboard. The most important parts here was
+                being able to export or convert to a search. Converting to a
+                search was a powerful option because it would allow further
+                manipulation to drill into the data even further.
+              </p>
+
+              <figure class="article-content__figure">
+                <img
+                  src="/assets/images/drill-down.png"
+                  alt="Settings area where KPIs are configured and managed"
+                  class="article-content__image--app lightbox-image"
+                />
+                <figcaption>Drilling down into a KPI</figcaption>
+              </figure>
+
+              <h2 id="deep-dive-outcome">Outcome</h2>
+
+              <p>
+                While the full release is pending, the early feedback loop with
+                sales demos and customer conversations confirmed strong
+                alignment with market needs. Early indications gave key
+                stakeholders confidence that the revenue gap can be narrowed.
+                This work directly addressed known pain points and is expected
+                to lead to more deal conversions and a lower risk to revenue.
+              </p>
+
+              <h2 id="deep-dive-reflections">Reflections</h2>
+              <h3>Navigating competing priorities</h3>
+              <p>
+                This project ran alongside major acquisition-driven initiatives,
+                creating competing demands for attention and resources. Ruthless
+                prioritisation and scope management were critical to moving
+                forward.
+              </p>
+              <h3>Designing for Flexibility</h3>
+              <p>
+                Balancing flexibility with usability was the hardest part of the
+                project. Every layer of configurability increased the risk of
+                confusion — and we had to design defaults, guardrails, and
+                sensible pathways to manage it.
+              </p>
+              <h3>Research Beyond the Obvious</h3>
+              <p>
+                Initial assumptions framed KPIs purely around targets.
+                Qualitative follow-ups revealed a broader view: that visibility,
+                not just goal-setting, was critical for customers. This insight
+                significantly improved the final design.
+              </p>
+              <h3>Future opportunities</h3>
+              <p>Given more time, I would have loved to explore:</p>
+              <ul>
+                <li>AI-driven projections and recommendations</li>
+                <li>Native support for historical comparisons and trends</li>
+              </ul>
+              <p>
+                I believe both would further enhance the platform's value to
+                recruitment teams
+              </p>
               <hr />
 
               <p class="italic">
