@@ -129,6 +129,20 @@
     text-align: center;
     user-select: none;
   }
+
+  code {
+    font-family: var(--font-mono), 'Monaspace', monospace;
+    font-size: 12px;
+    color: var(--text-primary);
+    background: var(--colour-neutral-50);
+    padding: 4px;
+    border-radius: 4px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    outline: var(--thickness-thin) solid var(--border-default);
+  }
 }
 
 /* Non semantic tokens / variables */
@@ -1594,6 +1608,18 @@
     }
   }
 
+  .bento__flashcards-image {
+    transform: scale(0.9);
+    margin: -12px 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .bento__flashcards-image {
+      transform: scale(0.8);
+      margin: -24px 0 0;
+    }
+  }
+
   .article__hero-image-bloom--override {
     position: absolute;
     width: 50%;
@@ -2187,6 +2213,11 @@
   color: #a05c1c;
 }
 
+.side-project-tag {
+  background: #f2e5ff;
+  color: #662f9d;
+}
+
 .bento-card h3 {
   font-family: var(--font-display);
   font-weight: var(--font-weight-semibold);
@@ -2695,3 +2726,126 @@
   font-weight: var(--font-weight-semibold);
   margin-top: 0px;
 }
+
+.writing__title {
+  font-size: 42px;
+  max-width: 720px;
+  padding-right: 48px;
+}
+
+@media (max-width: 640px) {
+  .writing__title {
+    padding-right: 0px;
+    max-width: 100%;
+  }
+}
+
+/* Mobile Menu Styles */
+.desktop-menu {
+  display: flex;
+}
+
+.mobile-menu {
+  display: none;
+  position: relative;
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger-btn[aria-expanded='true'] .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn[aria-expanded='true'] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn[aria-expanded='true'] .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-dropdown {
+  position: fixed;
+  top: 56px;
+  background-color: white;
+  box-shadow: var(--shadow-md);
+  border-bottom: var(--thickness-default) solid var(--border-default);
+  padding: 16px;
+  width: 430px;
+  z-index: 100;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-dropdown .nav__links {
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-dropdown .nav__links li {
+  width: fit-content;
+}
+
+.mobile-dropdown .nav__links a {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-size: var(--font-size-4);
+}
+
+.mobile-dropdown .nav__links a.mobile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .mobile-dropdown {
+    right: 0; /* Adjust for nav padding on mobile */
+  }
+}
+
+/* Rest of the existing styles below... */

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right desktop-menu">
+          <ul class="nav__links">
+            <li><a href="/work">Work</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
+            <li><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+            <li style="display: none">
+              <button
+                onclick="window.location.href='/src/about.html'"
+                class="btn btn--primary"
+              >
+                About
+              </button>
+            </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li><a href="/work">Work</a></li>
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li><a href="/writing">Writing</a></li>
+              <li><a href="/src/about.html">About</a></li>
+              <li style="display: none">
+                <a href="/src/about.html" class="btn btn--primary mobile-btn"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="article__hero" style="max-width: 720px; margin: 0 auto">
+        <div style="margin: 0 0 56px">
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li>
+                <a
+                  href="/src/side-projects.html"
+                  class="breadcrumb__link"
+                  style="color: var(--text-muted)"
+                  >Side projects</a
+                >
+              </li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a
+                  href="/src/flashcards.html"
+                  style="color: var(--text-primary)"
+                  class="breadcrumb__link"
+                  >Flashcards</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1 class="writing__title">
+            Building Flashcards to help me learn programming
+          </h1>
+          <div style="display: flex; gap: 8px; align-items: center">
+            <span
+              style="
+                font-size: 15px;
+                font-weight: var(--font-weight-medium);
+                color: var(--text-secondary);
+                line-height: 20px;
+                margin: 16px 0 0;
+              "
+              >May 2025</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="article-sections">
+        <div>
+          <section class="article-content">
+            <h2 id="tldr-problem">Learning code is hard</h2>
+            <p>At the end of 2024, I decided to start learning JavaScript.</p>
+            <p>
+              As a product designer, I wanted to be more effective at
+              communicating with engineers and actually build a few side project
+              ideas myself. I was already proficient with HTML and CSS, but I
+              wanted my prototypes to come to life and to do that I would need
+              to be able to write JavaScript and, eventually, React code.
+            </p>
+            <p>
+              I consider myself to be quite a fast learner, but I was under no
+              illusion that it would be easy. I knew the learning curve would be
+              steep, but after learning the fundamentals early on like
+              variables, conditionals, and operators, I felt confident. I had
+              signed up for Jonas Schmedtmann's
+              <a
+                href="https://www.udemy.com/share/101Wfe3@r4EkOsfS64doh_MjK1dAV6IlUlc78O50WbdB9F3U3W10qmjsNWkYE23tpm9PsvceyA==/"
+                target="_blank"
+                >JavaScript course</a
+              >
+              on Udemy and, more recently, his
+              <a
+                href="https://www.udemy.com/share/108PTo3@3gcr6pB7VoZbRihi679sQ14MarCPOWDA5S2UBKDeDwihr44Y5HD3qqfoNpYpVfjtwg==/"
+                target="_blank"
+                >React course</a
+              >
+              too. But, as the course progressed, more abstract and advanced
+              concepts started to creep in, and it was clear that there was a
+              lot of information and syntax that I needed to retain.
+            </p>
+            <p>
+              I came across a
+              <a
+                href="https://www.joshwcomeau.com/blog/how-to-learn-stuff-quickly/"
+                target="_blank"
+                >blog post</a
+              >
+              by Josh W Comeau on how to learn things fast. He uses a physical
+              Leitner box with flashcards to regularly review and retain
+              knowledge. That idea clicked with me and instead of using a
+              physical box, I decided to build my own flashcards app.
+            </p>
+            <p>
+              Building the app was a way to steer me away from tutorial hell,
+              and it was a great way to learn by doing and build something
+              genuinely useful that I would use to help me learn.
+            </p>
+
+            <img
+              src="/assets/images/flashcards.png"
+              alt="Flashcards app"
+              style="width: 100%; margin: 64px auto 24px; padding: 0 64px"
+              class="article__hero-image--kpi"
+            />
+
+            <h2>Scoping out the initial version</h2>
+            <p>
+              I designed the app to be mobile-first, since flashcards made the
+              most sense as something I could quickly access wherever I was. I
+              also wanted it to feel native, so I included a
+              <code>manifest.json</code> file to enable PWA functionality and
+              install the app on my phone’s home screen.
+            </p>
+            <p>
+              The app wouldn't just be for JavaScript and React either. Although
+              I am proficient with HTML and CSS, there are still many techniques
+              that I am unfamiliar with that I'd like to learn like view
+              transition, container queries and anchor positioning. I would also
+              like to learn things like Typescript and Next.js in the future, so
+              the system needed to scale to support more topics over time.
+            </p>
+
+            <h2>Flashcards</h2>
+            <p>
+              The app itself is fairly straight-forward. Tips are grouped into
+              categories and written in Markdown (mainly for portability). The
+              app serves a random tip from the selected category.
+            </p>
+            <img
+              src="/assets/images/random-tip-code.png"
+              alt="Flashcards app"
+              style="width: 70%; margin: 0 auto"
+            />
+            <p>
+              I used
+              <a href="https://github.com/markedjs/marked" target="_blank"
+                >marked</a
+              >
+              to parse the Markdown into HTML, and this has worked well so far.
+              One issue that I haven't yet solved is using Markdown code with
+              nice JavaScript formatting. I wrestled with
+              <a
+                href="https://github.com/highlightjs/highlight.js"
+                target="_blank"
+                >highlight.js</a
+              >
+              and
+              <a href="https://github.com/PrismJS/prism" target="_blank"
+                >prism.js</a
+              >
+              for what felt like days, and I just couldn't get it working. So
+              instead, I used a
+              <a href="https://www.ray.so/#padding=64" target="_blank"
+                >Raycast tool</a
+              >
+              that I stumbled across on Twitter which is really nice, so the
+              code snippets are currently all images. It's not ideal, but it
+              works for now.
+            </p>
+
+            <h2>📱 Live demo</h2>
+            <p>
+              You can check out Flashcards below if you like, or you can view it
+              <a
+                href="https://flashcards-orcin-nine.vercel.app/"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+            <p>
+              <i>Note: To reveal the categories, click anywhere on the body.</i>
+            </p>
+
+            <div
+              style="
+                position: relative;
+                width: 420px;
+                height: 874px;
+                margin: 0 auto;
+                margin-top: -32px;
+                transform: scale(0.8);
+              "
+            >
+              <img
+                src="/assets/images/iphone-frame.png"
+                alt="iPhone frame"
+                style="
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 2;
+                  pointer-events: none;
+                "
+              />
+              <div
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 376px;
+                  height: 840px;
+                  background-color: lch(9 0.93 251.38);
+                  border-radius: 44px;
+                  z-index: 1;
+                "
+              >
+                <p
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -5;
+                    color: white;
+                  "
+                >
+                  Loading iFrame...
+                </p>
+              </div>
+              <div
+                style="
+                  position: absolute;
+                  top: 53.5%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 375px;
+                  height: 770px;
+                  border-radius: 40px;
+                  z-index: 1;
+                "
+              ></div>
+              <iframe
+                src="https://flashcards-orcin-nine.vercel.app/"
+                style="
+                  position: absolute;
+                  top: 53.5%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 375px;
+                  height: 770px;
+                  border: none;
+                  border-radius: 0px 0px 40px 40px;
+                  z-index: 1;
+                "
+              ></iframe>
+            </div>
+
+            <h2>The present and the future of Flashcards</h2>
+            <p>
+              So far, I have found it really helpful, and I'm more confident
+              remembering syntax, especially. I tend to use it while doing
+              mundane things like waiting for the kettle to boil, waiting for a
+              train, or brushing my teeth. It was for this reason, if it was
+              early in the morning, or late at night (yes I’m aware this is
+              unhealthy), I opted for a dark theme originally.
+            </p>
+            <p>
+              I wanted these tips to be as digestible as possible, as it would
+              be easier to absorb than lengthy explanations with loads of
+              examples. That said, there are still a few tips that are a bit
+              long. Writing the tips myself has also helped to reinforce
+              concepts because I use examples that are relevant to me like my
+              family, pets, cars, hobbies, etc.
+            </p>
+            <p>
+              Is the code the best? Probably not. It's messy, it's pretty
+              amateur and I have no doubt I'll look back in time, with broader
+              knowledge and perhaps have a different approach. But it is perfect
+              for me at this point in my learning journey.
+            </p>
+            <p>
+              So far, I have nearly 80 JavaScript tips. I have since moved onto
+              React, and so this section of tips will grow in due course.
+            </p>
+            <p>Eventually, I'd like to do things like:</p>
+            <ul>
+              <li>Re-write it in React when learning React</li>
+              <li>
+                Improve parts of the UI and interaction — selecting the category
+                is very hidden, but it is only for me (at the moment, anyway)
+              </li>
+              <li>
+                Maybe one day include a light mode using
+                <code>prefers-color-scheme</code>
+              </li>
+              <li>
+                Maybe preferences for which category to load by default (right
+                now it's JavaScript, but when I learn React, instead of
+                hard-coding the default, a choice might be good)
+              </li>
+            </ul>
+            <p>
+              If you're interested in seeing the source code, you can find the
+              repo
+              <a href="https://github.com/jack-brind/flashcards" target="_blank"
+                >here</a
+              >. Please go easy on me.
+            </p>
+
+            <hr />
+
+            <p class="italic">
+              If you'd like to know more about the Flashcards app, please
+              <a
+                href="/src/about.html"
+                style="
+                  font-weight: var(--font-weight-regular);
+                  color: var(--colour-blue);
+                "
+                >get in touch</a
+              >.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg" />
+    <title>Jack Brind -Side projects</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right desktop-menu">
+          <ul class="nav__links">
+            <li style="display: none"><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
+            <li>
+              <button
+                onclick="window.location.href='/src/about.html'"
+                class="btn btn--primary"
+              >
+                About
+              </button>
+            </li>
+            <li style="display: none">
+              <button href="/contact" class="btn btn--primary">Contact</button>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li>
+                <a href="/src/about.html" class="btn btn--primary mobile-btn"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="background-pattern"></div>
+
+    <main role="main" style="margin-top: 128px">
+      <h1 style="font-size: 32px; text-wrap: balance">Side projects</h1>
+      <a href="/src/flashcards.html">Flashcards</a>
+    </main>
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

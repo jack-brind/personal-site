@@ -154,6 +154,39 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }, 200); // Initial delay
   }
+
+  // Hamburger Menu
+  const hamburgerBtn = document.querySelector('.hamburger-btn');
+  const mobileDropdown = document.querySelector('.mobile-dropdown');
+
+  if (hamburgerBtn && mobileDropdown) {
+    hamburgerBtn.addEventListener('click', function (e) {
+      e.stopPropagation(); // Prevent immediate propagation
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      mobileDropdown.classList.toggle('show');
+
+      // Only add the event listener if we're opening the dropdown
+      if (!expanded) {
+        // Add a small delay to prevent immediate triggering
+        setTimeout(() => {
+          document.addEventListener('click', closeDropdown);
+        }, 10);
+      }
+    });
+
+    // Define the closeDropdown function outside the event handler
+    function closeDropdown(e) {
+      if (
+        !hamburgerBtn.contains(e.target) &&
+        !mobileDropdown.contains(e.target)
+      ) {
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileDropdown.classList.remove('show');
+        document.removeEventListener('click', closeDropdown);
+      }
+    }
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
