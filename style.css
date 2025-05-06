@@ -1329,7 +1329,7 @@
   }
 
   .segment-control__option {
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-3) var(--spacing-5);
     border-radius: var(--radius-md);
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-medium);
@@ -1344,7 +1344,7 @@
     bottom: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-3) var(--spacing-5);
     background: var(--colour-neutral-1000);
     color: var(--colour-white);
     font-size: var(--font-size-3);
@@ -1366,6 +1366,12 @@
     border-top: 4px solid var(--colour-neutral-1000);
     opacity: 0;
     animation: fadeIn 0.2s ease forwards;
+  }
+
+  #read-time {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
   }
 
   @keyframes fadeIn {
