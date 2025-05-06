@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg" />
+    <title>Jack Brind -Side projects</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right desktop-menu">
+          <ul class="nav__links">
+            <li style="display: none"><a href="/work">Work</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li style="display: none"><a href="/work">Work</a></li>
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li style="display: none"><a href="/writing">Writing</a></li>
+              <li><a href="/src/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="background-pattern"></div>
+
+    <main role="main" class="menu-page" style="flex: 1">
+      <div class="header__headline">
+        <h1>Side projects</h1>
+      </div>
+      <a href="/src/flashcards.html" class="card-list-item">
+        <svg
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="var(--text-muted)"
+          class="bento-card__arrow"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.43795 13.5588C9.05532 13.9412 8.43568 13.9429 8.05091 13.5626C7.66281 13.179 7.66106 12.5529 8.04701 12.1671L12.206 8.01018H1C0.447716 8.01018 0 7.56247 0 7.01018V6.98982C0 6.43753 0.447715 5.98982 1 5.98982H12.206L8.04784 1.84037C7.66121 1.45455 7.66183 0.827959 8.04923 0.442907C8.43461 0.059857 9.05724 0.060724 9.44155 0.444846L15.2924 6.29272C15.6831 6.68328 15.6831 7.31672 15.2924 7.70728L9.43795 13.5588Z"
+          />
+        </svg>
+        <div class="card-list-item__content">
+          <div class="card-list-item__header">
+            <h3>Building Flashcards to help me learn programming</h3>
+            <p>
+              A progressive web app (PWA) that I created to help me with
+              learning JavaScript, React, and other programming concepts.
+            </p>
+          </div>
+          <p
+            style="
+              font-size: 13px;
+              color: var(--text-secondary);
+              font-weight: var(--font-weight-medium);
+            "
+          >
+            May 2025
+          </p>
+        </div>
+        <div class="card-list-item__image--container">
+          <img
+            src="/assets/images/flashcards-image.png"
+            class="card-list-item__image--flashcards"
+          />
+        </div>
+      </a>
+    </main>
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

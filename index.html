@@ -21,23 +21,28 @@
           <span class="nav__name">Jack Brind</span>
           <span class="nav__title">Product Designer</span>
         </button>
-        <div class="nav__right">
+        <div class="nav__right desktop-menu">
           <ul class="nav__links">
             <li style="display: none"><a href="/work">Work</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
             <li style="display: none"><a href="/writing">Writing</a></li>
-            <!-- <li><a href="/src/about.html">About</a></li> -->
-            <li>
-              <button
-                onclick="window.location.href='/src/about.html'"
-                class="btn btn--primary"
-              >
-                About
-              </button>
-            </li>
-            <li style="display: none">
-              <button href="/contact" class="btn btn--primary">Contact</button>
-            </li>
+            <li><a href="/src/about.html">About</a></li>
           </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li style="display: none"><a href="/work">Work</a></li>
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li style="display: none"><a href="/writing">Writing</a></li>
+              <li><a href="/src/about.html">About</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -252,11 +257,36 @@
               />
             </a>
 
-            <!-- Card 3 - itris Knowledgebase -->
             <a
-              href="/src/knowledgebase.html"
-              class="bento-card card-5-8 stretch-bento"
+              href="/src/flashcards.html"
+              class="bento-card card-3-8"
+              style="grid-column: span 3; grid-row: 2; height: 408px"
             >
+              <div class="bento-card__tags">
+                <span class="tag side-project-tag">SIDE PROJECT</span>
+              </div>
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="var(--text-muted)"
+                class="bento-card__arrow"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.43795 13.5588C9.05532 13.9412 8.43568 13.9429 8.05091 13.5626C7.66281 13.179 7.66106 12.5529 8.04701 12.1671L12.206 8.01018H1C0.447716 8.01018 0 7.56247 0 7.01018V6.98982C0 6.43753 0.447715 5.98982 1 5.98982H12.206L8.04784 1.84037C7.66121 1.45455 7.66183 0.827959 8.04923 0.442907C8.43461 0.059857 9.05724 0.060724 9.44155 0.444846L15.2924 6.29272C15.6831 6.68328 15.6831 7.31672 15.2924 7.70728L9.43795 13.5588Z"
+                />
+              </svg>
+              <h3>Flashcards</h3>
+              <p>A simple flashcards app built to help me learn programming</p>
+              <img
+                src="/assets/images/flashcards.png"
+                class="bento__flashcards-image"
+              />
+            </a>
+
+            <!-- Card 3 - itris Knowledgebase -->
+            <a href="/src/knowledgebase.html" class="bento-card card-5-8">
               <div class="bento-card__tags">
                 <span class="tag cs-tag">WORK</span>
               </div>
