@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         kpis: resolve(__dirname, 'src/kpis.html'),
         sideProjects: resolve(__dirname, 'src/side-projects.html'),
+        work: resolve(__dirname, 'src/work.html'),
         flashcards: resolve(__dirname, 'src/flashcards.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
         complianceOverrides: resolve(
