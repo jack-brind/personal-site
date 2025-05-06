@@ -22,21 +22,10 @@
         </button>
         <div class="nav__right desktop-menu">
           <ul class="nav__links">
-            <li><a href="/work">Work</a></li>
+            <li style="display: none"><a href="/work">Work</a></li>
             <li><a href="/src/side-projects.html">Side projects</a></li>
-            <li><a href="/writing">Writing</a></li>
+            <li style="display: none"><a href="/writing">Writing</a></li>
             <li><a href="/src/about.html">About</a></li>
-            <li style="display: none">
-              <button
-                onclick="window.location.href='/src/about.html'"
-                class="btn btn--primary"
-              >
-                About
-              </button>
-            </li>
-            <li style="display: none">
-              <button href="/contact" class="btn btn--primary">Contact</button>
-            </li>
           </ul>
         </div>
         <div class="nav__right mobile-menu">
@@ -47,15 +36,10 @@
           </button>
           <div class="mobile-dropdown">
             <ul class="nav__links">
-              <li><a href="/work">Work</a></li>
+              <li style="display: none"><a href="/work">Work</a></li>
               <li><a href="/src/side-projects.html">Side projects</a></li>
-              <li><a href="/writing">Writing</a></li>
+              <li style="display: none"><a href="/writing">Writing</a></li>
               <li><a href="/src/about.html">About</a></li>
-              <li style="display: none">
-                <a href="/src/about.html" class="btn btn--primary mobile-btn"
-                  >About</a
-                >
-              </li>
             </ul>
           </div>
         </div>
@@ -195,11 +179,13 @@
               categories and written in Markdown (mainly for portability). The
               app serves a random tip from the selected category.
             </p>
-            <img
-              src="/assets/images/random-tip-code.png"
-              alt="Flashcards app"
-              style="width: 70%; margin: 0 auto"
-            />
+            <div style="display: flex; justify-content: center">
+              <img
+                src="/assets/images/random-tip-code.png"
+                alt="Flashcards app"
+                style="width: 80%; margin: 24px auto"
+              />
+            </div>
             <p>
               I used
               <a href="https://github.com/markedjs/marked" target="_blank"
@@ -364,13 +350,8 @@
               repo
               <a href="https://github.com/jack-brind/flashcards" target="_blank"
                 >here</a
-              >. Please go easy on me.
-            </p>
-
-            <hr />
-
-            <p class="italic">
-              If you'd like to know more about the Flashcards app, please
+              >. Please go easy on me. If you'd like to know more about the
+              Flashcards app, please
               <a
                 href="/src/about.html"
                 style="
