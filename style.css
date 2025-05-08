@@ -1488,9 +1488,9 @@
   }
 
   .article-content h2 {
-    margin-top: var(--spacing-10);
-    margin-bottom: var(--spacing-6);
-    font-size: var(--font-size-8);
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-8);
+    font-size: var(--font-size-7);
     font-family: var(--font-sans);
   }
 
@@ -1510,11 +1510,15 @@
     font-family: var(--font-sans);
     font-size: var(--font-size-5);
     font-weight: var(--font-weight-regular);
-    line-height: 1.75;
+    line-height: 1.85;
     letter-spacing: -0.00438rem;
     margin-bottom: var(--spacing-8);
     text-wrap: pretty;
-    padding-left: var(--spacing-10);
+    padding-left: var(--spacing-9);
+  }
+
+  .article-content ul ul {
+    padding-left: 16px;
   }
 
   .article__hero {
@@ -2734,14 +2738,14 @@
 
 .writing__title {
   font-size: 42px;
-  max-width: 720px;
+  width: 720px;
   padding-right: 48px;
 }
 
 @media (max-width: 640px) {
   .writing__title {
     padding-right: 0px;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -2867,6 +2871,21 @@
 
 .card-list-item::after {
   display: none;
+}
+
+.writing-list .card-list-item:hover h3 {
+  color: var(--text-muted);
+}
+
+.arrow {
+  opacity: 0;
+  font-feature-settings: 'calt' on;
+  margin-left: 12px;
+  color: var(--text-muted);
+}
+
+.card-list-item:hover .arrow {
+  opacity: 1;
 }
 
 @media (max-width: 640px) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg" />
-    <title>Jack Brind - Side projects</title>
+    <title>Jack Brind - Writing</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -49,34 +49,60 @@
 
     <main role="main" class="menu-page" style="flex: 1">
       <div class="header__headline">
-        <h1>Side projects</h1>
+        <h1>Writing</h1>
       </div>
-      <a href="/src/flashcards.html" class="card-list-item">
-        <div class="card-list-item__content">
-          <div class="card-list-item__header">
-            <h3>Building Flashcards to help me learn programming</h3>
-            <p>
-              A progressive web app (PWA) that I created to help me with
-              learning JavaScript, React, and other programming concepts.
+      <div
+        class="writing-list"
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-top: 72px;
+        "
+      >
+        <a
+          href="/src/cutting-unnecessary-complexity"
+          class="card-list-item"
+          style="display: none; margin: 0 0 16px 0"
+        >
+          <div class="card-list-item__content">
+            <div class="card-list-item__header">
+              <h3>Salt features<span class="arrow">-></span></h3>
+            </div>
+            <p
+              style="
+                font-size: 13px;
+                color: var(--text-secondary);
+                font-weight: var(--font-weight-medium);
+              "
+            >
+              May 2025
             </p>
           </div>
-          <p
-            style="
-              font-size: 13px;
-              color: var(--text-secondary);
-              font-weight: var(--font-weight-medium);
-            "
-          >
-            May 2025
-          </p>
-        </div>
-        <div class="card-list-item__image--container">
-          <img
-            src="/assets/images/flashcards-image.png"
-            class="card-list-item__image--flashcards"
-          />
-        </div>
-      </a>
+        </a>
+        <a
+          href="/src/cutting-unnecessary-complexity"
+          class="card-list-item"
+          style="margin: 0 0 16px 0"
+        >
+          <div class="card-list-item__content">
+            <div class="card-list-item__header">
+              <h3>
+                Cutting unnecessary complexity<span class="arrow">-></span>
+              </h3>
+            </div>
+            <p
+              style="
+                font-size: 13px;
+                color: var(--text-secondary);
+                font-weight: var(--font-weight-medium);
+              "
+            >
+              May 2025
+            </p>
+          </div>
+        </a>
+      </div>
     </main>
     <footer role="contentinfo">
       <p>&copy; 2025 Jack Brind</p>

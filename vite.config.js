@@ -10,7 +10,12 @@ export default defineConfig({
         kpis: resolve(__dirname, 'src/kpis.html'),
         sideProjects: resolve(__dirname, 'src/side-projects.html'),
         work: resolve(__dirname, 'src/work.html'),
+        writing: resolve(__dirname, 'src/writing.html'),
         flashcards: resolve(__dirname, 'src/flashcards.html'),
+        cuttingThroughComplexity: resolve(
+          __dirname,
+          'src/cutting-unnecessary-complexity',
+        ),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
         complianceOverrides: resolve(
           __dirname,
