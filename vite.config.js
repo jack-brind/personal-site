@@ -12,10 +12,7 @@ export default defineConfig({
         work: resolve(__dirname, 'src/work.html'),
         writing: resolve(__dirname, 'src/writing.html'),
         flashcards: resolve(__dirname, 'src/flashcards.html'),
-        cuttingThroughComplexity: resolve(
-          __dirname,
-          'src/cutting-unnecessary-complexity.html',
-        ),
+        complexity: resolve(__dirname, 'src/cutting-complexity.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
         complianceOverrides: resolve(
           __dirname,
