@@ -14,7 +14,7 @@ export default defineConfig({
         flashcards: resolve(__dirname, 'src/flashcards.html'),
         cuttingThroughComplexity: resolve(
           __dirname,
-          'src/cutting-unnecessary-complexity',
+          'src/cutting-unnecessary-complexity.html',
         ),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
         complianceOverrides: resolve(
