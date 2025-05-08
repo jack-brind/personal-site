@@ -8,6 +8,10 @@
     {
       "source": "/compliance-overrides",
       "destination": "/compliance-overrides.html"
+    },
+    {
+      "source": "/src/cutting-unnecessary-complexity",
+      "destination": "/src/cutting-unnecessary-complexity.html"
     }
   ],
   "redirects": [

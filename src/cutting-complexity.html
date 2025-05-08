@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
+    <title>Jack Brind - Writing - Cutting unnecessary complexity</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right desktop-menu">
+          <ul class="nav__links">
+            <li><a href="/src/work.html">Work</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
+            <li><a href="/src/writing.html">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li><a href="/src/work.html">Work</a></li>
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li><a href="/src/writing.html">Writing</a></li>
+              <li><a href="/src/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="article__hero" style="max-width: 720px; margin: 0 auto">
+        <div style="margin: 0 0 56px">
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li>
+                <a
+                  href="/src/writing.html"
+                  class="breadcrumb__link"
+                  style="color: var(--text-muted)"
+                  >Writing</a
+                >
+              </li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a
+                  href="/src/cutting-complexity.html"
+                  style="color: var(--text-primary)"
+                  class="breadcrumb__link"
+                  >Cutting unnecessary complexity</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1 class="writing__title">Cutting unnecessary complexity</h1>
+          <div style="display: flex; gap: 8px; align-items: center">
+            <span
+              style="
+                font-size: 15px;
+                font-weight: var(--font-weight-medium);
+                color: var(--text-secondary);
+                line-height: 20px;
+                margin: 16px 0 0;
+              "
+              >May 2025</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="article-sections">
+        <div>
+          <section class="article-content">
+            <p>
+              If you're a Product Designer, you've likely experienced a time
+              when you've been deep in a design, attempting to pull off a
+              <i>clever solution</i> only to be met with more and more
+              complexity around every corner. You’re bogged down in details that
+              shouldn’t have been there in the first place. You’re playing
+              whack-a-mole with edge cases and firefighting complications of
+              your own making. The further you go, the more you lose sight of
+              the real goal.
+            </p>
+            <p>I’ve been there more times than I care to admit.</p>
+            <p>
+              What starts as an attempt to make the best solution possible, ends
+              in something hard to make sense of — for you, as well as your
+              users.
+            </p>
+            <p>
+              There is a temptation to over-index on the
+              <i>clever solution</i> with the idea that if we handle all the
+              edge cases for users and plumb in intricate logic, we’ll end up
+              with a more “complete” experience. But the truth is, too often a
+              solution becomes more complicated than it needs to be.
+              Fortunately, we can draw upon a tool that can help to correct the
+              path.
+            </p>
+            <h2>Enter: Occam's Razor</h2>
+            <p>
+              I first encountered Occam's Razor during a Critical Thinking
+              module in my Philosophy degree. It is a principle popularised by
+              William of Ockham, a 14th-century English Franciscan friar who
+              argued:
+            </p>
+            <blockquote>
+              <p class="italic">
+                Plurality should not be posited without necessity.
+              </p>
+            </blockquote>
+            <p>
+              But what does that mean? At its core, Occam's Razor is a
+              problem-solving heuristic. Modern interpretations of this
+              translate as simply
+              <i>Don’t make things more complicated than they need to be.</i>
+            </p>
+            <p>
+              It’s a mental model that helps reframe complexity into its
+              simplest useful form.
+            </p>
+            <h2>The problem with simplicity</h2>
+            <p>
+              It’s tempting to reduce this principle to “make things simpler”
+              but that misses the point. Simplicity isn’t the absence of
+              complexity, it’s the absence of <i>unnecessary</i> complexity. It
+              is more a way of finding simplicity <i>within</i> complexity.
+            </p>
+            <p>
+              Unfortunately, Occam's Razor isn't a magic wand that you can shake
+              at your Figma file to make it all better. In reality, finding the
+              right balance between too simple and overly complex is a
+              tightrope. Knowing when, and how, to cut out unnecessary
+              complexity comes with experience and even then, the most seasoned
+              designers will still occasionally pursue the perfect solution.
+            </p>
+            <p>
+              Simplicity holds almost <i>Holy Grail</i> status in design, and it
+              makes sense:
+            </p>
+            <blockquote>
+              <p class="italic">
+                A user interface is like a joke. If you have to explain it, it’s
+                not that good.
+              </p>
+            </blockquote>
+            <p>
+              Because of this, some products or experiences are full of UI
+              tricks like hidden gestures, or long-press to reveal overflow
+              menus, for example. These types of patterns can introduce a lack
+              of discoverability. It might reduce <i>visual</i> complexity but
+              at the cost of clarity. Similarly, in an effort to simplify, we
+              might encapsulate heavy, complex operations behind a single
+              button. However, this can have drawbacks: if a user clicks a
+              button and doesn’t know exactly what it’ll do, it can erode
+              confidence and trust.
+            </p>
+            <p>
+              Some product experiences are inescapably complex. The job isn’t to
+              pretend those complexities don’t exist but to handle them
+              responsibly. Simplicity doesn’t mean stripping things bare or
+              rejecting complexity entirely. It means avoiding unnecessary
+              complexity. A product should be no more and no less than what’s
+              needed to solve the problem effectively.
+            </p>
+            <h2>A practical example</h2>
+            <p>
+              At itris, I had worked on a design for a modal and posted it in a
+              chat with the product team for feedback.
+            </p>
+            <div style="display: flex; justify-content: center">
+              <img
+                src="/assets/images/modal.png"
+                alt="Screenshot of a modal to edit groups"
+                style="width: 60%; margin: 40px auto"
+              />
+            </div>
+            <p>
+              A junior designer that I was mentoring made a comment on the Save
+              button saying:
+            </p>
+            <blockquote>
+              <p class="italic">
+                Just to check… this button will be disabled until the user makes
+                a change, right?
+              </p>
+            </blockquote>
+            <p>
+              He later referenced Don Norman’s first usability heuristic,
+              <i>visibility of system status</i> — if there’s nothing to save,
+              logically the users shouldn't be able to save. It was a fair
+              point. Disabling the button would offer feedback on the form's
+              current state.
+            </p>
+            <p>
+              However, disabling would add unnecessary complexity. We would have
+              to:
+            </p>
+            <ul>
+              <li>Track whether the user has made any changes</li>
+              <li>Compare the current form state to the original</li>
+              <li>
+                Handle edge cases like:
+                <ul>
+                  <li>
+                    What if they changed the icon colour or radar type and then
+                    changed it back?
+                  </li>
+                  <li>
+                    What if they typed some whitespace into the name or
+                    description fields?
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p>
+              All that effort to make the button logic water-tight to prevent…
+              what, exactly?
+            </p>
+            <p>
+              Saving a form that hasn’t changed is harmless. Borrowing a
+              programming principle, it is <i>idempotent</i> meaning that you
+              can do it repeatedly without changing the result. So why block the
+              user from doing it?
+            </p>
+            <p>
+              Some might argue that disabling the button is a best practice, but
+              best practices are starting points, not hard rules, and they
+              aren’t always the best fit. The trade-off here is that the UX
+              <i>technically</i> goes against best practice, but leaving the
+              button enabled works just fine and no extra logic is necessary.
+            </p>
+            <p>
+              Sometimes the simplest, most obvious solution is also the best
+              one. It's not about being rigid with best practices, it's about
+              making thoughtful trade-offs.
+            </p>
+            <h2>Choosing what matters</h2>
+            <p>
+              Occam’s Razor is a powerful principle that can guide clearer,
+              simpler decisions when things start to get bloated or
+              overcomplicated. It encourages us to ask critical questions:
+            </p>
+            <ul>
+              <li>Is this a real user need or an internal bias?</li>
+              <li>Are we overvaluing edge cases?</li>
+              <li>
+                Are we adding logic that benefits the user, or just adding
+                logic?
+              </li>
+            </ul>
+            <p>
+              This principle has repeatedly helped me step back, rethink a
+              direction, and cut through the noise. Not by focusing on
+              minimalism, but by focusing on what’s essential.
+            </p>
+            <p style="margin-bottom: 64px">
+              Just because you can design something, doesn’t mean you should.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>
