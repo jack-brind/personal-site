@@ -13,6 +13,7 @@ export default defineConfig({
         writing: resolve(__dirname, 'src/writing.html'),
         flashcards: resolve(__dirname, 'src/flashcards.html'),
         complexity: resolve(__dirname, 'src/cutting-complexity.html'),
+        saltFeatures: resolve(__dirname, 'src/salt-features.html'),
         knowledgebase: resolve(__dirname, 'src/knowledgebase.html'),
         complianceOverrides: resolve(
           __dirname,
