@@ -46,7 +46,7 @@
       </div>
     </nav>
     <main role="main">
-      <div class="article__hero" style="max-width: 720px; margin: 0 auto">
+      <div class="article__hero--writing">
         <div style="margin: 0 0 56px">
           <div class="breadcrumbs">
             <ul
@@ -100,75 +100,84 @@
         <div>
           <section class="article-content">
             <p>
-              At itris, I introduced a term internally to help guide our
-              approach to design which was "salt features".
+              At itris, I introduced a term internally that was "salt features",
+              and it became a sort of mantra to help guide our approach to
+              design.
             </p>
             <p>
-              It was a way to describe features that, once added would be
-              difficult or impossible to remove without disruption to users.
-              Like salt in cooking, if you add too much, it ruins a dish. The
-              best way is to season little by little and keep tasting along the
-              way until you get to your perfectly seasoned Michelin star feature
-              (or product). You can always add salt but you can't take it away.
+              It was a way to describe features that, once shipped, would be
+              difficult or impossible to unship without disruption to users.
+              Like salt in cooking, if you add too much at once, it can ruin a
+              dish. The best approach is to season little by little and keep
+              tasting along the way until you get to your perfectly seasoned
+              Michelin star feature. You can always add salt, but you can't take
+              it away.
             </p>
             <p>
-              A practical example from my experience illustrates this clearly.
-              While designing a new Business Terms feature at itris, we
-              considered adding settings that could prevent users from creating
-              jobs for companies without agreed terms. Initially, it seemed
-              logical to include this as a configurable setting tied to Business
-              Terms right away. However, we had long-term plans for a broader
-              company compliance initiative that could be a more appropriate
-              home for this functionality. Adding these settings to Business
-              Terms prematurely would mean future friction both for users
-              adapting to a shift in workflow, and for our team, as we'd later
-              need to unwind decisions already embedded into the product.
+              While designing a feature to add Business Terms to company records
+              at itris, we considered adding settings that could prevent users
+              from creating jobs for companies without agreed terms. Initially,
+              it seemed logical to include this as a configurable setting tied
+              to Business Terms right away. However, we had long-term plans for
+              a broader company compliance initiative that could be a more
+              appropriate home for this functionality. Adding these settings to
+              Business Terms prematurely would mean future friction both for
+              users and for our team, as we would later need to unwind decisions
+              already embedded into the product.
             </p>
             <p>
               We chose to hold off on including these settings initially.
               Although this meant a temporary trade-off in immediate
-              functionality, we avoided unnecessary future work. This approach
-              embodied the careful, intentional thinking behind salt features.
+              functionality, we avoided unnecessary future work.
             </p>
             <p>
-              This became a sort of mantra that we would draw upon to help us
-              think clearly about a project's scope, especially in ambiguous
-              projects. It's tempting to include everything up-front, but
-              decisions made in haste can solidify into long-term problems. Even
-              minor-seeming choices, like adding a column to a table or a user
-              preference, might deserve thoughtful consideration if there was a
-              chance we would revisit or remove it later.
+              Salt features helped us to think clearly about a project's scope,
+              especially in ambiguous projects. It's tempting to include
+              everything up-front, but decisions made early can present
+              long-term challenges. Even seemingly minor choices, like adding a
+              column to a table or a user preference, might deserve thoughtful
+              consideration if there was a chance we would revisit or remove it
+              later.
+            </p>
+            <p>
+              Of course, it’s unrealistic to think of this as a bulletproof
+              principle – this isn’t a perfect system because we can’t predict
+              the future, and we still made mistakes. In reality, sometimes you
+              have to ship with uncertainty and adjust later, but the principle
+              helped us to be more intentional. It was a guideline that helped
+              us to keep longer-term initiatives in mind.
             </p>
             <p>
               A good example of how impactful these commitments can be is when
-              Apple changed the position of the Safari tab bar on iOS from the
-              top to the bottom. The intention was to improve reachability but
-              users were already accustomed to the tab bar being at the top, and
-              the change disrupted their mental model. Even though objectively,
-              this made much more sense, it wasn’t about whether the new
-              position was better; it was that the existing pattern had become
-              deeply ingrained, making the switch jarring and uncomfortable.
-              Even smart, well-intended changes meet resistance when they break
-              what users have already internalised. That’s why the concept of
-              salt features was important, because premature permanence can
-              limit your future manoeuvrability.
+              Apple made a change to Safari on iOS by
+              <a
+                href="https://techcrunch.com/2021/08/18/apple-walks-back-controversial-safari-changes-with-ios-15-beta-6-update/"
+                target="_blank"
+                >moving the tab bar</a
+              >
+              from the top to the bottom. The intention was to improve
+              reachability but users were already accustomed to the tab bar
+              being at the top, and the change disrupted their mental model.
+              Even though objectively, this made much more sense, it wasn’t
+              about whether the new position was better – it was that the
+              existing pattern had become deeply ingrained, making the switch
+              jarring. Could Apple have foreseen this in the first version of
+              Safari on iOS? Probably not. But it clearly illustrates how early
+              decisions can limit your future manoeuvrability.
             </p>
             <p>
               In fast moving product teams, throughput is often considered a
-              measure of success and overall it is. But focusing on short-term
-              momentum without careful consideration introduces significant
-              long-term risks. Salt features epitomise decisions that boost
-              short-term progress but quietly accumulate design and technical
-              debt.
+              measure of success and, overall it is. But if you focus
+              exclusively on short-term momentum, you might miss signs of a
+              potential accumulation of design and technical debt further down
+              the road.
             </p>
-
             <p style="margin-bottom: 64px">
               Ultimately, taking some time to consider decisions, no matter how
               minor they initially seem, can proactively manage complexity and
-              maintain product flexibility over time. Like cooking, intentional
-              design seasoning enhances the overall experience. But add too much
-              salt too quickly, and you might have no choice but to throw it
-              away and start again.
+              maintain product flexibility over time. Adding too much salt too
+              quickly could leave you in a position where you might have no
+              choice but to throw it away and start again.
             </p>
           </section>
         </div>

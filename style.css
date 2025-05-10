@@ -62,7 +62,6 @@
 
   html {
     scroll-behavior: smooth;
-    overscroll-behavior: none;
   }
 
   ::selection {
@@ -72,7 +71,6 @@
   body {
     margin: 0;
     padding: 0;
-    overscroll-behavior: none;
   }
 
   a,
@@ -1530,6 +1528,21 @@
     align-items: center;
     gap: 96px;
     position: relative;
+  }
+
+  .article__hero--writing {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    position: relative;
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .article__hero--writing {
+      width: 100%;
+    }
   }
 
   .article__hero-header {
