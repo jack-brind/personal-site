@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/profile-photo.svg" />
+    <title>Jack Brind - Writing - Salt features</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+    <nav>
+      <div class="nav__contents">
+        <button href="/" class="nav__left">
+          <img
+            src="/assets/profile-photo.svg"
+            alt="Jack Brind"
+            class="nav__avatar"
+          />
+          <span class="nav__name">Jack Brind</span>
+          <span class="nav__title">Product Designer</span>
+        </button>
+        <div class="nav__right desktop-menu">
+          <ul class="nav__links">
+            <li><a href="/src/work.html">Work</a></li>
+            <li><a href="/src/side-projects.html">Side projects</a></li>
+            <li><a href="/src/writing.html">Writing</a></li>
+            <li><a href="/src/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="nav__right mobile-menu">
+          <button class="hamburger-btn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown">
+            <ul class="nav__links">
+              <li><a href="/src/work.html">Work</a></li>
+              <li><a href="/src/side-projects.html">Side projects</a></li>
+              <li><a href="/src/writing.html">Writing</a></li>
+              <li><a href="/src/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="article__hero" style="max-width: 720px; margin: 0 auto">
+        <div style="margin: 0 0 56px">
+          <div class="breadcrumbs">
+            <ul
+              style="
+                display: flex;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                letter-spacing: -0.005em;
+                font-weight: 500;
+              "
+            >
+              <li>
+                <a
+                  href="/src/writing.html"
+                  class="breadcrumb__link"
+                  style="color: var(--text-muted)"
+                  >Writing</a
+                >
+              </li>
+              <div style="color: var(--text-muted)">/</div>
+              <li>
+                <a
+                  href="/src/salt-features.html"
+                  style="color: var(--text-primary)"
+                  class="breadcrumb__link"
+                  >Salt features</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1 class="writing__title">Salt features</h1>
+          <div style="display: flex; gap: 8px; align-items: center">
+            <span
+              style="
+                font-size: 15px;
+                font-weight: var(--font-weight-medium);
+                color: var(--text-secondary);
+                line-height: 20px;
+                margin: 16px 0 0;
+              "
+              >May 2025</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="article-sections">
+        <div>
+          <section class="article-content">
+            <p>
+              At itris, I introduced a term internally to help guide our
+              approach to design which was "salt features".
+            </p>
+            <p>
+              It was a way to describe features that, once added would be
+              difficult or impossible to remove without disruption to users.
+              Like salt in cooking, if you add too much, it ruins a dish. The
+              best way is to season little by little and keep tasting along the
+              way until you get to your perfectly seasoned Michelin star feature
+              (or product). You can always add salt but you can't take it away.
+            </p>
+            <p>
+              A practical example from my experience illustrates this clearly.
+              While designing a new Business Terms feature at itris, we
+              considered adding settings that could prevent users from creating
+              jobs for companies without agreed terms. Initially, it seemed
+              logical to include this as a configurable setting tied to Business
+              Terms right away. However, we had long-term plans for a broader
+              company compliance initiative that could be a more appropriate
+              home for this functionality. Adding these settings to Business
+              Terms prematurely would mean future friction both for users
+              adapting to a shift in workflow, and for our team, as we'd later
+              need to unwind decisions already embedded into the product.
+            </p>
+            <p>
+              We chose to hold off on including these settings initially.
+              Although this meant a temporary trade-off in immediate
+              functionality, we avoided unnecessary future work. This approach
+              embodied the careful, intentional thinking behind salt features.
+            </p>
+            <p>
+              This became a sort of mantra that we would draw upon to help us
+              think clearly about a project's scope, especially in ambiguous
+              projects. It's tempting to include everything up-front, but
+              decisions made in haste can solidify into long-term problems. Even
+              minor-seeming choices, like adding a column to a table or a user
+              preference, might deserve thoughtful consideration if there was a
+              chance we would revisit or remove it later.
+            </p>
+            <p>
+              A good example of how impactful these commitments can be is when
+              Apple changed the position of the Safari tab bar on iOS from the
+              top to the bottom. The intention was to improve reachability but
+              users were already accustomed to the tab bar being at the top, and
+              the change disrupted their mental model. Even though objectively,
+              this made much more sense, it wasn’t about whether the new
+              position was better; it was that the existing pattern had become
+              deeply ingrained, making the switch jarring and uncomfortable.
+              Even smart, well-intended changes meet resistance when they break
+              what users have already internalised. That’s why the concept of
+              salt features was important, because premature permanence can
+              limit your future manoeuvrability.
+            </p>
+            <p>
+              In fast moving product teams, throughput is often considered a
+              measure of success and overall it is. But focusing on short-term
+              momentum without careful consideration introduces significant
+              long-term risks. Salt features epitomise decisions that boost
+              short-term progress but quietly accumulate design and technical
+              debt.
+            </p>
+
+            <p style="margin-bottom: 64px">
+              Ultimately, taking some time to consider decisions, no matter how
+              minor they initially seem, can proactively manage complexity and
+              maintain product flexibility over time. Like cooking, intentional
+              design seasoning enhances the overall experience. But add too much
+              salt too quickly, and you might have no choice but to throw it
+              away and start again.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Jack Brind</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/jackbrind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/linkedin.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://x.com/jack_brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/twitter.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://layers.to/brindo"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/layers.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/jack-brind"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/github.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://medium.com/@jack.brind91"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/medium.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+        <a
+          href="https://unsplash.com/@brindo_"
+          target="_blank"
+          class="btn btn--ghost"
+        >
+          <img
+            src="/assets/images/unsplash.svg"
+            class="btn__icon--ghost social-icon"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Lightbox modal for images -->
+    <div class="lightbox">
+      <button class="lightbox-close btn__icon--ghost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img class="lightbox-content" src="" alt="" />
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>
